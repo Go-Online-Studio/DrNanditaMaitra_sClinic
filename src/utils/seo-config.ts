@@ -42,13 +42,13 @@ export const physicianLdJson = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '10:00',
-      closes: '13:00',
+      opens: '10:30',
+      closes: '12:30',
     },
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '16:00',
+      opens: '17:00',
       closes: '19:00',
     },
   ],
@@ -227,7 +227,7 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
 
   contact: {
     title: `Book Appointment | ${DOCTOR_NAME} Clinic Vadodara`,
-    description: `Book an appointment with ${DOCTOR_NAME} at Race Course Medical Centre, Vadodara. Clinic hours: Mon–Fri 10AM–1PM & 4PM–7PM. Call ${PHONE_DISPLAY}.`,
+    description: `Book an appointment with ${DOCTOR_NAME} at Race Course Medical Centre, Vadodara. Clinic hours: Mon–Sat 10:30AM–12:30PM & 5PM–7PM. Call ${PHONE_DISPLAY}.`,
     canonical: `${DOMAIN}/contact`,
     ogTitle: `Contact & Appointments | ${DOCTOR_NAME} Vadodara`,
     ogDescription: `Schedule a consultation with ${DOCTOR_NAME}. Call or WhatsApp ${PHONE_DISPLAY} or visit Race Course Medical Centre, Vadodara.`,
@@ -289,7 +289,7 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
         { '@type': 'Question', name: 'What are the signs of a healthy pregnancy?', acceptedAnswer: { '@type': 'Answer', text: 'Key signs include regular fetal movements after 20 weeks, stable blood pressure, appropriate weight gain, no unexplained bleeding or severe pain, and normal scan results. Regular antenatal checkups are the best way to ensure pregnancy health.' } },
         { '@type': 'Question', name: 'How do I know if I have fertility problems?', acceptedAnswer: { '@type': 'Answer', text: 'If you have been trying to conceive for 12 months (or 6 months if above 35) without success, a fertility evaluation is recommended. This includes hormonal blood tests, ultrasound, and semen analysis for the male partner.' } },
         { '@type': 'Question', name: "What is Dr. Nandita Maitra's clinic address in Vadodara?", acceptedAnswer: { '@type': 'Answer', text: '102, Race Course Medical Centre, Race Course, Vadodara, Gujarat 390007.' } },
-        { '@type': 'Question', name: 'What are the clinic hours?', acceptedAnswer: { '@type': 'Answer', text: 'Monday to Saturday: 10:00 AM – 1:00 PM and 4:00 PM – 7:00 PM. Closed on Sundays and public holidays.' } },
+        { '@type': 'Question', name: 'What are the clinic hours?', acceptedAnswer: { '@type': 'Answer', text: 'Monday to Saturday: 10:30 AM – 12:30 PM and 5:00 PM – 7:00 PM. Closed on Sundays and public holidays.' } },
         { '@type': 'Question', name: 'Does Dr. Maitra offer second opinions for surgery?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Dr. Maitra actively encourages patients to seek second opinions before proceeding with any surgical intervention such as hysterectomy, fibroid surgery, or laparoscopy.' } },
       ],
     },

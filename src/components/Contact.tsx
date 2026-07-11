@@ -131,8 +131,8 @@ Thank you!`;
                   <Clock className="h-5 w-5 text-[#a46b66] shrink-0 mt-0.5" />
                   <div className="text-xs text-slate-600">
                     <strong className="text-[#4e2627] text-sm block">Clinical Timings</strong>
-                    <span className="block pt-0.5">Monday – Saturday: 10:00 AM – 1:00 PM | 4:00 PM – 7:00 PM</span>
-                    <span className="block font-medium text-rose-700">Sunday: Closed (Emergency Triage Only)</span>
+                    <span className="block pt-0.5">Monday – Saturday: 10:30 AM – 12:30 PM | 5:00 PM – 7:00 PM</span>
+                    <span className="block font-medium text-rose-700">Sunday: Closed</span>
                   </div>
                 </div>
               </div>
@@ -335,7 +335,7 @@ Thank you!`;
             <div className="space-y-2">
               <h4 className="font-serif font-bold text-[#4e2627] text-sm">Is walk-in consultation allowed?</h4>
               <p className="leading-relaxed">
-                While we accommodate urgent emergencies directly, we strongly recommend booking a clinical appointment slot beforehand to avoid extended waiting times for pregnant mothers and elderly patients.
+                Walking consultation is allowed,but we strongly recommend booking a clinical appointment slot.
               </p>
             </div>
           </div>

@@ -109,15 +109,15 @@ export default function Footer() {
                   <Clock className="mt-0.5 h-5 w-5 shrink-0 text-[#d19890]" />
                   <div className="text-sm text-[#F9F8F8]/90 leading-relaxed">
                     <span className="block font-semibold">Monday – Saturday</span>
-                    <span className="text-xs text-[#F9F8F8]/70 block">10:00 AM – 1:00 PM</span>
-                    <span className="text-xs text-[#F9F8F8]/70 block">4:00 PM – 7:00 PM</span>
+                    <span className="text-xs text-[#F9F8F8]/70 block">10:30 AM – 12:30 PM</span>
+                    <span className="text-xs text-[#F9F8F8]/70 block">5:00 PM – 7:00 PM</span>
                   </div>
                 </div>
                 <div className="flex flex-col items-center md:flex-row md:items-start gap-3 text-rose-300 text-center md:text-left">
                   <Clock className="mt-0.5 h-5 w-5 shrink-0" />
                   <div className="text-sm leading-relaxed">
                     <span className="block font-semibold">Sunday</span>
-                    <span className="text-xs opacity-90 block">Closed (Emergencies Only)</span>
+                    <span className="text-xs opacity-90 block">Closed</span>
                   </div>
                 </div>
               </div>

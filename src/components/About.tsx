@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import PageSEO from './PageSEO';
-import { ArrowLeft, Award, BookOpen, GraduationCap, Heart, ShieldCheck, HeartHandshake, ArrowRight, Star, Quote, Users } from 'lucide-react';
+import { ArrowLeft, Award, BookOpen, GraduationCap, Heart, HeartHandshake, ArrowRight, Star, Quote, Users } from 'lucide-react';
 
 export default function About() {
   const navigate = useNavigate();
@@ -153,28 +153,22 @@ export default function About() {
                 <Heart className="shrink-0 h-6 w-6 text-[#a46b66]" />
               </div>
               <h3 className="font-serif text-2xl font-bold text-[#4e2627]">Our Care Philosophy</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3 text-xs text-slate-600 leading-relaxed">
-                  <ShieldCheck className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
-                  <span><strong>Evidence-Based Choices:</strong> Aligning all treatments with state-of-the-art global guidelines set by FOGSI, RCOG and WHO.</span>
-                </li>
-                <li className="flex items-start gap-3 text-xs text-slate-600 leading-relaxed">
-                  <ShieldCheck className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
-                  <span><strong>No Over-Medication:</strong> Encouraging lifestyle optimization, dietary balance, and careful tracking before resorting to aggressive pharmacology.</span>
-                </li>
-                <li className="flex items-start gap-3 text-xs text-slate-600 leading-relaxed">
-                  <ShieldCheck className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
-                  <span><strong>Safe & Confidential:</strong> Keeping patient records in absolute confidentiality under strict professional clinical ethics guidelines.</span>
-                </li>
-              </ul>
+              <div className="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p>
+                  At Gynecology Clinic, we believe that women’s healthcare should be scientifically sound, ethically grounded, and personally attentive. Our approach combines clinical experience, academic rigor, and evidence-based practice with a strong emphasis on prevention, accurate diagnosis, and individualized treatment.
+                </p>
+                <p>
+                  Whether the concern is a menstrual problem, cervical screening, fertility evaluation, menopause, pelvic pain, or the need for a second opinion, our aim is to provide care that is thoughtful, balanced, and compassionate—with attention not only to the condition, but also to the woman’s age, priorities, and stage of life.
+                </p>
+              </div>
             </div>
             
-            <div className="border-t border-[#d19890]/10 pt-6 mt-6">
+            {/* <div className="border-t border-[#d19890]/10 pt-6 mt-6">
               <div className="flex items-center gap-3">
                 <Star className="h-4 w-4 text-amber-500 fill-amber-500" />
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#4e2627]">Trusted by 12,000+ Families in Vadodara</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Credentials Listing */}
@@ -258,7 +252,7 @@ export default function About() {
             Experience Transparent, Scholar-Led Care
           </h3>
           <p className="text-xs text-slate-600 max-w-lg mx-auto leading-relaxed">
-            Choose a partner who respects your reproductive autonomy and provides guidelines-driven solutions. Consult with Dr. Maitra today.
+            Choose a partner who respects your reproductive autonomy and provides guidelines-driven solutions. Consult with us today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <button

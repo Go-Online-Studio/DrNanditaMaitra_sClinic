@@ -27,7 +27,7 @@ const categories: FAQCategory[] = [
       },
       {
         q: 'What are the clinic hours?',
-        a: 'Monday to Friday: 10:00 AM – 1:00 PM and 4:00 PM – 7:00 PM. The clinic is closed on Sundays and public holidays. We suggest calling in advance to confirm availability.',
+        a: 'Monday to Saturday: 10:30 AM – 12:30 PM and 5:00 PM – 7:00 PM. The clinic is closed on Sundays and public holidays. We suggest calling in advance to confirm availability.',
       },
       {
         q: 'How often should I visit a gynecologist for a checkup?',

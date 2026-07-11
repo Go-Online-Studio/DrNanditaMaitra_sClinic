@@ -772,7 +772,7 @@ export default function Home() {
       </section>
 
       {/* 7. Standalone Pre-Footer CTA */}
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="rounded-3xl glass-panel-heavy border border-[#d19890]/30 p-3 sm:p-8 md:p-12 text-center space-y-6">
           <HeartHandshake className="shrink-0 mx-auto h-12 w-12 text-[#a46b66]" />
           <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#4e2627] max-w-xl mx-auto">
@@ -797,7 +797,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
