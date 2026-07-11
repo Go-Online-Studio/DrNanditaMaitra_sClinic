@@ -1,0 +1,8 @@
+{
+  "name": "Dr. Nandita Maitra - Senior OB/GYN Clinic",
+  "description": "Clinical website for Dr. Nandita Maitra, a senior Obstetrician & Gynecologist with 35+ years of experience and former Medical College Professor, offering ethical, evidence-based, compassionate women's healthcare in Vadodara, Gujarat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
