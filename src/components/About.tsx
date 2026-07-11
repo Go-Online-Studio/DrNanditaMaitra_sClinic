@@ -268,12 +268,6 @@ export default function About() {
               <span>Book Appointment Now</span>
               <ArrowRight className="shrink-0 h-4 w-4" />
             </button>
-            <button
-              onClick={() => navigate('/second-opinion')}
-              className="rounded-full border border-[#4e2627]/20 bg-white hover:bg-slate-50 text-[#4e2627] px-8 py-4 text-xs font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
-            >
-              <span>Review Surgical File</span>
-            </button>
           </div>
         </div>
 

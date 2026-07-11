@@ -23,6 +23,7 @@ import BannerImageMob1 from '../../public/images/BannerMob1.webp';
 import BannerImageMob2 from '../../public/images/BannerMob2.webp';
 import BannerImageMob3 from '../../public/images/BannerMob3.webp';
 
+import { servicesData } from '../data/servicesData';
 import { PageId, QuickInquiry, Testimonial } from '../types';
 import { 
   Phone, 
@@ -224,10 +225,10 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
-                      onClick={() => navigate('/gynecology')}
+                      onClick={() => navigate('/services')}
                       className="rounded-full bg-[#d19890] hover:bg-[#a46b66] hover:text-white text-[#4e2627] px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
                     >
-                      Explore Gynecology Care
+                      Our Services
                     </button>
                     <button
                       onClick={() => navigate('/contact')}
@@ -271,16 +272,16 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
-                      onClick={() => navigate('/gynecology')}
+                      onClick={() => navigate('/services')}
                       className="rounded-full bg-[#d19890] hover:bg-[#a46b66] hover:text-white text-[#4e2627] px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
                     >
-                      Wellness Programs
+                      Our Services
                     </button>
                     <button
-                      onClick={() => navigate('/second-opinion')}
+                      onClick={() => navigate('/contact')}
                       className="rounded-full bg-[#4e2627] border border-[#d19890]/40 hover:bg-[#a46b66] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:scale-102 focus:outline-none"
                     >
-                      Surgical Second Opinions
+                      Book Appointment
                     </button>
                   </div>
                 </div>
@@ -318,10 +319,10 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
-                      onClick={() => navigate('/fertility')}
+                      onClick={() => navigate('/services')}
                       className="rounded-full bg-[#d19890] hover:bg-[#a46b66] hover:text-white text-[#4e2627] px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
                     >
-                      Explore Fertility Care
+                      Our Services
                     </button>
                     <a
                       href={getWhatsAppUrl("Hello Dr. Maitra's team, I'd like to inquire about a fertility consultation.")}
@@ -502,174 +503,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Services Grid: 4 Main Pillars */}
+      {/* 3. Services Grid: 8 Services */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" id="clinical-services-grid">
         <div className="text-center space-y-3 mb-12">
           <span className="inline-block text-xs font-semibold tracking-wider text-[#a46b66] uppercase bg-[#d19890]/10 px-3.5 py-1 rounded-full">
-            Clinical Pillars & Offerings
+            Our Services
           </span>
           <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#4e2627]">
-            Specialized Women's Healthcare Services
+            Gynecology &amp; Women's Health Services
           </h3>
           <p className="mx-auto max-w-2xl text-sm text-slate-600">
-            Dr. Nandita Maitra operates under strict medical evidence guidelines, helping patients avoid unnecessary pharmaceutical burdens or elective surgical interventions.
+            At Gynecology Clinic, we offer thoughtful, evidence-based gynecology care with a strong emphasis on prevention, accurate diagnosis, and individualized treatment.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          
-          {/* Pillar 1: Gynecology & Wellness */}
-          <div className="group rounded-3xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 flex flex-col justify-between">
-            <div>
-              {/* Image Container */}
-              <div className="relative aspect-[1.5] overflow-hidden bg-slate-100">
-                <img 
-                  src={HealthcareServices1} 
-                  alt="Gynecology & Wellness" 
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/95 backdrop-blur-xs text-[#4e2627] border border-[#d19890]/20 shadow-md">
-                  <Activity className="shrink-0 h-5 w-5 text-[#a46b66]" />
+        
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {servicesData.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.id}
+                onClick={() => navigate(`/services/${service.id}`)}
+                className="group cursor-pointer rounded-2xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#a46b66]/30 flex flex-col"
+              >
+                <div className="relative h-48 overflow-hidden bg-gray-100">
+                  <img
+                    src={service.image}
+                    alt={service.heading}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 backdrop-blur text-[#a46b66] shadow-sm">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                </div>
+                
+                <div className="p-5 flex flex-col flex-grow">
+                  <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors mb-2 line-clamp-2">
+                    {service.heading}
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-2 flex-grow mb-4">
+                    {service.shortDesc}
+                  </p>
+                  
+                  <div className="mt-auto flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d19890] group-hover:text-[#a46b66] transition-colors">
+                    Learn More <ChevronRight className="h-3 w-3" />
+                  </div>
                 </div>
               </div>
-              <div className="p-4 sm:p-6 space-y-3">
-                <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors">Gynecology & Wellness</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Empowering women through every life stage, providing proactive cervical screenings (Pap smear), advanced PCOS/PCOD custom management protocols, and compassionate menopausal counseling.
-                </p>
-                <ul className="space-y-1.5 text-slate-500 text-[11px] pt-1">
-                  <li className="flex items-center gap-1.5">&bull; Annual Preventive Screenings</li>
-                  <li className="flex items-center gap-1.5">&bull; Hormonal & PCOS Triage</li>
-                  <li className="flex items-center gap-1.5">&bull; Menopause Support Care</li>
-                </ul>
-              </div>
-            </div>
-            <div className="px-6 pb-6">
-              <button
-                onClick={() => navigate('/gynecology')}
-                className="w-full rounded-full border border-[#d19890] hover:bg-[#4e2627] text-[#4e2627] hover:text-white py-2.5 text-[11px] font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 focus:outline-none"
-              >
-                <span>Detailed Wellness Care</span>
-                <ChevronRight className="shrink-0 h-4 w-4" />
-              </button>
-            </div>
-          </div>
+            );
+          })}
+        </div>
 
-          {/* Pillar 2: Obstetrics & Maternity */}
-          <div className="group rounded-3xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 flex flex-col justify-between">
-            <div>
-              {/* Image Container */}
-              <div className="relative aspect-[1.5] overflow-hidden bg-slate-100">
-                <img 
-                  src={HealthcareServices2} 
-                  alt="early pregnancy care" 
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/95 backdrop-blur-xs text-[#4e2627] border border-[#d19890]/20 shadow-md">
-                  <Baby className="shrink-0 h-5 w-5 text-[#a46b66]" />
-                </div>
-              </div>
-              <div className="p-4 sm:p-6 space-y-3">
-                <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors">Pre Conception & Early Pregnancy Care</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Pre-pregnancy health optimization, clinical counseling, and early viability scans to secure a safe gestational start during the critical first trimester.
-                </p>
-                <ul className="space-y-1.5 text-slate-500 text-[11px] pt-1">
-                  <li className="flex items-center gap-1.5">&bull; Pre-Pregnancy Counseling</li>
-                  <li className="flex items-center gap-1.5">&bull; Viability & Dating Scans</li>
-                  <li className="flex items-center gap-1.5">&bull; Early Pregnancy Care</li>
-                </ul>
-              </div>
-            </div>
-            <div className="px-6 pb-6">
-              <button
-                onClick={() => navigate('/earlypregnancycare')}
-                className="w-full rounded-full border border-[#d19890] hover:bg-[#4e2627] text-[#4e2627] hover:text-white py-2.5 text-[11px] font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 focus:outline-none"
-              >
-                <span>Explore Early Care</span>
-                <ChevronRight className="shrink-0 h-4 w-4" />
-              </button>
-            </div>
-          </div>
-
-          {/* Pillar 3: Fertility & Family */}
-          <div className="group rounded-3xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 flex flex-col justify-between">
-            <div>
-              {/* Image Container */}
-              <div className="relative aspect-[1.5] overflow-hidden bg-slate-100">
-                <img 
-                  src={HealthcareServices3} 
-                  alt="Fertility & Family" 
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/95 backdrop-blur-xs text-[#4e2627] border border-[#d19890]/20 shadow-md">
-                  <HeartHandshake className="shrink-0 h-5 w-5 text-[#a46b66]" />
-                </div>
-              </div>
-              <div className="p-4 sm:p-6 space-y-3">
-                <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors">Fertility & Family</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Transparent primary fertility investigation, ovulation tracking (follicular studies), ovarian reserve assessments, and honest options counseling avoiding false hype or commercialization.
-                </p>
-                <ul className="space-y-1.5 text-slate-500 text-[11px] pt-1">
-                  <li className="flex items-center gap-1.5">&bull; Follicular Study & Tracking</li>
-                  <li className="flex items-center gap-1.5">&bull; Primary Fertility Panels</li>
-                  <li className="flex items-center gap-1.5">&bull; Contraception Counseling</li>
-                </ul>
-              </div>
-            </div>
-            <div className="px-6 pb-6">
-              <button
-                onClick={() => navigate('/fertility')}
-                className="w-full rounded-full border border-[#d19890] hover:bg-[#4e2627] text-[#4e2627] hover:text-white py-2.5 text-[11px] font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 focus:outline-none"
-              >
-                <span>Explore Fertility Care</span>
-                <ChevronRight className="shrink-0 h-4 w-4" />
-              </button>
-            </div>
-          </div>
-
-          {/* Pillar 4: Diagnostics & Screenings */}
-          <div className="group rounded-3xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 flex flex-col justify-between">
-            <div>
-              {/* Image Container */}
-              <div className="relative aspect-[1.5] overflow-hidden bg-slate-100">
-                <img 
-                  src={HealthcareServices4} 
-                  alt="Diagnostics & Screening" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-4 left-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/95 backdrop-blur-xs text-[#4e2627] border border-[#d19890]/20 shadow-md">
-                  <Stethoscope className="shrink-0 h-5 w-5 text-[#a46b66]" />
-                </div>
-              </div>
-              <div className="p-4 sm:p-6 space-y-3">
-                <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors">Diagnostics & Screening</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  High-precision in-clinic fetal ultrasound, pelvic scans, non-invasive genetic screenings (NIPT), and timely cancer marker tests ensuring clinical clarity and absolute diagnostic confidence.
-                </p>
-                <ul className="space-y-1.5 text-slate-500 text-[11px] pt-1">
-                  <li className="flex items-center gap-1.5">&bull; Pelvic & Maternity Ultrasound</li>
-                  <li className="flex items-center gap-1.5">&bull; Preventive Cervical Screens</li>
-                  <li className="flex items-center gap-1.5">&bull; NIPT / Genetic Screenings</li>
-                </ul>
-              </div>
-            </div>
-            <div className="px-6 pb-6">
-              <button
-                onClick={() => navigate('/diagnostics')}
-                className="w-full rounded-full border border-[#d19890] hover:bg-[#4e2627] text-[#4e2627] hover:text-white py-2.5 text-[11px] font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 focus:outline-none"
-              >
-                <span>Detailed Screenings</span>
-                <ChevronRight className="shrink-0 h-4 w-4" />
-              </button>
-            </div>
-          </div>
-
+        {/* View all services CTA */}
+        <div className="text-center mt-10">
+          <button
+            onClick={() => navigate('/services')}
+            className="inline-flex items-center gap-2 rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
+            id="home-services-view-all"
+          >
+            <span>View All Services</span>
+            <ChevronRight className="shrink-0 h-4 w-4" />
+          </button>
         </div>
       </section>
 

@@ -294,6 +294,41 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
       ],
     },
   },
+
+  services: {
+    title: `Gynecology & Women's Health Services Vadodara | ${DOCTOR_NAME}`,
+    description: `Comprehensive gynecology services in Vadodara — cervical screening, colposcopy, PCOS care, fertility evaluation, menopause consultation, gynecologic ultrasound, pregnancy consultation, and second opinion. By ${DOCTOR_NAME}, MBBS MD FRCOG.`,
+    canonical: `${DOMAIN}/services`,
+    ogTitle: `Women's Health Services | ${DOCTOR_NAME} Vadodara`,
+    ogDescription: `Evidence-based gynecology and obstetric services in Vadodara by ${DOCTOR_NAME} — cervical screening, PCOS, fertility, menopause, pregnancy, and more.`,
+    keywords: 'gynecology services Vadodara, women health clinic Gujarat, PCOS treatment Vadodara, fertility consultation Gujarat, menopause specialist Vadodara, cervical screening Baroda, colposcopy Vadodara, pregnancy consultation Gujarat',
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@type': 'MedicalBusiness',
+      name: CLINIC_NAME,
+      url: `${DOMAIN}/services`,
+      address: { '@type': 'PostalAddress', streetAddress: ADDRESS, addressLocality: 'Vadodara', addressRegion: 'Gujarat', postalCode: '390007', addressCountry: 'IN' },
+      telephone: PHONE,
+      medicalSpecialty: 'Obstetrics and Gynecology',
+    },
+  },
+
+  'patient-education': {
+    title: `Patient Education – Women's Health Articles | ${DOCTOR_NAME} Vadodara`,
+    description: `Trusted women's health articles on PCOS, cervical screening, menopause, early pregnancy care, and fertility — authored by ${DOCTOR_NAME}, Senior Gynecologist in Vadodara, Gujarat.`,
+    canonical: `${DOMAIN}/patient-education`,
+    ogTitle: `Patient Education | ${DOCTOR_NAME} Vadodara OB-GYN`,
+    ogDescription: `Read evidence-based women's health articles on gynecology, pregnancy, PCOS, fertility, and menopause. Written by ${DOCTOR_NAME}, Vadodara.`,
+    keywords: `women health articles Vadodara, gynecology patient education Gujarat, PCOS guide India, menopause information Vadodara, pregnancy care articles Gujarat, ${DOCTOR_NAME} blog`,
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: "Patient Education – Women's Health Articles",
+      url: `${DOMAIN}/patient-education`,
+      author: { '@type': 'Person', name: DOCTOR_NAME },
+      publisher: { '@type': 'Organization', name: CLINIC_NAME, url: DOMAIN },
+    },
+  },
 };
 
 export const GEO_TAGS = {

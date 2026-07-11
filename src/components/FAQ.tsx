@@ -23,115 +23,50 @@ const categories: FAQCategory[] = [
     items: [
       {
         q: 'How do I book an appointment with Dr. Nandita Maitra?',
-        a: 'You can book an appointment by calling our clinic at 0265-2331818 or WhatsApp-ing us at +91 90810 05399, by filling out the appointment form on our Contact page, or by visiting our clinic directly at 102, Race Course Medical Centre, Race Course, Vadodara.',
+        a: 'You can book an appointment by calling our clinic at 0265-2331818, via WhatsApp at +91 90810 05399, by filling out the form on our Contact page, or by visiting our clinic at 102, Race Course Medical Centre, Race Course, Vadodara.',
       },
       {
         q: 'What are the clinic hours?',
-        a: 'Monday to Friday: 10:00 AM – 1:00 PM and 4:00 PM – 7:00 PM. The clinic is closed on Sundays and public holidays. We recommend calling ahead to confirm availability.',
+        a: 'Monday to Friday: 10:00 AM – 1:00 PM and 4:00 PM – 7:00 PM. The clinic is closed on Sundays and public holidays. We suggest calling in advance to confirm availability.',
       },
       {
-        q: 'How often should I visit a gynecologist for a routine checkup?',
-        a: 'Women aged 21 and above should have at least one annual gynecological examination. If you have conditions like PCOS, fibroids, endometriosis, or are pregnant, your visit frequency will be tailored to your care plan — often every 4 to 8 weeks.',
-      },
-      {
-        q: 'Does Dr. Maitra accept new patients?',
-        a: 'Yes, Dr. Maitra is currently accepting new patients for all clinical services including gynecology, obstetrics, fertility consultation, diagnostic screenings, and surgical second opinions. Please contact the clinic to schedule your first appointment.',
+        q: 'How often should I visit a gynecologist for a checkup?',
+        a: 'Women aged 21 and above should have at least one annual gynecological examination. If you have conditions like PCOS, fertility issues, menopause concerns, or are pregnant, your visits will be scheduled according to your specific care plan.',
       },
       {
         q: 'What documents should I bring to my first appointment?',
-        a: 'For your first visit, please bring: any existing medical reports, scan reports, blood test results, previous prescription records, and a valid government-issued photo ID. If you have had prior surgeries, bring any operation notes or discharge summaries.',
+        a: 'Please bring any past medical files, ultrasound/scan reports, blood test results, prescriptions, and a valid photo ID. If you have had previous surgeries, please bring the operation notes or discharge summaries.',
       },
     ],
   },
   {
-    id: 'gynecology',
-    label: 'Gynecology & Wellness',
+    id: 'services',
+    label: 'Clinical Services FAQ',
     color: '#a46b66',
     items: [
       {
-        q: 'How often should I get a Pap smear?',
-        a: 'Per WHO and FOGSI (Federation of Obstetric and Gynecological Societies of India) guidelines: women aged 21–29 should get a Pap smear every 3 years; women aged 30–65 should combine a Pap smear with HPV DNA co-testing every 5 years for optimal safety and early detection.',
+        q: 'What is a colposcopy and when is it recommended?',
+        a: 'A colposcopy is a detailed examination of the cervix, vagina, and vulva using a specialized magnifying instrument. It is recommended for women with abnormal Pap smears, positive HPV tests, persistent vaginal discharge, postcoital bleeding, or suspicious vulval findings.',
       },
       {
-        q: 'Can PCOS be cured permanently?',
-        a: "PCOS (Polycystic Ovarian Syndrome) is a metabolic and endocrine disorder — not a simple infection — so there is no single-step permanent cure. However, it can be managed very successfully through a combination of lifestyle modification, dietary changes, insulin optimization, and targeted medical therapy under expert clinical supervision. Many patients achieve complete symptom control.",
+        q: 'When is a gynecologic ultrasound indicated?',
+        a: 'Pelvic ultrasound is used to evaluate conditions like abnormal uterine bleeding, pelvic pain, fibroids, ovarian cysts, endometrial abnormalities, or fertility concerns. Findings are carefully reviewed in clinical context.',
       },
       {
-        q: 'Do you offer non-surgical treatments for uterine fibroids?',
-        a: 'Absolutely. Uterine fibroids often do not require immediate surgery unless they are causing severe hemorrhage, reproductive obstruction, or significant quality-of-life impact. We prioritize medical therapies, hormonal feedback regulation, and monitored observation to avoid unnecessary surgical interventions wherever clinically safe.',
+        q: 'What does a fertility consultation involve?',
+        a: 'We perform a systematic evaluation including menstrual history, ovulation tracking, tubal or uterine assessment, and ovarian reserve evaluation. The focus is to identify the causes of conception issues and map out clear next steps.',
       },
       {
-        q: 'What is colposcopy and when is it needed?',
-        a: "Colposcopy is a close-up examination of the cervix, vagina, and vulva using a specialized magnifying instrument called a colposcope. It is recommended when a Pap smear result shows abnormal cells, when an HPV test is positive, or when the cervix appears abnormal during a routine examination. It is a painless, in-clinic procedure.",
+        q: 'How is PCOS managed at the clinic?',
+        a: 'Since PCOS is a metabolic and endocrine disorder, we focus on individualized treatment. This includes cycle regulation, targeted medical therapies, lifestyle advice, and managing symptoms like acne, hair growth, or fertility issues.',
       },
       {
-        q: 'What are the symptoms of endometriosis?',
-        a: 'Common symptoms include severe menstrual cramps, chronic pelvic pain especially before and during periods, pain during intercourse, heavy or irregular menstrual bleeding, and difficulty conceiving. However, some women with significant endometriosis may have minimal or no symptoms. A proper diagnosis requires clinical examination and sometimes laparoscopy.',
-      },
-    ],
-  },
-  {
-    id: 'obstetrics',
-    label: 'Obstetrics & Pregnancy',
-    color: '#6b8e6b',
-    items: [
-      {
-        q: 'When should I start antenatal care during pregnancy?',
-        a: 'Ideally, your first antenatal visit should happen as early as possible — ideally in the first trimester (weeks 1–12). Early registration helps identify and manage any high-risk factors, establishes baseline health data, and ensures you receive timely screening tests, supplements, and vaccinations.',
+        q: 'What support is available for menopause?',
+        a: 'We offer consultations for perimenopause and menopause symptoms such as hot flashes, sleep issues, irregular bleeding, and vaginal dryness, alongside long-term counseling on bone and cardiovascular health.',
       },
       {
-        q: 'What are the signs of a healthy pregnancy?',
-        a: "Key positive signs include: regular and appropriate fetal movements (felt from around 18–20 weeks), stable blood pressure, adequate weight gain per trimester, no unexplained vaginal bleeding, no severe persistent pain, and normal results on scans and blood tests. Regular antenatal checkups with Dr. Maitra are the best way to confirm your pregnancy's progress.",
-      },
-      {
-        q: 'What makes a pregnancy high-risk?',
-        a: "A pregnancy may be classified as high-risk if the mother has pre-existing conditions such as diabetes, hypertension, thyroid disease, heart disease, or kidney disorders. Other factors include advanced maternal age (35+), multiple pregnancies (twins, triplets), previous pregnancy complications, or when the fetus has detected growth or structural concerns. High-risk pregnancies require closer monitoring and specialist care.",
-      },
-      {
-        q: "Does Dr. Maitra support normal (vaginal) delivery?",
-        a: 'Yes. Dr. Maitra strongly advocates for evidence-based delivery decisions and supports vaginal delivery wherever it is safe for both mother and baby. Caesarean sections are recommended only when medically indicated — not for convenience. She practices patient-informed, evidence-based obstetric care aligned with WHO and FOGSI guidelines.',
-      },
-    ],
-  },
-  {
-    id: 'fertility',
-    label: 'Fertility & Family Planning',
-    color: '#6b6b8e',
-    items: [
-      {
-        q: 'How do I know if I have fertility problems?',
-        a: 'If you have been trying to conceive for 12 consecutive months without success (or 6 months if you are 35 years or older), a fertility evaluation is clinically recommended. A basic workup includes hormonal blood tests, a pelvic ultrasound, and a semen analysis for the male partner. Many fertility issues are treatable once properly diagnosed.',
-      },
-      {
-        q: 'What fertility treatments does Dr. Maitra offer?',
-        a: "Dr. Maitra offers comprehensive fertility evaluation, medical management of ovulatory disorders (such as PCOS-related infertility), thyroid and hormonal correction, cycle monitoring, and IUI (Intrauterine Insemination). For couples requiring IVF or advanced assisted reproductive technologies, she provides clinical guidance and appropriate referrals to specialized IVF centres.",
-      },
-      {
-        q: 'Can age affect female fertility?',
-        a: "Yes. Female fertility begins to decline gradually after age 32 and more significantly after age 37, as egg quantity and quality both diminish with age. However, many women in their late 30s and early 40s conceive successfully with appropriate monitoring and care. If you are planning to conceive after 35, an early fertility assessment is strongly recommended.",
-      },
-      {
-        q: 'What contraception methods does your clinic advise?',
-        a: "Dr. Maitra provides individualized contraception counselling based on your health history, lifestyle, and family planning goals. Options discussed include oral contraceptive pills, intrauterine devices (copper or hormonal IUDs), injectable contraceptives, barrier methods, and permanent sterilization options. There is no one-size-fits-all — the best method depends on your specific needs.",
-      },
-    ],
-  },
-  {
-    id: 'second-opinion',
-    label: 'Surgical Second Opinion',
-    color: '#2e5266',
-    items: [
-      {
-        q: 'Does Dr. Maitra offer second opinions for gynecological surgery?',
-        a: "Yes, Dr. Maitra actively encourages patients to seek second opinions before proceeding with any significant gynecological surgery — including hysterectomy (womb removal), myomectomy (fibroid surgery), laparoscopy, or ovarian cystectomy. You can submit your surgical records and previous scan reports through our second opinion request form on the website.",
-      },
-      {
-        q: 'What documents should I send for a second opinion review?',
-        a: "Please submit: your surgical recommendation letter, recent ultrasound or MRI/CT scan reports, all relevant blood and hormone test results, previous surgical notes if you have had prior procedures, and a clear description of your current symptoms. The more information you provide, the more thorough Dr. Maitra's review can be.",
-      },
-      {
-        q: 'How long does a second opinion consultation take?',
-        a: 'A second opinion consultation typically takes 30 to 60 minutes. Dr. Maitra reviews all submitted documents carefully and then meets with you to discuss her clinical assessment, alternative options, and her evidence-based recommendation in detail.',
+        q: 'Do you offer second opinions for gynecological surgeries?',
+        a: 'Yes. We provide thorough second opinion consultations for complex gynecological issues, abnormal reports, or recommended surgical procedures to help you understand all treatment pathways before deciding.',
       },
     ],
   },
@@ -156,19 +91,12 @@ export default function FAQ() {
     : activeCategoryData.items.map((item) => ({ ...item, category: activeCategoryData.label }));
 
   const toggleItem = (key: string) => {
-    const firstItemKey = filteredItems.length > 0 ? `${filteredItems[0].q}-0` : null;
-    const activeKey = openItem !== null ? openItem : firstItemKey;
-    if (key === activeKey) {
-      if (firstItemKey !== null) {
-        setOpenItem(firstItemKey);
-      }
+    if (openItem === key) {
+      setOpenItem(null);
     } else {
       setOpenItem(key);
     }
   };
-
-  const firstItemKey = filteredItems.length > 0 ? `${filteredItems[0].q}-0` : null;
-  const activeKey = openItem !== null ? openItem : firstItemKey;
 
   return (
     <div className="bg-[#F9F8F8] min-h-screen" id="faq-page">
@@ -200,7 +128,7 @@ export default function FAQ() {
           </div>
 
           <p className="text-[#F9F8F8]/75 text-sm leading-relaxed max-w-2xl mb-8">
-            Common questions about women's health, gynecology, obstetrics, fertility, and our clinic — answered by Dr. Nandita Maitra.
+            Common questions about women's health, gynecology, fertility, pregnancy, and our clinic — answered by Dr. Nandita Maitra.
           </p>
 
           {/* Search Box */}
@@ -256,7 +184,7 @@ export default function FAQ() {
           ) : (
             filteredItems.map((item, idx) => {
               const key = `${item.q}-${idx}`;
-              const isOpen = activeKey === key;
+              const isOpen = openItem === key;
               return (
                 <div
                   key={key}

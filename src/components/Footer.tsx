@@ -23,46 +23,46 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: Care Pillars */}
+          {/* Column 2: Quick Links */}
           <div className="w-full md:w-auto md:min-w-[200px] space-y-5 flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="font-serif text-lg font-semibold tracking-wider text-[#d19890]">
-              Care Pillars
+              Quick Links
             </h3>
             <ul className="space-y-3.5 text-sm text-[#F9F8F8]/80 flex flex-col items-center md:items-start">
               <li>
                 <Link
-                  to="/gynecology"
+                  to="/services"
                   className="flex items-center gap-2 hover:text-[#d19890] transition-colors focus:outline-none cursor-pointer"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d19890]/40"></span>
-                  <span>Gynecology & Wellness</span>
+                  <span>Our Services</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/earlypregnancycare"
+                  to="/patient-education"
                   className="flex items-center gap-2 hover:text-[#d19890] transition-colors focus:outline-none cursor-pointer"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d19890]/40"></span>
-                  <span>Pre Conception & Early Pregnancy Care</span>
+                  <span>Patient Education</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/fertility"
+                  to="/about"
                   className="flex items-center gap-2 hover:text-[#d19890] transition-colors focus:outline-none cursor-pointer"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d19890]/40"></span>
-                  <span>Fertility & Family Planning</span>
+                  <span>About Dr. Maitra</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/diagnostics"
+                  to="/contact"
                   className="flex items-center gap-2 hover:text-[#d19890] transition-colors focus:outline-none cursor-pointer"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d19890]/40"></span>
-                  <span>Diagnostics & Screening</span>
+                  <span>Book Appointment</span>
                 </Link>
               </li>
             </ul>
