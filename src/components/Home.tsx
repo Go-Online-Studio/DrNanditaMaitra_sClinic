@@ -4,6 +4,8 @@ import PageSEO from './PageSEO';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Fancybox } from '@fancyapps/ui';
+import { validateName, validatePhone } from '../utils/validation';
+import { submitToGoogleSheet } from '../services/googleSheets';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -69,6 +71,7 @@ export default function Home() {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -76,14 +79,59 @@ export default function Home() {
     if (formError) setFormError('');
   };
 
-  const handleFormSubmit = (e: FormEvent) => {
+  const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!formData.patientName || !formData.patientPhone || !formData.reasonForVisit) {
-      setFormError('Please fill in Name, Phone, and Reason for Visit.');
+    
+    // Validate inputs
+    const nameError = validateName(formData.patientName);
+    if (nameError) {
+      setFormError(nameError);
       return;
     }
-    // Simulate API request
+
+    const phoneError = validatePhone(formData.patientPhone);
+    if (phoneError) {
+      setFormError(phoneError);
+      return;
+    }
+
+    if (!formData.preferredDate) {
+      setFormError('Preferred Date is required.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setFormError('');
+
+    // First store data in Google Sheet
+    await submitToGoogleSheet({
+      name: formData.patientName,
+      number: formData.patientPhone,
+      reason: formData.reasonForVisit,
+      date: formData.preferredDate || 'N/A',
+      email: 'N/A',
+      description: formData.message || 'N/A'
+    });
+
+    // Prepare WhatsApp message
+    const formattedMessage = `Hello Dr. Maitra's Clinic,
+
+I would like to make a quick clinic inquiry:
+• Name: ${formData.patientName.trim()}
+• Phone Number: ${formData.patientPhone.trim()}
+• Reason for Visit: ${formData.reasonForVisit}
+• Preferred Date: ${formData.preferredDate.trim() || 'N/A'}
+• Details: ${formData.message.trim() || 'N/A'}
+
+Thank you!`;
+
+    const whatsappUrl = getWhatsAppUrl(formattedMessage);
+    
+    setIsSubmitting(false);
     setFormSubmitted(true);
+
+    // Open WhatsApp URL (triggers app on mobile and web client on desktop)
+    window.open(whatsappUrl, '_blank');
   };
 
   const resetForm = () => {
@@ -95,6 +143,8 @@ export default function Home() {
       message: ''
     });
     setFormSubmitted(false);
+    setFormError('');
+    setIsSubmitting(false);
   };
 
   // Testimonials list matching FOGSI/ACOG high standards
@@ -473,12 +523,13 @@ export default function Home() {
 
                     <div>
                       <label htmlFor="preferredDate" className="block text-xs font-semibold text-slate-700 mb-1">
-                        Preferred Date (Optional)
+                        Preferred Date *
                       </label>
                       <input
                         type="date"
                         name="preferredDate"
                         id="preferredDate"
+                        required
                         value={formData.preferredDate}
                         onChange={handleInputChange}
                         className="w-full text-xs glass-input p-3 rounded-lg"
@@ -486,13 +537,29 @@ export default function Home() {
                     </div>
                   </div>
 
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-semibold text-slate-700 mb-1">
+                      Additional Details / Description (Optional)
+                    </label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows={3}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Share any details about your health concern or preferences..."
+                      className="w-full text-xs glass-input p-3 rounded-lg resize-none"
+                    />
+                  </div>
+
                   <div className="flex items-center gap-3 pt-1">
                     <button
                       type="submit"
-                      className="flex-1 rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white py-3 px-4 text-xs font-bold uppercase tracking-wide transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none focus:ring-2 focus:ring-[#a46b66]"
+                      disabled={isSubmitting}
+                      className="flex-1 rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white py-3 px-4 text-xs font-bold uppercase tracking-wide transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none focus:ring-2 focus:ring-[#a46b66] disabled:opacity-50 disabled:cursor-not-allowed"
                       id="submit-quick-inquiry-btn"
                     >
-                      Send Confidential Inquiry
+                      {isSubmitting ? 'Sending Confidential Inquiry...' : 'Send Confidential Inquiry'}
                     </button>
                   </div>
                 </form>

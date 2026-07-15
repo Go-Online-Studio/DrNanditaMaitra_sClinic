@@ -3,19 +3,23 @@ import { Phone, MapPin, Clock, Mail, MessageSquare, ArrowRight, ShieldCheck, Che
 import { useWhatsAppLink } from '../hooks/useWhatsAppLink';
 import { useNavigate } from 'react-router-dom';
 import PageSEO from './PageSEO';
+import { validateName, validatePhone } from '../utils/validation';
+import { submitToGoogleSheet } from '../services/googleSheets';
 
 export default function Contact() {
   const navigate = useNavigate();
   const { getWhatsAppUrl } = useWhatsAppLink();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
+    date: '',
     visitReason: 'General Gynecology Consultation',
     message: ''
   });
-  const [errors, setErrors] = useState({ name: '', phone: '' });
+  const [errors, setErrors] = useState({ name: '', phone: '', date: '' });
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -26,35 +30,30 @@ export default function Contact() {
     }
   };
 
-  const handleFormSubmit = (e: FormEvent) => {
+  const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
     // Clear errors first
-    const newErrors = { name: '', phone: '' };
-    let hasError = false;
+    const nameError = validateName(formData.name);
+    const phoneError = validatePhone(formData.phone);
+    const dateError = !formData.date ? 'Preferred Date is required.' : '';
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Full Name is required.';
-      hasError = true;
-    } else if (formData.name.trim().length < 3) {
-      newErrors.name = 'Full Name must be at least 3 characters.';
-      hasError = true;
-    }
-
-    // Phone validation
-    const phoneRegex = /^[+]?[0-9\s-]{10,15}$/;
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Contact Number is required.';
-      hasError = true;
-    } else if (!phoneRegex.test(formData.phone.trim())) {
-      newErrors.phone = 'Please enter a valid 10-15 digit contact number (digits, spaces, hyphens, and optional + only).';
-      hasError = true;
-    }
-
-    if (hasError) {
-      setErrors(newErrors);
+    if (nameError || phoneError || dateError) {
+      setErrors({ name: nameError, phone: phoneError, date: dateError });
       return;
     }
+
+    setIsSubmitting(true);
+
+    // First store data in Google Sheet
+    await submitToGoogleSheet({
+      name: formData.name,
+      number: formData.phone,
+      reason: formData.visitReason,
+      date: formData.date || 'N/A',
+      email: formData.email || 'N/A',
+      description: formData.message || 'N/A'
+    });
 
     // Process Form Data and compile a beautiful WhatsApp message
     const formattedMessage = `Hello Dr. Maitra's Clinic,
@@ -62,15 +61,17 @@ export default function Contact() {
 I would like to schedule an appointment. Here are my registration details:
 • Name: ${formData.name.trim()}
 • Phone Number: ${formData.phone.trim()}
-• Email Address: ${formData.email.trim() || 'Not Provided'}
+• Email Address: ${formData.email.trim() || 'N/A'}
+• Preferred Date: ${formData.date.trim() || 'N/A'}
 • Reason for Visit: ${formData.visitReason}
-• Message: ${formData.message.trim() || 'No additional details provided.'}
+• Details: ${formData.message.trim() || 'N/A'}
 
 Thank you!`;
 
     const whatsappUrl = getWhatsAppUrl(formattedMessage);
     
     // Set success state
+    setIsSubmitting(false);
     setFormSubmitted(true);
     
     // Redirect to WhatsApp
@@ -182,7 +183,19 @@ Thank you!`;
                     Thank you, <strong className="text-slate-900">{formData.name}</strong>. Your clinical request has been secured. Our head clinic coordinator will contact you at <span className="font-mono text-slate-900">{formData.phone}</span> shortly to complete your booking.
                   </p>
                   <button
-                    onClick={() => { setFormSubmitted(false); setFormData({ name: '', phone: '', email: '', visitReason: 'General Gynecology Consultation', message: '' }); }}
+                    onClick={() => {
+                      setFormSubmitted(false);
+                      setIsSubmitting(false);
+                      setErrors({ name: '', phone: '', date: '' });
+                      setFormData({
+                        name: '',
+                        phone: '',
+                        email: '',
+                        date: '',
+                        visitReason: 'General Gynecology Consultation',
+                        message: ''
+                      });
+                    }}
                     className="rounded-full border border-[#d19890] text-[#4e2627] hover:bg-white bg-white/40 px-6 py-2.5 text-xs font-bold uppercase tracking-wider transition-colors focus:outline-none"
                   >
                     Submit another booking request
@@ -262,25 +275,51 @@ Thank you!`;
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="visitReason" className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
-                      Reason for Visit *
-                    </label>
-                    <select
-                      name="visitReason"
-                      id="visitReason"
-                      required
-                      value={formData.visitReason}
-                      onChange={handleInputChange}
-                      className="w-full rounded-xl border border-[#d19890]/20 bg-white/40 focus:bg-white px-3.5 py-2.5 text-xs focus:border-[#a46b66] focus:outline-none focus:ring-1 focus:ring-[#a46b66] transition-all"
-                    >
-                      <option value="General Gynecology Consultation">General Gynecology & Wellness</option>
-                      <option value="Antenatal Maternity Monitoring">Pregnancy / Antenatal Monitoring</option>
-                      <option value="Infertility Workup / Follicular scan">Infertility / Follicular Scan</option>
-                      <option value="Surgical Second Opinion">Surgical Second Opinion</option>
-                      <option value="Cancer Screen / Pap smear test">Cancer Screen / Pap Smear Test</option>
-                      <option value="PCOS / Endometriosis treatment">PCOS / Endometriosis Treatment</option>
-                    </select>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="visitReason" className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                        Reason for Visit *
+                      </label>
+                      <select
+                        name="visitReason"
+                        id="visitReason"
+                        required
+                        value={formData.visitReason}
+                        onChange={handleInputChange}
+                        className="w-full rounded-xl border border-[#d19890]/20 bg-white/40 focus:bg-white px-3.5 py-2.5 text-xs focus:border-[#a46b66] focus:outline-none focus:ring-1 focus:ring-[#a46b66] transition-all bg-white/50"
+                      >
+                        <option value="General Gynecology Consultation">General Gynecology & Wellness</option>
+                        <option value="Antenatal Maternity Monitoring">Pregnancy / Antenatal Monitoring</option>
+                        <option value="Infertility Workup / Follicular scan">Infertility / Follicular Scan</option>
+                        <option value="Surgical Second Opinion">Surgical Second Opinion</option>
+                        <option value="Cancer Screen / Pap smear test">Cancer Screen / Pap Smear Test</option>
+                        <option value="PCOS / Endometriosis treatment">PCOS / Endometriosis Treatment</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label htmlFor="date" className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                        Preferred Date *
+                      </label>
+                      <input
+                        type="date"
+                        name="date"
+                        id="date"
+                        required
+                        value={formData.date}
+                        onChange={handleInputChange}
+                        className={`w-full rounded-xl border bg-white/40 focus:bg-white px-3.5 py-2.5 text-xs focus:outline-none focus:ring-1 transition-all ${
+                          errors.date 
+                            ? 'border-red-400 focus:border-red-500 focus:ring-red-500' 
+                            : 'border-[#d19890]/20 focus:border-[#a46b66] focus:ring-[#a46b66]'
+                        }`}
+                      />
+                      {errors.date && (
+                        <p className="mt-1 text-[11px] text-red-600 font-semibold flex items-center gap-1">
+                          ⚠ {errors.date}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
                   <div>
@@ -307,10 +346,11 @@ Thank you!`;
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md focus:outline-none text-center"
+                    disabled={isSubmitting}
+                    className="w-full rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md focus:outline-none text-center disabled:opacity-50 disabled:cursor-not-allowed"
                     id="submit-contact-form"
                   >
-                    Submit Booking Request
+                    {isSubmitting ? 'Submitting Booking Request...' : 'Submit Booking Request'}
                   </button>
                 </form>
               )}
