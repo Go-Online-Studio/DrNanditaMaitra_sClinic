@@ -13,6 +13,7 @@ import NotFound from './components/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import Privacy from './components/Privacy';
 import FAQ from './components/FAQ';
+import ProfessionalDisclaimer from './components/ProfessionalDisclaimer';
 import { ArrowUp, Phone } from 'lucide-react';
 import { useWhatsAppLink } from './hooks/useWhatsAppLink';
 
@@ -50,6 +51,7 @@ export default function App() {
               <Route path="/services/:id" element={<ServiceDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/disclaimer" element={<ProfessionalDisclaimer />} />
               <Route path="/faq" element={<FAQ />} />
 
               {/* Patient Education */}

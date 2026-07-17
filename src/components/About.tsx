@@ -1,9 +1,23 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageSEO from './PageSEO';
-import { ArrowLeft, Award, BookOpen, GraduationCap, Heart, HeartHandshake, ArrowRight, Star, Quote, Users } from 'lucide-react';
+import { ArrowLeft, Award, BookOpen, GraduationCap, Heart, HeartHandshake, ArrowRight, Star, Quote, Users, Shield, Globe } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-fade';
 
 export default function About() {
   const navigate = useNavigate();
+
+  const clinicImages = [
+    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
+    "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=1200",
+    "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&q=80&w=1200",
+    "https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&q=80&w=1200"
+  ];
   // const milestoneTimeline = [
   //   {
   //     year: "1988",
@@ -70,77 +84,129 @@ export default function About() {
           <span className="text-xs font-semibold text-slate-500">About the Clinician</span>
         </div>
 
+        {/* Banner Section */}
+        <div className="w-full mb-12 lg:mb-16 rounded-3xl overflow-hidden border border-[#d19890]/25 shadow-md h-64 md:h-80 lg:h-[400px]">
+           <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200" alt="Clinic Interior" className="w-full h-full object-cover" />
+        </div>
+
         {/* Hero Section */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center mb-20">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start mb-20">
           
-          {/* Text Info */}
-          <div className="lg:col-span-7 space-y-6">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#d19890]/20 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#a46b66]">
-              <GraduationCap className="h-4 w-4" /> Academic & Clinical Biography
+          {/* Left Column - 35% */}
+          <div className="w-full lg:w-[35%] flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 overflow-hidden rounded-full border-4 border-[#F9F8F8] shadow-lg shrink-0 mx-auto lg:mx-0">
+               <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400"
+                  alt="Dr. Nandita Maitra"
+                  className="w-full h-full object-cover grayscale-40 hover:grayscale-0 transition-all duration-700"
+                  referrerPolicy="no-referrer"
+                />
+            </div>
+            
+            <div className="space-y-2 w-full">
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#4e2627]">
+                Dr. Nandita Maitra
+              </h2>
+              <p className="font-sans text-sm font-bold text-[#a46b66]">
+                MBBS, MD, FRCOG
+              </p>
+              <p className="font-serif text-lg text-slate-700">
+                Senior Consultant Gynecologist & Obstetrician
+              </p>
+            </div>
+            
+            <hr className="w-full border-t border-[#d19890]/30 my-4" />
+            
+            <div className="w-full text-sm text-slate-600 font-sans space-y-1">
+              <p className="font-semibold text-[#4e2627]">Former Additional Professor & Unit Head</p>
+              <p>Department of Obstetrics & Gynecology</p>
+              <p>Medical College & SSG Hospital, Vadodara</p>
+            </div>
+            
+            <div className="w-full space-y-3 pt-4">
+              <h4 className="text-xs font-bold uppercase tracking-widest text-[#a46b66]">Professional Registrations</h4>
+              <div className="space-y-3">
+                 <div className="flex items-center gap-3 text-sm text-slate-600 justify-center lg:justify-start">
+                   <Shield className="h-4.5 w-4.5 text-[#d19890] shrink-0" />
+                   <span>Gujarat Medical Council Registration No. G-4169</span>
+                 </div>
+                 <div className="flex items-center gap-3 text-sm text-slate-600 justify-center lg:justify-start">
+                   <Globe className="h-4.5 w-4.5 text-[#d19890] shrink-0" />
+                   <span>RCOG (UK) Registration No. 102761</span>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - 65% */}
+          <div className="w-full lg:w-[65%] space-y-6 lg:pt-4">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#4e2627]">
+              Academic & Clinical Biography
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-bold text-[#4e2627]">
-              Meet Dr. Nandita Maitra
-            </h2>
-            <p className="font-serif text-lg italic text-[#a46b66] font-medium">
-              MBBS, MD, FRCOG &bull; Senior Consultant Gynecologist & Obstetrician
-            </p>
-            <div className="space-y-4 text-slate-600 text-sm leading-relaxed font-sans">
+            <div className="space-y-5 text-slate-600 text-sm md:text-base leading-relaxed font-sans mt-4">
               <p>
-                Dr. Nandita Maitra, MBBS, MD, FRCOG is a highly respected Senior Consultant Gynecologist and Obstetrician, carrying over <strong>33 years of distinguished experience</strong> in women’s healthcare, obstetrics, gynecology, academic medicine, and clinical teaching.
+                <b>Dr. Nandita Maitra, MBBS, MD, FRCOG,</b> is a Senior Consultant Gynecologist and Obstetrician with over <b>35 years of distinguished experience</b> in women's healthcare, obstetrics, gynecology, academic medicine, and clinical teaching.
               </p>
               <p>
-                She completed her MBBS and MD in Obstetrics and Gynecology from Medical College, Baroda, and holds the prestigious <strong>FRCOG</strong> (Fellow of the Royal College of Obstetricians and Gynaecologists, United Kingdom), reflecting her academic excellence, professional standing, and contribution to the field.
+                She completed her <b>MBBS and MD in Obstetrics & Gynecology</b> from Medical College, Baroda, and holds the prestigious <b>FRCOG (Fellow of the Royal College of Obstetricians and Gynaecologists, United Kingdom)</b>.
               </p>
               <p>
-                Dr. Maitra served in the Department of Obstetrics and Gynecology at Medical College and SSG Hospital, Baroda, for 33 years and retired as Additional Professor and Unit Head. Over her accomplished academic and clinical career, she has trained numerous students and made significant contributions to patient care and medical education.
+                Dr. Maitra dedicated more than three decades to the Department of Obstetrics & Gynecology at <b>Medical College and SSG Hospital, Vadodara</b>, where she served as <b>Additional Professor and Unit Head</b> before her retirement. Throughout her academic career, she was actively involved in undergraduate and postgraduate teaching, mentoring future obstetricians and gynecologists while providing comprehensive care to thousands of women.
               </p>
-            </div>
-
-            {/* Micro Badges */}
-            {/* <div className="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-4">
-              <div className="rounded-xl border border-[#d19890]/15 bg-white p-3 text-center">
-                <div className="text-2xl font-serif font-bold text-[#4e2627]">35+</div>
-                <div className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Years of Practice</div>
-              </div>
-              <div className="rounded-xl border border-[#d19890]/15 bg-white p-3 text-center">
-                <div className="text-2xl font-serif font-bold text-[#4e2627]">15k+</div>
-                <div className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Babies Delivered</div>
-              </div>
-              <div className="rounded-xl border border-[#d19890]/15 bg-white p-3 text-center">
-                <div className="text-2xl font-serif font-bold text-[#4e2627]">40+</div>
-                <div className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Research Papers</div>
-              </div>
-              <div className="rounded-xl border border-[#d19890]/15 bg-white p-3 text-center">
-                <div className="text-2xl font-serif font-bold text-[#4e2627]">100%</div>
-                <div className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Ethical Unbiased</div>
-              </div>
-            </div> */}
-          </div>
-
-          {/* Photo & Dr. Quote */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="relative overflow-hidden rounded-3xl border border-[#d19890]/25 bg-white shadow-xl p-3">
-              <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600"
-                alt="Dr. Nandita Maitra - Senior OBGYN Consultant"
-                className="w-full h-[400px] object-cover rounded-2xl grayscale-60 hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute top-6 right-6 bg-[#4e2627] text-[#F9F8F8] p-2.5 rounded-xl shadow-lg border border-[#d19890]/20">
-                <Award className="shrink-0 h-6 w-6 text-[#d19890]" />
+              <p>
+                Today, through <b>GYNECOLOGY CLINIC</b>, Dr. Maitra combines decades of academic expertise with compassionate, evidence-based clinical practice. She is committed to providing ethical, individualized care in accordance with National Medical Commission (NMC) ethical guidelines and current evidence-based practice.
+              </p>
+              
+              <div className="pt-6 mt-2 border-t border-[#d19890]/20 space-y-4">
+                <p className="text-sm text-slate-600">
+                  Take the next step in your healthcare journey with compassionate, evidence-based support.
+                </p>
+                <div className="pt-2">
+                  <button
+                    onClick={() => navigate('/contact')}
+                    className="rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-6 py-4 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none flex items-center justify-center gap-2 w-full sm:w-auto"
+                  >
+                    <span>Book Appointment Now</span>
+                    <ArrowRight className="shrink-0 h-4 w-4" />
+                  </button>
+                </div>
               </div>
             </div>
-            {/* <div className="rounded-2xl glass-panel-heavy p-3 sm:p-6 border border-[#d19890]/20 relative">
-              <Quote className="absolute top-3 left-3 h-8 w-8 text-[#d19890]/15 pointer-events-none" />
-              <p className="text-xs italic text-[#4e2627] leading-relaxed relative z-10 pl-4 sm:pl-6">
-                "Medicine is a scholarly calling before it is a business. In gynecology, our role is to act as partners throughout a woman's life-stages—supporting natural outcomes first, and reserving surgery strictly for when scientifically necessary."
-              </p>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-[#a46b66] mt-3 pl-4 sm:pl-6">
-                — Dr. Nandita Maitra
-              </p>
-            </div> */}
           </div>
+        </div>
 
+        {/* Clinic Visuals Carousel */}
+        <div className="mb-20">
+          <div className="text-center space-y-2 mb-10">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#4e2627]">Our Facility</h3>
+            <p className="text-sm text-slate-500">A glimpse into our comfortable and modern clinic</p>
+          </div>
+          <div className="rounded-3xl overflow-hidden border border-[#d19890]/25 shadow-xl bg-white p-2 sm:p-3">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay, EffectFade]}
+              effect="fade"
+              fadeEffect={{ crossFade: true }}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              rewind={true}
+              className="w-full h-64 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden"
+              style={{
+                '--swiper-theme-color': '#4e2627',
+                '--swiper-navigation-size': '24px',
+                '--swiper-pagination-bullet-inactive-color': '#d19890',
+                '--swiper-pagination-bullet-inactive-opacity': '0.5'
+              } as React.CSSProperties}
+            >
+              {clinicImages.map((img, idx) => (
+                <SwiperSlide key={idx}>
+                  <img src={img} alt={`Clinic View ${idx + 1}`} className="w-full h-full object-cover" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
 
         {/* Credentials and Clinical Philosophy */}
@@ -155,7 +221,7 @@ export default function About() {
               <h3 className="font-serif text-2xl font-bold text-[#4e2627]">Our Care Philosophy</h3>
               <div className="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
                 <p>
-                  At Gynecology Clinic, we believe that women’s healthcare should be scientifically sound, ethically grounded, and personally attentive. Our approach combines clinical experience, academic rigor, and evidence-based practice with a strong emphasis on prevention, accurate diagnosis, and individualized treatment.
+                  At <b>Gynecology Clinic</b>, we believe that women’s healthcare should be <b>scientifically sound, ethically grounded, and personally attentive</b>. Our approach combines clinical experience, academic rigor, and evidence-based practice with a strong emphasis on prevention, accurate diagnosis, and individualized treatment.
                 </p>
                 <p>
                   Whether the concern is a menstrual problem, cervical screening, fertility evaluation, menopause, pelvic pain, or the need for a second opinion, our aim is to provide care that is thoughtful, balanced, and compassionate—with attention not only to the condition, but also to the woman’s age, priorities, and stage of life.
@@ -242,26 +308,6 @@ export default function About() {
                 {body}
               </span>
             ))}
-          </div>
-        </div>
-
-        {/* CTA Pre-footer block */}
-        <div className="rounded-3xl glass-panel-heavy border border-[#d19890]/30 p-4 sm:p-8 md:p-12 text-center space-y-6">
-          <HeartHandshake className="shrink-0 mx-auto h-12 w-12 text-[#a46b66] animate-scale-pulse" />
-          <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#4e2627] max-w-xl mx-auto">
-            Experience Transparent, Scholar-Led Care
-          </h3>
-          <p className="text-xs text-slate-600 max-w-lg mx-auto leading-relaxed">
-            Choose a partner who respects your reproductive autonomy and provides guidelines-driven solutions. Consult with us today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-            <button
-              onClick={() => navigate('/contact')}
-              className="rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-4 py-4 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none flex items-center justify-center gap-2"
-            >
-              <span>Book Appointment Now</span>
-              <ArrowRight className="shrink-0 h-4 w-4" />
-            </button>
           </div>
         </div>
 

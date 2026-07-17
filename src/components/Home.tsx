@@ -1,9 +1,8 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import PageSEO from './PageSEO';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { Fancybox } from '@fancyapps/ui';
 import { validateName, validatePhone } from '../utils/validation';
 import { submitToGoogleSheet } from '../services/googleSheets';
 
@@ -11,13 +10,9 @@ import { submitToGoogleSheet } from '../services/googleSheets';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import '@fancyapps/ui/dist/fancybox/fancybox.css';
+
 
 // Import local images
-import HealthcareServices1 from '../../public/images/HealthcareServices1.webp';
-import HealthcareServices2 from '../../public/images/HealthcareServices2.webp';
-import HealthcareServices3 from '../../public/images/HealthcareServices3.webp';
-import HealthcareServices4 from '../../public/images/HealthcareServices4.webp';
 import BannerImage1 from '../../public/images/BannerImage1.webp';
 import BannerImage2 from '../../public/images/BannerImage2.webp';
 import BannerImage3 from '../../public/images/BannerImage3.webp';
@@ -53,13 +48,6 @@ export default function Home() {
   // FAQ state
   const [openFaq, setOpenFaq] = useState<number>(0);
   // Swiper state is managed internally by the Swiper component.
-  // Fancybox binding
-  useEffect(() => {
-    Fancybox.bind("[data-fancybox='clinic-gallery']", {});
-    return () => {
-      Fancybox.destroy();
-    };
-  }, []);
 
   // Quick Inquiry Form State
   const [formData, setFormData] = useState<QuickInquiry>({
@@ -768,12 +756,10 @@ Thank you!`;
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {galleryItems.map((item, index) => (
               <div key={index} className="group relative overflow-hidden rounded-2xl border border-[#d19890]/15 glass-card p-2 shadow-sm transition-transform duration-300 hover:scale-103">
-                <a
-                  href={item.src}
-                  data-fancybox="clinic-gallery"
-                  data-caption={item.caption}
+                <Link
+                  to="/about"
                   className="block relative h-48 overflow-hidden rounded-xl"
-                  aria-label={`Enlarge image of ${item.alt}`}
+                  aria-label={`Learn more about ${item.alt}`}
                 >
                   <img
                     src={item.src}
@@ -783,10 +769,10 @@ Thank you!`;
                   />
                   <div className="absolute inset-0 bg-[#4e2627]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="rounded-full bg-white/95 px-3.5 py-1.5 text-[11px] font-bold text-[#4e2627] shadow-md">
-                      View Clinical Area
+                      About Our Practice
                     </span>
                   </div>
-                </a>
+                </Link>
                 <div className="mt-3 px-1 pb-1">
                   <h4 className="font-serif text-sm font-bold text-[#4e2627]">{item.alt}</h4>
                   <p className="text-[10px] text-slate-500 line-clamp-1">{item.caption}</p>
@@ -838,33 +824,6 @@ Thank you!`;
         </div>
       </section>
 
-      {/* 7. Standalone Pre-Footer CTA */}
-      {/* <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-3xl glass-panel-heavy border border-[#d19890]/30 p-3 sm:p-8 md:p-12 text-center space-y-6">
-          <HeartHandshake className="shrink-0 mx-auto h-12 w-12 text-[#a46b66]" />
-          <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#4e2627] max-w-xl mx-auto">
-            Unsure of an Impending Gynecological Surgery or complex treatment plan?
-          </h3>
-          <p className="text-sm text-slate-700 max-w-2xl mx-auto leading-relaxed">
-            Get an objective, patient-safe review from Dr. Nandita Maitra. Relying on 35+ years of clinical teaching expertise, she will thoroughly examine your patient records to confirm clinical necessity.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => navigate('/second-opinion')}
-              className="rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-3 sm:px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none"
-            >
-              Get a Second Opinion Consultation
-            </button>
-            <a
-              href="tel:+912652331818"
-              className="rounded-full border border-[#4e2627]/20 bg-white/60 hover:bg-white text-[#4e2627] px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-sm font-mono flex items-center justify-center gap-2"
-            >
-              <Phone className="shrink-0 h-4.5 w-4.5 text-[#a46b66]" />
-              <span>0265-2331818</span>
-            </a>
-          </div>
-        </div>
-      </section> */}
     </main>
   );
 }

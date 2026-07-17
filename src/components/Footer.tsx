@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-[#F9F8F8]/80 leading-relaxed font-sans">
-              Senior Obstetrician, Gynecologist, and Fertility Consultant with over 35 years of clinical and teaching excellence. Committed to offering evidence-based, compassionate, and ethical women's healthcare services in Vadodara, Gujarat.
+              Ethical • Evidence-Based • Compassionate Women's Healthcare | Over 35 years of clinical and academic experience in women's health. We are committed to providing care in accordance with National Medical Commission (NMC) ethical guidelines and applicable Indian 
             </p>
           </div>
 
@@ -162,11 +162,11 @@ export default function Footer() {
             <Link to="/privacy" className="hover:text-[#d19890] transition-colors focus:outline-none">
               Privacy Policy
             </Link>
-            <Link to="/about" className="hover:text-[#d19890] transition-colors focus:outline-none">
-              About the Clinic
+            <Link to="/disclaimer" className="hover:text-[#d19890] transition-colors focus:outline-none">
+              Professional & Legal Disclaimer
             </Link>
-            <Link to="/faq" className="hover:text-[#d19890] transition-colors focus:outline-none">
-              FAQ
+            <Link to="/contact" className="hover:text-[#d19890] transition-colors focus:outline-none">
+              Contact Us
             </Link>
           </div>
         </div>

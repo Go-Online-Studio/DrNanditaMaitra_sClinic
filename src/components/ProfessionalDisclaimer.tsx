@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Shield } from 'lucide-react';
+import { ArrowLeft, Scale } from 'lucide-react';
 import PageSEO from './PageSEO';
 
-export default function Privacy() {
+export default function ProfessionalDisclaimer() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#F9F8F8] min-h-screen" id="privacy-policy-page">
-      <PageSEO pageKey="privacy" />
+    <div className="bg-[#F9F8F8] min-h-screen" id="disclaimer-page">
+      <PageSEO pageKey="disclaimer" />
 
       {/* Hero Banner */}
       <div className="relative overflow-hidden bg-gradient-to-br from-[#4e2627] via-[#6b3535] to-[#4e2627] py-20">
@@ -19,18 +19,18 @@ export default function Privacy() {
           <button
             onClick={() => navigate('/')}
             className="mb-8 inline-flex items-center gap-2 text-xs font-semibold text-[#d19890] hover:text-white transition-colors focus:outline-none"
-            id="privacy-back-btn"
+            id="disclaimer-back-btn"
           >
             <ArrowLeft className="h-4 w-4" /> Back to Home
           </button>
 
           <div className="flex items-center gap-4 mb-6">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#d19890]/20 border border-[#d19890]/30">
-              <Shield className="h-7 w-7 text-[#d19890]" />
+              <Scale className="h-7 w-7 text-[#d19890]" />
             </div>
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#d19890]/70">Legal</span>
-              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white">Privacy Policy</h1>
+              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white">Professional & Legal Disclaimer</h1>
             </div>
           </div>
         </div>
@@ -39,13 +39,13 @@ export default function Privacy() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="rounded-2xl border border-slate-100 bg-white p-6 md:p-10 shadow-sm space-y-6 text-slate-700 leading-relaxed font-sans text-sm md:text-base">
           <p>
-            At GYNECOLOGY CLINIC, we are committed to protecting your privacy and maintaining the confidentiality of your personal information.
+            GYNECOLOGY CLINIC is committed to providing ethical, evidence-based healthcare in accordance with the professional standards of the National Medical Commission (NMC) and the provisions of the Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994 (PCPNDT Act).
           </p>
           <p>
-            Personal information is handled with appropriate safeguards and in accordance with the principles of the Digital Personal Data Protection Act, 2023 (DPDP Act).
+            The information provided on this website is intended for patient education and general information only. It should not be considered a substitute for professional medical consultation, diagnosis, or treatment.
           </p>
           <p>
-            Information voluntarily submitted through our contact or appointment forms, such as your name, phone number, email address, or enquiry, is used solely to respond to your request or facilitate your healthcare needs. We do not sell, rent, or share your personal information with third parties for marketing purposes.
+            Fetal sex determination or disclosure is neither performed nor permitted under any circumstances, in accordance with Indian law.
           </p>
         </div>
       </div>

@@ -91,9 +91,6 @@ Thank you!`;
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#4e2627]">
             Schedule Your Visit
           </h2>
-          <p className="mx-auto max-w-2xl text-sm text-slate-600">
-            Reach out to our clinical administration team in Vadodara to coordinate your visit, secure pre-natal counseling packages, or request detailed surgical reviews.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
@@ -138,24 +135,6 @@ Thank you!`;
                 </div>
               </div>
 
-              {/* Direct WhatsApp Action */}
-              <div className="bg-emerald-50/60 rounded-xl p-4 border border-emerald-100 space-y-3">
-                <h4 className="text-xs font-bold text-emerald-900 flex items-center gap-1.5">
-                  <MessageSquare className="shrink-0 h-4 w-4 text-emerald-600" />
-                  <span>Instant Booking Triage</span>
-                </h4>
-                <p className="text-[11px] text-emerald-800 leading-relaxed">
-                  Couples and maternity patients can connect instantly with our senior coordinator via WhatsApp to request priority evening slots.
-                </p>
-                <a
-                  href={getWhatsAppUrl("Hello Dr. Maitra's clinic. I would like to coordinate an appointment.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 text-xs font-bold uppercase tracking-wider shadow-md transition-all text-center"
-                >
-                  Message Clinical Admin
-                </a>
-              </div>
             </div>
             {/* Map Embed panel */}
             <div className="rounded-2xl overflow-hidden border border-[#d19890]/20 shadow-md">
