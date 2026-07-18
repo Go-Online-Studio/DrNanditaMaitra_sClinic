@@ -16,7 +16,7 @@ export const servicesData = [
     heading: 'Cervical Screening, Colposcopy & Vulval Evaluation',
     shortDesc: 'Comprehensive evaluation for cervical and vulval health including HPV testing and colposcopy.',
     fullDesc: `We provide comprehensive evaluation for cervical and vulval health using HPV-based cervical screening, Pap smear, colposcopy, and vulvoscopy where indicated. These services are especially important for women with an abnormal Pap smear, positive HPV test, persistent discharge, postcoital bleeding, unhealthy cervical appearance, or suspicious vulval symptoms or lesions. The focus is on early detection of precancerous change, accurate diagnosis, and timely guidance for follow-up or treatment.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Cervical+Screening',
+    image: '/images/GynecService1.webp',
   },
   {
     id: 'gynecologic-ultrasound',
@@ -24,7 +24,7 @@ export const servicesData = [
     heading: 'Gynecologic Ultrasound',
     shortDesc: 'Expert pelvic ultrasound for diagnosing abnormal bleeding, pain, cysts, and fertility issues.',
     fullDesc: `Pelvic ultrasound is an important part of modern gynecology and is offered when clinically indicated for the evaluation of abnormal uterine bleeding, pelvic pain, fibroids, ovarian cysts, infertility concerns, endometrial abnormalities, and other gynecological conditions. Ultrasound findings are interpreted carefully in clinical context to support accurate diagnosis and appropriate treatment planning.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Gynecologic+Ultrasound',
+    image: '/images/GynecService2.webp',
   },
   {
     id: 'fertility-consultation',
@@ -32,7 +32,7 @@ export const servicesData = [
     heading: 'Fertility Consultation & Evaluation',
     shortDesc: 'Systematic fertility evaluation and guidance for conception and reproductive health.',
     fullDesc: `Fertility care begins with a careful understanding of your menstrual pattern, ovulation, age, prior treatment history, and possible gynecological factors affecting conception. Evaluation may include assessment for ovulatory disorders, PCOS, tubal or uterine factors, ovarian reserve concerns, and cycle-related problems. The aim is to identify the likely cause in a systematic and evidence-based manner and guide couples toward appropriate next steps.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Fertility+Consultation',
+    image: '/images/GynecService3.webp',
   },
   {
     id: 'comprehensive-gynecology',
@@ -40,7 +40,7 @@ export const servicesData = [
     heading: 'Comprehensive Gynecology Consultation',
     shortDesc: 'Careful evaluation and treatment for a wide range of common gynecological concerns.',
     fullDesc: `Consultation is available for a wide range of common gynecological concerns including irregular periods, heavy menstrual bleeding, painful periods, pelvic pain, vaginal discharge, infections, ovarian cysts, fibroids, and menopausal symptoms. Care is centred on careful listening, proper clinical evaluation, clear explanation of findings, and treatment tailored to each woman's age, symptoms, and priorities.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Comprehensive+Gynecology',
+    image: '/images/GynecService4.webp',
   },
   {
     id: 'pcos-care',
@@ -48,7 +48,7 @@ export const servicesData = [
     heading: 'PCOS Care',
     shortDesc: 'Individualized treatment for PCOS including cycle regulation and metabolic guidance.',
     fullDesc: `PCOS can present in different ways, including irregular periods, acne, excess hair growth, difficulty losing weight, infertility, or metabolic concerns. Consultation includes evaluation of menstrual history, ultrasound findings where relevant, and metabolic risk factors. Treatment is individualized and may include cycle regulation, lifestyle advice, management of androgen-related symptoms, and guidance for fertility or long-term health concerns.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=PCOS+Care',
+    image: '/images/GynecService5.webp',
   },
   {
     id: 'menopause-consultation',
@@ -56,7 +56,7 @@ export const servicesData = [
     heading: 'Menopause Consultation',
     shortDesc: 'Evidence-based symptom relief and guidance on long-term health after menopause.',
     fullDesc: `Perimenopause and menopause can bring a range of symptoms such as hot flashes, sleep disturbance, mood changes, irregular bleeding, vaginal dryness, urinary discomfort, and sexual health concerns. Menopause consultation focuses on symptom relief, reassurance, appropriate evaluation of abnormal bleeding where needed, and guidance on long-term health after menopause, including bone and metabolic health where relevant.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Menopause+Consultation',
+    image: '/images/GynecService6.webp',
   },
   {
     id: 'pregnancy-consultation',
@@ -64,7 +64,7 @@ export const servicesData = [
     heading: 'Pregnancy Consultation',
     shortDesc: 'Expert consultation for early pregnancy concerns, antenatal guidance, and high-risk care.',
     fullDesc: `Consultation is available for pregnancy confirmation, early pregnancy concerns, bleeding or pain in early pregnancy, review of reports, antenatal guidance, and second opinion in pregnancy-related problems. Women with medical or obstetric risk factors may also seek review for high-risk pregnancy concerns and advice regarding further care.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Pregnancy+Consultation',
+    image: '/images/GynecService7.webp',
   },
   {
     id: 'second-opinion',
@@ -72,6 +72,6 @@ export const servicesData = [
     heading: 'Second Opinion Consultation',
     shortDesc: 'Careful second opinion for complex gynecological problems and uncertain diagnoses.',
     fullDesc: `Consultation for women seeking a careful second opinion in complex gynecological problems, uncertain diagnoses, abnormal reports, or when treatment options need thoughtful review before proceeding further.`,
-    image: 'https://placehold.co/800x600/d19890/ffffff?text=Second+Opinion',
+    image: '/images/GynecService8.webp',
   },
 ];
