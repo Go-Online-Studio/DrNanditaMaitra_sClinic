@@ -19,7 +19,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-[#F9F8F8]/80 leading-relaxed font-sans">
-              Ethical • Evidence-Based • Compassionate Women's Healthcare | Over 35 years of clinical and academic experience in women's health. We are committed to providing care in accordance with National Medical Commission (NMC) ethical guidelines and applicable Indian 
+              Ethical • Evidence-Based • Compassionate Women's Healthcare | Over 35 years of clinical and academic experience in women's health. We are committed to providing care in accordance with National Medical Commission (NMC) ethical guidelines and applicable Indian laws. 
             </p>
           </div>
 

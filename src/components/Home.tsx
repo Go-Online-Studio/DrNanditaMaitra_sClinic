@@ -580,11 +580,11 @@ Thank you!`;
                 onClick={() => navigate(`/services/${service.id}`)}
                 className="group cursor-pointer rounded-2xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#a46b66]/30 flex flex-col"
               >
-                <div className="relative h-48 overflow-hidden bg-gray-100">
+                <div className="relative overflow-hidden bg-gray-100">
                   <img
                     src={service.image}
                     alt={service.heading}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full aspect-4/3 object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
