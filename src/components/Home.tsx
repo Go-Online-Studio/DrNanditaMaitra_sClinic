@@ -611,7 +611,7 @@ Thank you!`;
         </div>
 
         {/* View all services CTA */}
-        <div className="text-center mt-10">
+        {/* <div className="text-center mt-10">
           <button
             onClick={() => navigate('/services')}
             className="inline-flex items-center gap-2 rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
@@ -620,7 +620,7 @@ Thank you!`;
             <span>View All Services</span>
             <ChevronRight className="shrink-0 h-4 w-4" />
           </button>
-        </div>
+        </div> */}
       </section>
 
       {/* 4. Trust & Statistics */}
