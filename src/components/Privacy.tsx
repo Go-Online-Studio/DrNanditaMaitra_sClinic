@@ -39,10 +39,10 @@ export default function Privacy() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="rounded-2xl border border-slate-100 bg-white p-6 md:p-10 shadow-sm space-y-6 text-slate-700 leading-relaxed font-sans text-sm md:text-base">
           <p>
-            At GYNECOLOGY CLINIC, we are committed to protecting your privacy and maintaining the confidentiality of your personal information.
+            At <b>GYNECOLOGY CLINIC</b>, we are committed to protecting your privacy and maintaining the confidentiality of your personal information.
           </p>
           <p>
-            Personal information is handled with appropriate safeguards and in accordance with the principles of the Digital Personal Data Protection Act, 2023 (DPDP Act).
+            Personal information is handled with appropriate safeguards and in accordance with the principles of the <b>Digital Personal Data Protection Act, 2023 (DPDP Act).</b>
           </p>
           <p>
             Information voluntarily submitted through our contact or appointment forms, such as your name, phone number, email address, or enquiry, is used solely to respond to your request or facilitate your healthcare needs. We do not sell, rent, or share your personal information with third parties for marketing purposes.

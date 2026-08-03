@@ -11,11 +11,27 @@ import {
 
 export const servicesData = [
   {
-    id: 'cervical-screening',
+    id: 'cervical-cancer-screening',
     icon: Microscope,
-    heading: 'Cervical Screening, Colposcopy & Vulval Evaluation',
-    shortDesc: 'Comprehensive evaluation for cervical and vulval health including HPV testing and colposcopy.',
-    fullDesc: `We provide comprehensive evaluation for cervical and vulval health using HPV-based cervical screening, Pap smear, colposcopy, and vulvoscopy where indicated. These services are especially important for women with an abnormal Pap smear, positive HPV test, persistent discharge, postcoital bleeding, unhealthy cervical appearance, or suspicious vulval symptoms or lesions. The focus is on early detection of precancerous change, accurate diagnosis, and timely guidance for follow-up or treatment.`,
+    heading: 'Cervical Cancer Screening',
+    shortDesc: 'A simple test today for a healthier tomorrow. Options include Pap Smear, HPV DNA Test, and Colposcopy.',
+    fullDesc: `A simple test today for a healthier tomorrow. We provide comprehensive cervical cancer screening options including Pap Smears, HPV DNA Tests, and Colposcopy. These services are essential for the early detection of precancerous changes and ensuring your long-term cervical health.`,
+    image: '/images/GynecService1.webp',
+  },
+  {
+    id: 'colposcopy',
+    icon: Microscope,
+    heading: 'Colposcopy',
+    shortDesc: 'See clearly. Care deeply. Detailed examination of the cervix for early detection using high magnification.',
+    fullDesc: `See clearly. Care deeply. We provide detailed examination of the cervix using a colposcope. High magnification allows for clear visualization to detect precancerous changes and early lesions. Our goal is to ensure accurate diagnosis for timely treatment in a comfortable, safe, and compassionate environment.`,
+    image: '/images/GynecService1.webp',
+  },
+  {
+    id: 'vulval-evaluation',
+    icon: Microscope,
+    heading: 'Vulval Evaluation',
+    shortDesc: 'Expert assessment and care for vulval health, symptoms, and lesions.',
+    fullDesc: `We offer expert evaluation for vulval health, addressing concerns such as persistent discharge, itching, pain, or suspicious vulval symptoms and lesions. Using vulvoscopy where indicated, we focus on accurate diagnosis and tailored treatment plans to relieve symptoms and maintain optimal vulval health.`,
     image: '/images/GynecService1.webp',
   },
   {
@@ -59,11 +75,19 @@ export const servicesData = [
     image: '/images/GynecService6.webp',
   },
   {
-    id: 'pregnancy-consultation',
+    id: 'early-pregnancy-care',
     icon: Baby,
-    heading: 'Pregnancy Consultation',
-    shortDesc: 'Expert consultation for early pregnancy concerns, antenatal guidance, and high-risk care.',
-    fullDesc: `Consultation is available for pregnancy confirmation, early pregnancy concerns, bleeding or pain in early pregnancy, review of reports, antenatal guidance, and second opinion in pregnancy-related problems. Women with medical or obstetric risk factors may also seek review for high-risk pregnancy concerns and advice regarding further care.`,
+    heading: 'Early Pregnancy Care',
+    shortDesc: 'Expert care for the first trimester, covering milestones, screening tests, and lifestyle guidance.',
+    fullDesc: `Our early pregnancy care focuses on a healthy start for you and your baby. We guide you through first trimester milestones to understand early growth and development. We provide essential screening tests and offer advice on diet and lifestyle for nourishing choices and a strong foundation.`,
+    image: '/images/GynecService7.webp',
+  },
+  {
+    id: 'preconception-counselling',
+    icon: Baby,
+    heading: 'Preconception Counselling',
+    shortDesc: 'Comprehensive guidance including health assessment, medication review, vaccinations, and genetic counselling.',
+    fullDesc: `Preconception counselling provides couples with essential guidance before conception. Our approach includes a thorough health assessment, careful review of medications, necessary vaccinations, and genetic counselling. This proactive evaluation helps ensure the best possible start for a healthy pregnancy.`,
     image: '/images/GynecService7.webp',
   },
   {

@@ -224,7 +224,7 @@ export default function About() {
                   At <b>Gynecology Clinic</b>, we believe that women’s healthcare should be <b>scientifically sound, ethically grounded, and personally attentive</b>. Our approach combines clinical experience, academic rigor, and evidence-based practice with a strong emphasis on prevention, accurate diagnosis, and individualized treatment.
                 </p>
                 <p>
-                  Whether the concern is a menstrual problem, cervical screening, fertility evaluation, menopause, pelvic pain, or the need for a second opinion, our aim is to provide care that is thoughtful, balanced, and compassionate—with attention not only to the condition, but also to the woman’s age, priorities, and stage of life.
+                  Whether the concern is a menstrual problem, cervical cancer screening, fertility evaluation, menopause, pelvic pain, or the need for a second opinion, our aim is to provide care that is thoughtful, balanced, and compassionate—with attention not only to the condition, but also to the woman’s age, priorities, and stage of life.
                 </p>
               </div>
             </div>

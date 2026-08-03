@@ -66,7 +66,7 @@ export default function ServiceDetail() {
               <img 
                 src={service.image} 
                 alt={service.heading} 
-                className="w-full h-auto object-cover max-h-[400px]"
+                className="w-full h-auto aspect-4/3 object-cover"
               />
             </div>
             

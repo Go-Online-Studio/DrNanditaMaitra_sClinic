@@ -32,7 +32,7 @@ export default function Services() {
             Gynecology &amp; Women's Health Services
           </h1>
           <p className="text-sm sm:text-base text-[#F9F8F8]/80 leading-relaxed max-w-3xl">
-            At Gynecology Clinic, we offer thoughtful, evidence-based gynecology care with a strong emphasis on prevention, accurate diagnosis, and individualized treatment. Our services are designed to support women through common gynecological concerns as well as more specialised areas such as cervical screening, colposcopy, vulval evaluation, fertility assessment, and gynecologic ultrasound.
+            At Gynecology Clinic, we offer thoughtful, evidence-based gynecology care with a strong emphasis on prevention, accurate diagnosis, and individualized treatment. Our services are designed to support women through common gynecological concerns as well as more specialised areas such as cervical cancer screening, colposcopy, vulval evaluation, fertility assessment, and gynecologic ultrasound.
           </p>
         </div>
       </div>
@@ -90,7 +90,7 @@ export default function Services() {
               Thoughtful, Balanced, and Compassionate Care
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              At Gynecology Clinic, we believe that women's healthcare should be scientifically sound, ethically grounded, and personally attentive. Our approach combines clinical experience, academic rigor, and evidence-based practice with a strong emphasis on prevention, accurate diagnosis, and individualized treatment. Whether the concern is a menstrual problem, cervical screening, fertility evaluation, menopause, pelvic pain, or the need for a second opinion, our aim is to provide care that is thoughtful, balanced, and compassionate—with attention not only to the condition, but also to the woman's age, priorities, and stage of life.
+              At Gynecology Clinic, we believe that women's healthcare should be scientifically sound, ethically grounded, and personally attentive. Our approach combines clinical experience, academic rigor, and evidence-based practice with a strong emphasis on prevention, accurate diagnosis, and individualized treatment. Whether the concern is a menstrual problem, cervical cancer screening, fertility evaluation, menopause, pelvic pain, or the need for a second opinion, our aim is to provide care that is thoughtful, balanced, and compassionate—with attention not only to the condition, but also to the woman's age, priorities, and stage of life.
             </p>
           </div>
         </div>
