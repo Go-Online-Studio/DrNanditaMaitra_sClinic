@@ -64,7 +64,7 @@ export const servicesData = [
   {
     id: 'pcos-care',
     icon: RefreshCw,
-    heading: 'PCOS Care',
+    heading: 'PCOS / PMOS Care',
     shortDesc: 'Individualized treatment for PCOS including cycle regulation and metabolic guidance.',
     fullDesc: `PCOS can present in different ways, including irregular periods, acne, excess hair growth, difficulty losing weight, infertility, or metabolic concerns. Consultation includes evaluation of menstrual history, ultrasound findings where relevant, and metabolic risk factors. Treatment is individualized and may include cycle regulation, lifestyle advice, management of androgen-related symptoms, and guidance for fertility or long-term health concerns.`,
     image: '/images/GynecServiceImage7.avif',
