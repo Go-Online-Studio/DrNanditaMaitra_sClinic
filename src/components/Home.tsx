@@ -574,7 +574,6 @@ Thank you!`;
         
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {servicesData.map((service) => {
-            const Icon = service.icon;
             return (
               <div
                 key={service.id}
@@ -588,9 +587,6 @@ Thank you!`;
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute top-3 left-3 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 backdrop-blur text-[#a46b66] shadow-sm">
-                    <Icon className="h-5 w-5" />
-                  </div>
                 </div>
                 
                 <div className="p-5 flex flex-col flex-grow">

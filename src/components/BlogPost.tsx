@@ -4,21 +4,7 @@ import { GEO_TAGS } from '../utils/seo-config';
 import { getBlogBySlug, BLOG_POSTS } from '../data/blogPosts';
 import { ArrowLeft, Clock, Tag, Calendar, BookOpen, ChevronRight, Phone } from 'lucide-react';
 
-const LOREM_SECTIONS = [
-  `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
-  `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis molestie dictum semper, nunc augue iaculis erat, vel condimentum mi nulla sed enim.`,
-  `Aliquam fringilla cursus purus. Nullam aliquet, diam vel sagittis luctus, erat nisi porttitor enim, vitae tristique felis est a erat. Nam sollicitudin massa at dui tincidunt, nec efficitur lorem volutpat. Integer condimentum eros non felis tristique, in malesuada nunc pharetra.`,
-  `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.`,
-  `At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.`,
-];
 
-const SECTION_HEADINGS = [
-  'Understanding the Basics',
-  'Symptoms and When to Seek Help',
-  'Diagnosis and Evaluation',
-  'Treatment and Management',
-  'Long-Term Outlook and Follow-Up',
-];
 
 const CATEGORY_COLORS: Record<string, string> = {
   'Hormonal Health':       'bg-purple-50 text-purple-700 border-purple-200',
@@ -150,23 +136,26 @@ export default function BlogPost() {
           </div>
         </div>
 
-        {/* Article body — 5 sections with lorem ipsum */}
+        {/* Article body */}
         <div className="prose prose-sm max-w-none space-y-10">
-          {SECTION_HEADINGS.map((heading, i) => (
+          {post.sections.map((section, i) => (
             <section key={i}>
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-[#4e2627] mb-3">
-                {heading}
-              </h2>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                {LOREM_SECTIONS[i]}
-              </p>
+              {section.title && (
+                <h2 className="font-serif text-lg sm:text-xl font-bold text-[#4e2627] mb-3">
+                  {section.title}
+                </h2>
+              )}
+              <div
+                className="text-sm text-slate-600 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: section.content }}
+              />
             </section>
           ))}
         </div>
 
         {/* Disclaimer */}
         <div className="mt-12 rounded-2xl bg-slate-50 border border-slate-200 px-6 py-5 text-xs text-slate-500 leading-relaxed">
-          <strong className="text-slate-700">Medical Information Notice:</strong> This article is for general educational purposes only and does not constitute medical advice, diagnosis, or treatment. For personal medical guidance, please consult Dr. Nandita Maitra or a qualified healthcare professional.
+          <strong className="text-slate-700">Medical Disclaimer:</strong> This patient information is based on current evidence and clinical guidelines. Content has been adapted and simplified for patient education from <strong>UpToDate&reg;</strong>, retrieved on <strong>August 1, 2026</strong>, with additional review and editing by <strong>Dr. Nandita Maitra</strong> to ensure accuracy and relevance for women&apos;s health.
         </div>
 
         {/* CTA */}

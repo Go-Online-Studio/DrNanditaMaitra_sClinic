@@ -57,6 +57,8 @@ export default function App() {
               {/* Patient Education */}
               <Route path="/patient-education" element={<PatientEducation />} />
               <Route path="/patient-education/:slug" element={<BlogPost />} />
+              <Route path="/blog" element={<Navigate to="/patient-education" replace />} />
+              <Route path="/blog/:slug" element={<Navigate to="/patient-education/:slug" replace />} />
 
               {/* Legacy redirects — old service page URLs → /services */}
               <Route path="/gynecology" element={<Navigate to="/services/comprehensive-gynecology" replace />} />
