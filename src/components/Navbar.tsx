@@ -42,7 +42,8 @@ export default function Navbar() {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      // Only close desktop dropdown on outside click; mobile menu has its own close logic
+      if (window.innerWidth >= 1024 && dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null);
       }
     };
@@ -50,22 +51,22 @@ export default function Navbar() {
     updateHeight();
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('pointerup', handleClickOutside);
     return () => {
       clearTimeout(resizeTimer);
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('pointerup', handleClickOutside);
     };
   }, []);
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleNavClick = (path: string) => {
+  const handleNavClick = (path?: string) => {
     setIsOpen(false);
     setActiveDropdown(null);
-    navigate(path);
+    if (path) navigate(path);
   };
 
   const toggleDropdown = (e: React.MouseEvent, id: string, path: string) => {
@@ -91,7 +92,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            onClick={() => handleNavClick('/')}
+            onClick={handleNavClick}
             className="group flex items-center focus:outline-none"
             id="nav-logo"
           >
@@ -121,7 +122,7 @@ export default function Navbar() {
                   >
                     <Link
                       to={item.path}
-                      onClick={() => handleNavClick(item.path)}
+                      onClick={handleNavClick}
                       className={`relative py-2 text-sm font-bold transition-colors duration-200 focus:outline-none flex items-center gap-1 ${
                         isActive
                           ? 'text-[#4e2627]'
@@ -147,7 +148,7 @@ export default function Navbar() {
                         <Link
                           key={service.id}
                           to={`/services/${service.id}`}
-                          onClick={() => handleNavClick(`/services/${service.id}`)}
+                          onClick={handleNavClick}
                           className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                             location.pathname === `/services/${service.id}`
                               ? 'bg-[#d19890]/10 text-[#a46b66]'
@@ -166,7 +167,7 @@ export default function Navbar() {
                 <Link
                   key={item.id}
                   to={item.path}
-                  onClick={() => handleNavClick(item.path)}
+                  onClick={handleNavClick}
                   className={`relative py-2 text-sm font-bold transition-colors duration-200 focus:outline-none flex items-center h-full ${
                     isActive
                       ? 'text-[#4e2627]'
@@ -207,7 +208,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Drawer */}
         {isOpen && (
-          <div className="absolute top-20 left-0 w-full border-b border-[#d19890]/20 bg-white/95 backdrop-blur-lg shadow-xl lg:hidden max-h-[80vh] overflow-y-auto">
+          <div className="absolute top-20 left-0 w-full border-b border-[#d19890]/20 bg-white shadow-xl lg:hidden max-h-[80vh] overflow-y-auto">
             <div className="space-y-1 px-4 pt-2 pb-6 sm:px-6">
               {NAV_ITEMS.map((item) => {
                 const isActive =
@@ -219,37 +220,38 @@ export default function Navbar() {
                   const isDropdownOpen = activeDropdown === item.id;
                   return (
                     <div key={item.id} className="w-full">
-                      <div 
+                      <button 
+                        onClick={(e) => toggleDropdown(e as any, item.id, item.path)}
                         className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold transition-all ${
                           isActive
                             ? 'bg-[#d19890]/20 text-[#4e2627]'
                             : 'text-slate-600 hover:bg-white/40'
                         }`}
                       >
-                        <Link
-                          to={item.path}
-                          onClick={() => handleNavClick(item.path)}
-                          className="flex-grow"
-                        >
-                          {item.label}
-                        </Link>
-                        <button 
-                          onClick={(e) => toggleDropdown(e as any, item.id, item.path)}
-                          className="p-1"
-                        >
-                          <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                      </div>
+                        <span>{item.label}</span>
+                        <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                      </button>
                       
                       {/* Mobile Accordion Dropdown */}
                       {isDropdownOpen && (
                         <div className="overflow-hidden">
-                          <div className="pl-6 pr-4 py-2 space-y-1 animate-slide-down">
+                          <div className="pl-6 pr-4 py-2 space-y-1 animate-slide-down flex flex-col">
+                            <Link
+                              to={item.path}
+                              onClick={handleNavClick}
+                              className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                                location.pathname === item.path
+                                  ? 'bg-[#d19890]/10 text-[#a46b66]'
+                                  : 'text-slate-500 hover:text-[#a46b66]'
+                              }`}
+                            >
+                              All {item.label}
+                            </Link>
                             {servicesData.map((service) => (
                               <Link
                                 key={service.id}
                                 to={`/services/${service.id}`}
-                                onClick={() => handleNavClick(`/services/${service.id}`)}
+                                onClick={handleNavClick}
                                 className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
                                   location.pathname === `/services/${service.id}`
                                     ? 'bg-[#d19890]/10 text-[#a46b66]'
@@ -270,7 +272,7 @@ export default function Navbar() {
                   <Link
                     key={item.id}
                     to={item.path}
-                    onClick={() => handleNavClick(item.path)}
+                    onClick={handleNavClick}
                     className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold transition-all ${
                       isActive
                         ? 'bg-[#d19890]/20 text-[#4e2627]'
