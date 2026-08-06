@@ -1,10 +1,8 @@
 import {
   ShieldCheck,
   ZoomIn,
-  Stethoscope,
   Scan,
   Dna,
-  Activity,
   RefreshCw,
   Heart,
   Baby,
@@ -14,91 +12,86 @@ import {
 
 export const servicesData = [
   {
-    id: 'cervical-cancer-screening',
-    icon: ShieldCheck,
-    heading: 'Cervical Cancer Screening',
-    shortDesc: 'A simple test today for a healthier tomorrow. Options include Pap Smear, HPV DNA Test, and Colposcopy.',
-    fullDesc: `A simple test today for a healthier tomorrow. We provide comprehensive cervical cancer screening options including Pap Smears, HPV DNA Tests, and Colposcopy. These services are essential for the early detection of precancerous changes and ensuring your long-term cervical health.`,
-    image: '/images/GynecServiceImage1.avif',
-  },
-  {
-    id: 'colposcopy',
-    icon: ZoomIn,
-    heading: 'Colposcopy',
-    shortDesc: 'See clearly. Care deeply. Detailed examination of the cervix for early detection using high magnification.',
-    fullDesc: `See clearly. Care deeply. We provide detailed examination of the cervix using a colposcope. High magnification allows for clear visualization to detect precancerous changes and early lesions. Our goal is to ensure accurate diagnosis for timely treatment in a comfortable, safe, and compassionate environment.`,
-    image: '/images/GynecServiceImage2.avif',
-  },
-  {
-    id: 'vulval-evaluation',
-    icon: Stethoscope,
-    heading: 'Vulval Evaluation',
-    shortDesc: 'Expert assessment and care for vulval health, symptoms, and lesions.',
-    fullDesc: `We offer expert evaluation for vulval health, addressing concerns such as persistent discharge, itching, pain, or suspicious vulval symptoms and lesions. Using vulvoscopy where indicated, we focus on accurate diagnosis and tailored treatment plans to relieve symptoms and maintain optimal vulval health.`,
-    image: '/images/GynecServiceImage3.avif',
-  },
-  {
     id: 'gynecologic-ultrasound',
     icon: Scan,
     heading: 'Gynecologic Ultrasound',
-    shortDesc: 'Expert pelvic ultrasound for diagnosing abnormal bleeding, pain, cysts, and fertility issues.',
-    fullDesc: `Pelvic ultrasound is an important part of modern gynecology and is offered when clinically indicated for the evaluation of abnormal uterine bleeding, pelvic pain, fibroids, ovarian cysts, infertility concerns, endometrial abnormalities, and other gynecological conditions. Ultrasound findings are interpreted carefully in clinical context to support accurate diagnosis and appropriate treatment planning.`,
-    image: '/images/GynecServiceImage4.avif',
+    shortDesc: 'Safe, radiation-free pelvic ultrasound for accurate diagnosis of bleeding, pain, cysts, and fertility concerns.',
+    fullDesc: `Pelvic ultrasound is an essential part of modern gynecological care, providing a safe, painless, and radiation-free way to evaluate the uterus, ovaries, and other pelvic organs. It helps diagnose the cause of symptoms such as abnormal bleeding, pelvic pain, menstrual irregularities, ovarian cysts, fibroids, and infertility, while also allowing accurate monitoring of treatment.\n
+At our clinic, ultrasound is performed by an experienced gynecologist, ensuring that your symptoms, examination findings, and scan are interpreted together for a more accurate diagnosis and a personalized treatment plan.
+`,
+    image: '/images/GynecServiceImage1.avif',
   },
   {
     id: 'fertility-consultation',
     icon: Dna,
     heading: 'Fertility Consultation & Evaluation',
-    shortDesc: 'Systematic fertility evaluation and guidance for conception and reproductive health.',
-    fullDesc: `Fertility care begins with a careful understanding of your menstrual pattern, ovulation, age, prior treatment history, and possible gynecological factors affecting conception. Evaluation may include assessment for ovulatory disorders, PCOS, tubal or uterine factors, ovarian reserve concerns, and cycle-related problems. The aim is to identify the likely cause in a systematic and evidence-based manner and guide couples toward appropriate next steps.`,
-    image: '/images/GynecServiceImage5.avif',
-  },
-  {
-    id: 'comprehensive-gynecology',
-    icon: Activity,
-    heading: 'Comprehensive Gynecology Consultation',
-    shortDesc: 'Careful evaluation and treatment for a wide range of common gynecological concerns.',
-    fullDesc: `Consultation is available for a wide range of common gynecological concerns including irregular periods, heavy menstrual bleeding, painful periods, pelvic pain, vaginal discharge, infections, ovarian cysts, fibroids, and menopausal symptoms. Care is centred on careful listening, proper clinical evaluation, clear explanation of findings, and treatment tailored to each woman's age, symptoms, and priorities.`,
-    image: '/images/GynecServiceImage6.avif',
+    shortDesc: 'Comprehensive, evidence-based fertility evaluation and targeted investigations to guide your conception journey.',
+    fullDesc: `A comprehensive fertility evaluation helps identify the factors affecting conception and guides the most appropriate treatment. The assessment begins with a detailed medical history, menstrual cycle evaluation, and clinical examination, followed by targeted investigations based on your individual needs.\n
+Evaluation may include ovulation monitoring (cycle studies), pelvic ultrasound, ovarian reserve assessment (AMH and antral follicle count), hormone testing, tubal patency assessment, and semen analysis for the male partner. Additional investigations are recommended only when clinically indicated, ensuring an evidence-based and individualized approach`,
+    image: '/images/GynecServiceImage2.avif',
   },
   {
     id: 'pcos-care',
     icon: RefreshCw,
     heading: 'PCOS / PMOS Care',
-    shortDesc: 'Individualized treatment for PCOS including cycle regulation and metabolic guidance.',
-    fullDesc: `PCOS can present in different ways, including irregular periods, acne, excess hair growth, difficulty losing weight, infertility, or metabolic concerns. Consultation includes evaluation of menstrual history, ultrasound findings where relevant, and metabolic risk factors. Treatment is individualized and may include cycle regulation, lifestyle advice, management of androgen-related symptoms, and guidance for fertility or long-term health concerns.`,
+    shortDesc: 'Accurate diagnosis and individualized care for PCOS, focusing on symptom management and long-term metabolic health.',
+    fullDesc: `Polycystic Ovary Syndrome (PCOS) is one of the most common hormonal disorders affecting women of reproductive age. It may present with irregular or infrequent periods, acne, excessive hair growth, difficulty conceiving, or weight-related concerns, although many women with PCOS have a normal body weight. Left untreated, PCOS can increase the long-term risk of diabetes, metabolic disorders, and endometrial problems.\n
+Our approach focuses on accurate diagnosis, identifying the specific PCOS phenotype, and individualized treatment. Care includes lifestyle guidance, management of menstrual and hormonal symptoms, fertility evaluation when required, and long-term monitoring to help protect your reproductive and overall health.
+`,
+    image: '/images/GynecServiceImage3.avif',
+  },
+  {
+    id: 'preconception-counselling',
+    icon: HeartHandshake,
+    heading: 'Preconception Counselling',
+    shortDesc: 'Personalized health assessment and guidance before conception to ensure the best possible start for a healthy pregnancy.',
+    fullDesc: `Planning a pregnancy is the first step towards a healthy mother and baby. Preconception counselling helps identify and address medical, lifestyle, and reproductive factors before conception, improving the chances of a healthy pregnancy and reducing preventable complications.\n
+Assessment includes a review of your medical history, medications, immunization status, menstrual health, nutrition, weight, and any existing medical conditions. Individualized advice is provided on optimizing health, managing chronic illnesses, and planning pregnancy at the right time.\n
+Our goal is to help you begin your pregnancy with confidence through personalized, evidence-based care tailored to your individual needs.`,
+    image: '/images/GynecServiceImage4.avif',
+  },
+  {
+    id: 'early-pregnancy-care',
+    icon: Baby,
+    heading: 'Early Pregnancy Care',
+    shortDesc: 'Compassionate first-trimester care, including essential screening tests, early ultrasound, and personalized guidance.',
+    fullDesc: `Compassionate care from the very beginning of pregnancy, with a focus on maternal well-being and healthy fetal development. Services include early pregnancy ultrasound, essential blood tests, and screening for anemia, blood group, infections, and diabetes where indicated. We also provide guidance on nutrition, medications, and first-trimester screening, NIPT, and NT scan to support a healthy pregnancy.`,
+    image: '/images/GynecServiceImage5.avif',
+  },
+  {
+    id: 'cervical-cancer-screening',
+    icon: ShieldCheck,
+    heading: 'Cervical Cancer Screening',
+    shortDesc: 'Evidence-based screening including Pap smears and HPV DNA testing for early detection and long-term cervical health.',
+    fullDesc: `Our screening services include Pap smear (cytology), HPV DNA testing, and colposcopy when indicated. We follow evidence-based screening recommendations and provide individualized advice based on your age, screening history, HPV status, and risk factors.\n
+Early detection offers the best opportunity for prevention, timely treatment, and long-term peace of mind. Screening is recommended even in the absence of symptoms, as early cervical changes usually do not cause noticeable signs.`,
+    image: '/images/GynecServiceImage6.avif',
+  },
+  {
+    id: 'colposcopy-and-vulval-evaluation',
+    icon: ZoomIn,
+    heading: 'Colposcopy and Vulval Evaluation',
+    shortDesc: 'Expert high-definition (HD) magnification of the cervix and vulva for precise diagnosis of abnormal screening results and symptoms.',
+    fullDesc: `Expert evaluation for abnormal Pap smears, HPV infection, persistent cervical abnormalities, and vulval symptoms using high-definition (HD) magnification. Colposcopy allows detailed assessment of the cervix, while vulvoscopy provides careful examination of the vulva to identify inflammatory, precancerous, and other vulval disorders. When required, targeted biopsies are performed to ensure an accurate diagnosis and appropriate treatment.\n
+Vulval assessment is guided by the TRIV framework, a systematic approach that evaluates Texture, Redness, Inspection, and Variation to help identify subtle vulval changes and support precise diagnosis`,
     image: '/images/GynecServiceImage7.avif',
   },
   {
     id: 'menopause-consultation',
     icon: Heart,
     heading: 'Menopause Consultation',
-    shortDesc: 'Evidence-based symptom relief and guidance on long-term health after menopause.',
-    fullDesc: `Perimenopause and menopause can bring a range of symptoms such as hot flashes, sleep disturbance, mood changes, irregular bleeding, vaginal dryness, urinary discomfort, and sexual health concerns. Menopause consultation focuses on symptom relief, reassurance, appropriate evaluation of abnormal bleeding where needed, and guidance on long-term health after menopause, including bone and metabolic health where relevant.`,
+    shortDesc: 'Comprehensive assessment and tailored treatments to relieve menopausal symptoms and protect your long-term health and well-being.',
+    fullDesc: `Whether you are experiencing hot flushes, night sweats, irregular periods, mood changes, sleep disturbances, vaginal dryness, urinary symptoms, or concerns about bone and heart health, personalized care can help you manage this transition with confidence and comfort.\n
+Care begins with a comprehensive assessment of your symptoms, medical history, and individual health risks. Treatment is tailored to your needs and may include lifestyle and dietary advice, menopausal hormone therapy (when appropriate), non-hormonal treatment options, and measures to protect bone, cardiovascular, and urogenital health.\n
+Our aim is to help you remain healthy, active, and confident, while improving your quality of life during the menopausal transition and beyond.`,
     image: '/images/GynecServiceImage8.avif',
-  },
-  {
-    id: 'early-pregnancy-care',
-    icon: Baby,
-    heading: 'Early Pregnancy Care',
-    shortDesc: 'Expert care for the first trimester, covering milestones, screening tests, and lifestyle guidance.',
-    fullDesc: `Our early pregnancy care focuses on a healthy start for you and your baby. We guide you through first trimester milestones to understand early growth and development. We provide essential screening tests and offer advice on diet and lifestyle for nourishing choices and a strong foundation.`,
-    image: '/images/GynecServiceImage9.avif',
-  },
-  {
-    id: 'preconception-counselling',
-    icon: HeartHandshake,
-    heading: 'Preconception Counselling',
-    shortDesc: 'Comprehensive guidance including health assessment, medication review, vaccinations, and genetic counselling.',
-    fullDesc: `Preconception counselling provides couples with essential guidance before conception. Our approach includes a thorough health assessment, careful review of medications, necessary vaccinations, and genetic counselling. This proactive evaluation helps ensure the best possible start for a healthy pregnancy.`,
-    image: '/images/GynecServiceImage10.avif',
   },
   {
     id: 'second-opinion',
     icon: MessageSquareDot,
     heading: 'Second Opinion Consultation',
-    shortDesc: 'Careful second opinion for complex gynecological problems and uncertain diagnoses.',
-    fullDesc: `Consultation for women seeking a careful second opinion in complex gynecological problems, uncertain diagnoses, abnormal reports, or when treatment options need thoughtful review before proceeding further.`,
-    image: '/images/GynecService8.webp',
+    shortDesc: 'Unbiased, evidence-based review of your diagnosis or advised treatment to help you make confident and informed healthcare decisions.',
+    fullDesc: `When you are uncertain about a diagnosis, advised surgery, or not improving with treatment, seeking a second opinion can help you move forward with confidence. We provide a careful, unbiased review of your medical history, examination findings, investigations, and previous treatment. The aim is to confirm the diagnosis, explore appropriate alternatives where available, and help you make informed decisions based on the best available evidence.`,
+    image: '/images/GynecServiceImage9.avif',
   },
 ];

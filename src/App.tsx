@@ -61,12 +61,14 @@ export default function App() {
               <Route path="/blog/:slug" element={<Navigate to="/patient-education/:slug" replace />} />
 
               {/* Legacy redirects — old service page URLs → /services */}
-              <Route path="/gynecology" element={<Navigate to="/services/comprehensive-gynecology" replace />} />
+              <Route path="/gynecology" element={<Navigate to="/services" replace />} />
               <Route path="/earlypregnancycare" element={<Navigate to="/services/early-pregnancy-care" replace />} />
               <Route path="/fertility" element={<Navigate to="/services/fertility-consultation" replace />} />
               <Route path="/diagnostics" element={<Navigate to="/services/gynecologic-ultrasound" replace />} />
               <Route path="/second-opinion" element={<Navigate to="/services/second-opinion" replace />} />
               <Route path="/services/cervical-screening" element={<Navigate to="/services/cervical-cancer-screening" replace />} />
+              <Route path="/services/colposcopy" element={<Navigate to="/services/colposcopy-and-vulval-evaluation" replace />} />
+              <Route path="/services/vulval-evaluation" element={<Navigate to="/services/colposcopy-and-vulval-evaluation" replace />} />
               <Route path="/services/pregnancy-consultation" element={<Navigate to="/services/early-pregnancy-care" replace />} />
 
               <Route path="*" element={<NotFound />} />

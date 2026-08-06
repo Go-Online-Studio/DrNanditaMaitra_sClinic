@@ -1,22 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageSEO from './PageSEO';
-import { ArrowLeft, Award, BookOpen, GraduationCap, Heart, HeartHandshake, ArrowRight, Star, Quote, Users, Shield, Globe } from 'lucide-react';
+import { ZoomIn, ArrowLeft, Award, BookOpen, GraduationCap, Heart, HeartHandshake, ArrowRight, Star, Quote, Users, Shield, Globe } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import { Fancybox } from '@fancyapps/ui';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 export default function About() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    Fancybox.bind('[data-fancybox="facility-gallery"]', {
+      Hash: false,
+    });
+
+    return () => {
+      Fancybox.unbind('[data-fancybox="facility-gallery"]');
+      Fancybox.close();
+    };
+  }, []);
+
   const clinicImages = [
-    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&q=80&w=1200"
+    "/images/GalleryAbout1.avif",
+    "/images/GalleryAbout2.avif",
+    "/images/GalleryAbout3.avif",
+    "/images/GalleryAbout4.avif",
+    "/images/GalleryAbout5.avif",
+    "/images/GalleryAbout6.avif",
+    "/images/GalleryAbout7.avif",
+    "/images/GalleryAbout8.avif"
   ];
   // const milestoneTimeline = [
   //   {
@@ -86,7 +103,7 @@ export default function About() {
 
         {/* Banner Section */}
         <div className="w-full mb-12 lg:mb-16 rounded-3xl overflow-hidden border border-[#d19890]/25 shadow-md h-64 md:h-80 lg:h-[400px]">
-           <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200" alt="Clinic Interior" className="w-full h-full object-cover" />
+           <img src="/images/AboutBanner.avif" alt="Clinic Interior" className="w-full h-full object-cover" />
         </div>
 
         {/* Hero Section */}
@@ -96,9 +113,9 @@ export default function About() {
           <div className="w-full lg:w-[35%] flex flex-col items-center lg:items-start text-center lg:text-left space-y-6">
             <div className="w-48 h-48 sm:w-56 sm:h-56 overflow-hidden rounded-full border-4 border-[#F9F8F8] shadow-lg shrink-0 mx-auto lg:mx-0">
                <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400"
+                  src="/images/ProfileDoctor.webp"
                   alt="Dr. Nandita Maitra"
-                  className="w-full h-full object-cover grayscale-40 hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
             </div>
@@ -190,9 +207,9 @@ export default function About() {
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
-              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }} 
               rewind={true}
-              className="w-full h-64 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden"
+              className="w-full md:aspect-[1.5/1] lg:aspect-[1.8/1] rounded-2xl overflow-hidden"
               style={{
                 '--swiper-theme-color': '#4e2627',
                 '--swiper-navigation-size': '24px',
@@ -202,7 +219,22 @@ export default function About() {
             >
               {clinicImages.map((img, idx) => (
                 <SwiperSlide key={idx}>
-                  <img src={img} alt={`Clinic View ${idx + 1}`} className="w-full h-full object-cover" />
+                  <a
+                    href={img}
+                    data-fancybox="facility-gallery"
+                    data-caption={`Clinic View ${idx + 1}`}
+                    className="group relative block w-full h-full cursor-zoom-in overflow-hidden"
+                  >
+                    <img
+                      src={img}
+                      alt={`Clinic View ${idx + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-[#4e2627]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white">
+                      <ZoomIn className="h-6 w-6" />
+                      <span className="text-sm font-semibold tracking-wide">Click to Enlarge</span>
+                    </div>
+                  </a>
                 </SwiperSlide>
               ))}
             </Swiper>

@@ -163,24 +163,24 @@ Thank you!`;
   // Gallery items
   const galleryItems = [
     {
-      src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800',
-      caption: 'The Welcoming Consultation Space - Private, calm, and tailored for absolute patient confidentiality.',
-      alt: 'Private Consultation Area'
+      src: '/images/GalleryHome1.avif',
+      caption: 'A welcoming and patient-friendly clinic entrance.',
+      alt: 'Welcome to Gynecology Clinic'
     },
     {
-      src: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=800',
-      caption: 'Clinical Diagnostics & Screening Room - Equipped with modern, high-precision equipment.',
-      alt: 'Diagnostics Room'
+      src: '/images/GalleryHome2.avif',
+      caption: 'Dedicated care for detailed gynecologic examinations.',
+      alt: 'Colposcopy & Vulval Evaluation'
     },
     {
-      src: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=800',
-      caption: 'Maternity Ultrasound & Evaluation Area - Comfort and care for expectant mothers.',
-      alt: 'Maternity Evaluation Area'
+      src: '/images/GalleryHome3.avif',
+      caption: 'Relax in a clean and comfortable waiting space.',
+      alt: 'Comfortable Waiting Area'
     },
     {
-      src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800',
-      caption: 'Our Relaxing Lounge - Designed to keep families and patient companions perfectly comfortable.',
-      alt: 'Patient Lounge Room'
+      src: '/images/GalleryHome4.avif',
+      caption: 'Private space for preventive women\'s health screening.',
+      alt: 'Cervical Cancer Screening'
     }
   ];
 
@@ -593,7 +593,7 @@ Thank you!`;
                   <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors mb-2 line-clamp-2">
                     {service.heading}
                   </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-2 flex-grow mb-4">
+                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
                     {service.shortDesc}
                   </p>
                   
@@ -733,8 +733,8 @@ Thank you!`;
         </div>
       </section> */}
 
-      {/* 6. Clinic Environment Gallery */}
-      <section className="bg-white/30 backdrop-blur-md border-t border-b border-[#d19890]/10 py-16" id="clinic-gallery">
+      {/* 6. Clinic Environment Gallery - Temporarily removed */}
+      {/* <section className="bg-white/30 backdrop-blur-md border-t border-b border-[#d19890]/10 py-16" id="clinic-gallery">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-3 mb-12">
@@ -783,7 +783,7 @@ Thank you!`;
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* 6.5. Frequently Asked Questions */}
       <section className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8" id="home-faqs-section">

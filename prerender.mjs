@@ -24,9 +24,9 @@ const routes = [
   'patient-education/early-pregnancy-care-first-trimester',
   'patient-education/fertility-evaluation-when-to-consult',
   'services/cervical-screening',
+  'services/colposcopy-and-vulval-evaluation',
   'services/gynecologic-ultrasound',
   'services/fertility-consultation',
-  'services/comprehensive-gynecology',
   'services/pcos-care',
   'services/menopause-consultation',
   'services/pregnancy-consultation',
@@ -54,7 +54,7 @@ const pageMeta = {
   },
   services: {
     title: "Gynecology & Women's Health Services Vadodara | Dr. Nandita Maitra",
-    description: "Comprehensive gynecology services in Vadodara — cervical screening, colposcopy, PCOS care, fertility evaluation, menopause consultation, gynecologic ultrasound, pregnancy consultation, and second opinion.",
+    description: "Comprehensive gynecology services in Vadodara — cervical screening, colposcopy and vulval evaluation, PCOS care, fertility evaluation, menopause consultation, gynecologic ultrasound, pregnancy consultation, and second opinion.",
     canonical: 'https://www.drnanditamaitra.com/services',
   },
   'patient-education': {
@@ -92,6 +92,11 @@ const pageMeta = {
     description: 'Comprehensive evaluation for cervical and vulval health including HPV testing and colposcopy.',
     canonical: 'https://www.drnanditamaitra.com/services/cervical-screening',
   },
+  'services/colposcopy-and-vulval-evaluation': {
+    title: 'Colposcopy and Vulval Evaluation | Dr. Nandita Maitra Vadodara',
+    description: 'Detailed examination of the cervix, vagina, and vulva using colposcopy and vulvoscopy for abnormal smears, HPV, and vulval symptoms.',
+    canonical: 'https://www.drnanditamaitra.com/services/colposcopy-and-vulval-evaluation',
+  },
   'services/gynecologic-ultrasound': {
     title: 'Gynecologic Ultrasound | Dr. Nandita Maitra Vadodara',
     description: 'Expert pelvic ultrasound for diagnosing abnormal bleeding, pain, cysts, and fertility issues.',
@@ -101,11 +106,6 @@ const pageMeta = {
     title: 'Fertility Consultation & Evaluation | Dr. Nandita Maitra Vadodara',
     description: 'Systematic fertility evaluation and guidance for conception and reproductive health.',
     canonical: 'https://www.drnanditamaitra.com/services/fertility-consultation',
-  },
-  'services/comprehensive-gynecology': {
-    title: 'Comprehensive Gynecology Consultation | Dr. Nandita Maitra Vadodara',
-    description: 'Careful evaluation and treatment for a wide range of common gynecological concerns.',
-    canonical: 'https://www.drnanditamaitra.com/services/comprehensive-gynecology',
   },
   'services/pcos-care': {
     title: 'PCOS Care & Treatment | Dr. Nandita Maitra Vadodara',

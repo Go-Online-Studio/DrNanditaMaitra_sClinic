@@ -297,7 +297,7 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
 
   services: {
     title: `Gynecology & Women's Health Services Vadodara | ${DOCTOR_NAME}`,
-    description: `Comprehensive gynecology services in Vadodara — cervical cancer screening, colposcopy, vulval evaluation, PCOS care, fertility evaluation, menopause consultation, gynecologic ultrasound, early pregnancy care, preconception counselling, and second opinion. By ${DOCTOR_NAME}, MBBS MD FRCOG.`,
+    description: `Comprehensive gynecology services in Vadodara — cervical cancer screening, colposcopy and vulval evaluation, PCOS care, fertility evaluation, menopause consultation, gynecologic ultrasound, early pregnancy care, preconception counselling, and second opinion. By ${DOCTOR_NAME}, MBBS MD FRCOG.`,
     canonical: `${DOMAIN}/services`,
     ogTitle: `Women's Health Services | ${DOCTOR_NAME} Vadodara`,
     ogDescription: `Evidence-based gynecology and obstetric services in Vadodara by ${DOCTOR_NAME} — cervical cancer screening, PCOS, fertility, menopause, pregnancy, and more.`,
