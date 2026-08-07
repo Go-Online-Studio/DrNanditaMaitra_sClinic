@@ -27,13 +27,10 @@ export default function About() {
 
   const clinicImages = [
     "/images/GalleryAbout1.avif",
-    "/images/GalleryAbout2.avif",
-    "/images/GalleryAbout3.avif",
     "/images/GalleryAbout4.avif",
-    "/images/GalleryAbout5.avif",
-    "/images/GalleryAbout6.avif",
-    "/images/GalleryAbout7.avif",
-    "/images/GalleryAbout8.avif"
+    "/images/GalleryAbout8.avif",
+    "/images/GalleryAbout2.avif",
+    "/images/GalleryAbout3.avif"
   ];
   // const milestoneTimeline = [
   //   {
