@@ -252,14 +252,14 @@ Thank you!`;
               <div className="relative z-20 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="max-w-2xl space-y-4 sm:space-y-6">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#d19890]/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#d19890] backdrop-blur-sm sm:text-sm">
-                    <Sparkles className="shrink-0 h-4 w-4" /> 35+ Years of Dedicated Clinical Excellence
+                    <Sparkles className="shrink-0 h-4 w-4" /> 35+ Years of Dedicated Clinical Experience
                   </span>
                   <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#F9F8F8]">
                     Ethical and Evidence-Based <br />
                     <span className="text-[#d19890]">Gynecology</span> Care
                   </h2>
                   <p className="text-sm text-slate-200 sm:text-base md:text-lg leading-relaxed">
-                    Guidance and clinical precision from former Medical College Professor, helping mothers navigate safe journeys from conception to childbirth.
+                    Guidance from a former Medical College faculty member for informed decisions and personalised gynaecological care
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
@@ -299,14 +299,14 @@ Thank you!`;
               <div className="relative z-20 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="max-w-2xl space-y-4 sm:space-y-6">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#d19890]/20 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d19890] backdrop-blur-sm sm:text-sm">
-                    <Stethoscope className="shrink-0 h-4 w-4" /> Academic-Grade Consultation & Treatment
+                    <Stethoscope className="shrink-0 h-4 w-4" /> Academic-Grade Consultation
                   </span>
                   <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#F9F8F8]">
-                    Comprehensive <br />
-                    <span className="text-[#d19890]">Gynecology & Wellness</span>
+                    Preventive and Comprehensive <br />
+                    <span className="text-[#d19890]">Gynecology Care</span>
                   </h2>
                   <p className="text-sm text-slate-200 sm:text-base md:text-lg leading-relaxed">
-                    Promoting women's lifelong health with state-of-the-art screenings, preventive guidelines, and minimal-intervention surgical protocols.
+                    Empowering women through preventive health care.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
@@ -346,14 +346,14 @@ Thank you!`;
               <div className="relative z-20 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="max-w-2xl space-y-4 sm:space-y-6">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#d19890]/20 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d19890] backdrop-blur-sm sm:text-sm">
-                    <Award className="shrink-0 h-4 w-4" /> Trusted Teaching Faculty and Surgeon
+                    <Award className="shrink-0 h-4 w-4" /> Trusted Teacher, Clinician and Surgeon
                   </span>
                   <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#F9F8F8]">
                     Empathetic <br />
                     <span className="text-[#d19890]">Fertility Evaluation</span>
                   </h2>
                   <p className="text-sm text-slate-200 sm:text-base md:text-lg leading-relaxed">
-                    Providing transparent family planning answers, modern follicular studies, and ethical guidance aligned with global fertility standards.
+                    Understanding your fertility concerns through compassionate care and systematic evaluation.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
