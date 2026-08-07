@@ -126,7 +126,7 @@ export default function BlogPost() {
         </h1>
 
         {/* Author byline */}
-        <div className="flex items-center gap-3 mb-10 pb-8 border-b border-[#d19890]/15">
+        <div className="flex items-center gap-3 mb-8 pb-8 border-b border-[#d19890]/15">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#d19890]/20 text-[#a46b66]">
             <BookOpen className="h-5 w-5" />
           </div>
@@ -134,6 +134,15 @@ export default function BlogPost() {
             <p className="text-sm font-bold text-[#4e2627]">Dr. Nandita Maitra</p>
             <p className="text-[11px] text-slate-500">MBBS, MD, FRCOG — Senior Gynecologist, Vadodara</p>
           </div>
+        </div>
+
+        {/* Blog Image */}
+        <div className="mb-10 w-full overflow-hidden rounded-2xl bg-slate-100 shadow-sm border border-slate-200/60">
+          <img
+            src={post.imageUrl || "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200"}
+            alt={post.title}
+            className="w-full h-auto aspect-[1.5/1] object-cover"
+          />
         </div>
 
         {/* Article body */}

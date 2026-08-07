@@ -45,8 +45,18 @@ export default function PatientEducation() {
                 className="group flex flex-col rounded-3xl bg-white border border-[#d19890]/20 shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 cursor-pointer"
                 onClick={() => navigate(`/patient-education/${post.slug}`)}
               >
-                {/* Card top accent */}
-                <div className="h-1.5 bg-gradient-to-r from-[#4e2627] to-[#d19890]" />
+                {/* Card top accent / Image */}
+                {post.imageUrl ? (
+                  <div className="w-full aspect-[1.5/1] overflow-hidden bg-slate-100">
+                    <img
+                      src={post.imageUrl}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <div className="h-1.5 bg-gradient-to-r from-[#4e2627] to-[#d19890]" />
+                )}
 
                 <div className="flex flex-col flex-1 p-6 sm:p-7 space-y-4">
                   {/* Category + Read time */}

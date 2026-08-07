@@ -19,6 +19,7 @@ export interface BlogPost {
   ogDescription: string;
   canonical: string;
   ldJson: object;
+  imageUrl?: string;
   sections: BlogSection[];
 }
 
@@ -38,6 +39,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'Acne in Women: Could It Be Hormonal?',
     ogDescription: `Persistent acne in women may be linked to hormonal imbalance or PCOS. Learn about the causes, treatment options, and when to consult a gynecologist.`,
     canonical: `${DOMAIN}/patient-education/acne-in-women-could-it-be-hormonal`,
+    imageUrl: '/images/Acne_in_Women-_Could_It_Be_Hormonal.webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -229,6 +231,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'Healthy Weight Loss for Women: Simple Diet and Lifestyle Tips',
     ogDescription: `Discover safe, sustainable weight-loss strategies for women. Learn how healthy eating and lifestyle changes can improve PCOS, fertility, menstrual health, and overall well-being.`,
     canonical: `${DOMAIN}/patient-education/healthy-weight-loss-for-women`,
+    imageUrl: '/images/Healthy_Weight_Loss_for_Women.webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -457,6 +460,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'Excess Facial or Body Hair in Women (Hirsutism): Could It Be PCOS?',
     ogDescription: `Learn about hirsutism (excess facial or body hair in women), its causes, symptoms, diagnosis, treatment, and its link with PCOS and hormonal imbalance.`,
     canonical: `${DOMAIN}/patient-education/excess-facial-or-body-hair-in-women-hirsutism`,
+    imageUrl: '/images/Hirsutism_and_PCOS.webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -649,6 +653,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'PMS vs. PMDD: Understanding the Difference',
     ogDescription: `Learn the difference between PMS and PMDD, common symptoms, causes, treatment options, and when to consult a gynecologist for severe premenstrual symptoms.`,
     canonical: `${DOMAIN}/patient-education/pms-vs-pmdd-understanding-difference`,
+    imageUrl: '/images/PMS_vs_PMDD_Guide.webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -864,6 +869,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'Polycystic Ovary Syndrome (PCOS): Symptoms, Diagnosis & Treatment',
     ogDescription: `Learn about PCOS, its symptoms, diagnosis, fertility, treatment options, and lifestyle management. Early diagnosis and treatment can improve long-term health and reproductive outcomes.`,
     canonical: `${DOMAIN}/patient-education/polycystic-ovary-syndrome-pcos`,
+    imageUrl: '/images/Polycystic_ovary_syndrome_(The_Basics).webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -1092,6 +1098,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'Painful Periods (Dysmenorrhea): When Should You See a Gynecologist?',
     ogDescription: `Painful periods are common, but severe menstrual cramps are not normal. Learn about the causes, symptoms, treatment options, and when to consult a gynecologist.`,
     canonical: `${DOMAIN}/patient-education/painful-periods-dysmenorrhea`,
+    imageUrl: '/images/Painful_Periods.webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -1246,6 +1253,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ogTitle: 'Is My Period Normal? A Complete Guide to Menstruation',
     ogDescription: `Learn what is considered a normal menstrual cycle, common menstrual symptoms, causes of irregular periods, menstrual hygiene, and when to consult a gynecologist.`,
     canonical: `${DOMAIN}/patient-education/is-my-period-normal`,
+    imageUrl: '/images/Menstrual_Health_Guide.webp',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Article',
