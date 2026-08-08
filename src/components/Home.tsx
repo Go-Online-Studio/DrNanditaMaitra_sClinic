@@ -560,63 +560,95 @@ Thank you!`;
 
       {/* 3. Services Grid: 8 Services */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" id="clinical-services-grid">
-        <div className="text-center space-y-3 mb-12">
-          <span className="inline-block text-xs font-semibold tracking-wider text-[#a46b66] uppercase bg-[#d19890]/10 px-3.5 py-1 rounded-full">
-            Our Services
-          </span>
-          <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#4e2627]">
-            Gynecology &amp; Women's Health Services
-          </h3>
-          <p className="mx-auto max-w-2xl text-sm text-slate-600">
-            At Gynecology Clinic, we offer thoughtful, evidence-based gynecology care with a strong emphasis on prevention, accurate diagnosis, and individualized treatment.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {servicesData.map((service) => {
-            return (
-              <div
-                key={service.id}
-                onClick={() => navigate(`/services/${service.id}`)}
-                className="group cursor-pointer rounded-2xl bg-white border border-[#d19890]/20 overflow-hidden shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#a46b66]/30 flex flex-col"
-              >
-                <div className="relative overflow-hidden bg-gray-100">
-                  <img
-                    src={service.image}
-                    alt={service.heading}
-                    className="w-full aspect-4/3 object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                
-                <div className="p-5 flex flex-col flex-grow">
-                  <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors mb-2 line-clamp-2">
-                    {service.heading}
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-                    {service.shortDesc}
-                  </p>
-                  
-                  <div className="mt-auto flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d19890] group-hover:text-[#a46b66] transition-colors">
-                    Learn More <ChevronRight className="h-3 w-3" />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+         {/* Section Heading */}
+  <div className="text-center mb-10">
+    <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#4e2627]">
+      Our Services
+    </h3>
 
-        {/* View all services CTA */}
-        {/* <div className="text-center mt-10">
-          <button
-            onClick={() => navigate('/services')}
-            className="inline-flex items-center gap-2 rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
-            id="home-services-view-all"
-          >
-            <span>View All Services</span>
-            <ChevronRight className="shrink-0 h-4 w-4" />
-          </button>
-        </div> */}
+    <p className="mx-auto max-w-2xl text-sm text-slate-600">
+      At Gynecology Clinic, we offer thoughtful, evidence-based gynecology
+      care with a strong emphasis on prevention, accurate diagnosis, and
+      individualized treatment.
+    </p>
+  </div>
+
+  {/* Services Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {servicesData.map((service, index) => {
+      const isLastCard = index === servicesData.length - 1;
+
+      return (
+        <div
+          key={service.id}
+          onClick={() => navigate(`/services/${service.id}`)}
+          className={`
+            group
+            cursor-pointer
+            rounded-2xl
+            bg-white
+            border border-[#d19890]/20
+            overflow-hidden
+            shadow-sm
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:shadow-lg
+            hover:border-[#a46b66]/30
+            flex
+            flex-col
+
+            ${
+              isLastCard
+                ? "lg:col-span-4 lg:w-full lg:max-w-[286px] lg:justify-self-center"
+                : ""
+            }
+          `}
+        >
+          {/* Image */}
+          <div className="relative overflow-hidden bg-gray-100">
+            <img
+              src={service.image}
+              alt={service.heading}
+              className="w-full aspect-4/3 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="p-5 flex flex-col flex-grow">
+            <h4 className="font-serif text-lg font-bold text-[#4e2627] group-hover:text-[#a46b66] transition-colors mb-2 line-clamp-2">
+              {service.heading}
+            </h4>
+
+            <p className="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+              {service.shortDesc}
+            </p>
+
+            {/* Learn More */}
+            <div className="mt-auto flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#d19890] group-hover:text-[#a46b66] transition-colors">
+              Learn More
+              <ChevronRight className="h-3 w-3" />
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  {/* View All Services CTA */}
+  {/*
+  <div className="text-center mt-10">
+    <button
+      onClick={() => navigate('/services')}
+      className="inline-flex items-center gap-2 rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-102 focus:outline-none"
+      id="home-services-view-all"
+    >
+      <span>View All Services</span>
+      <ChevronRight className="shrink-0 h-4 w-4" />
+    </button>
+  </div>
+  */}
       </section>
 
       {/* 4. Trust & Statistics */}

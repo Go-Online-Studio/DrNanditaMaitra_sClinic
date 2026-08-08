@@ -39,13 +39,15 @@ export default function ProfessionalDisclaimer() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="rounded-2xl border border-slate-100 bg-white p-6 md:p-10 shadow-sm space-y-6 text-slate-700 leading-relaxed font-sans text-sm md:text-base">
           <p>
-            GYNECOLOGY CLINIC is committed to providing ethical, evidence-based healthcare in accordance with the professional standards of the National Medical Commission (NMC) and the provisions of the Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994 (PCPNDT Act).
+            GYNECOLOGY CLINIC is committed to providing ethical, evidence-based women's healthcare in accordance with the professional standards of the National Medical Commission (NMC) and the provisions of the Pre-Conception and Pre-Natal Diagnostic Techniques (Prohibition of Sex Selection) Act, 1994 (PCPNDT Act).
+
           </p>
           <p>
-            The information provided on this website is intended for patient education and general information only. It should not be considered a substitute for professional medical consultation, diagnosis, or treatment.
+            The information on this website is provided for general educational and informational purposes only. It is not intended to replace professional medical consultation, diagnosis, or treatment. Clinical decisions should always be made in consultation with a qualified healthcare professional after an appropriate medical evaluation.
           </p>
           <p>
-            Fetal sex determination or disclosure is neither performed nor permitted under any circumstances, in accordance with Indian law.
+            In strict compliance with the PCPNDT Act, fetal sex determination, disclosure of fetal sex, and sex selection are neither performed nor permitted under any circumstances. Requests for such information cannot be entertained.
+We are dedicated to delivering compassionate, confidential, and patient-centred care while upholding the highest standards of medical ethics, professionalism, and legal compliance.
           </p>
         </div>
       </div>

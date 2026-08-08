@@ -35,14 +35,19 @@ export default function PatientEducation() {
 
       {/* Blog Post Grid */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16" id="blog-posts-grid">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {BLOG_POSTS.map((post) => {
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-12 lg:grid-cols-12">
+          {BLOG_POSTS.map((post, index) => {
+            const isLastCard = index === BLOG_POSTS.length - 1;
             const categoryClass = CATEGORY_COLORS[post.category] ?? 'bg-slate-50 text-slate-600 border-slate-200';
             return (
               <article
                 key={post.slug}
                 id={`blog-card-${post.slug}`}
-                className="group flex flex-col rounded-3xl bg-white border border-[#d19890]/20 shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 cursor-pointer"
+                className={`group flex flex-col rounded-3xl bg-white border border-[#d19890]/20 shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#a46b66]/30 cursor-pointer ${
+                  isLastCard
+                    ? 'col-span-1 sm:col-span-6 sm:col-start-4 lg:col-span-4 lg:col-start-5'
+                    : 'col-span-1 sm:col-span-6 lg:col-span-4'
+                }`}
                 onClick={() => navigate(`/patient-education/${post.slug}`)}
               >
                 {/* Card top accent / Image */}

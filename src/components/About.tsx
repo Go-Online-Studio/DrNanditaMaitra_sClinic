@@ -3,11 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import PageSEO from './PageSEO';
 import { ZoomIn, ArrowLeft, Award, BookOpen, GraduationCap, Heart, HeartHandshake, ArrowRight, Star, Quote, Users, Shield, Globe } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 import { Fancybox } from '@fancyapps/ui';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
@@ -26,11 +25,30 @@ export default function About() {
   }, []);
 
   const clinicImages = [
-    "/images/GalleryAbout1.avif",
-    "/images/GalleryAbout4.avif",
-    "/images/GalleryAbout8.avif",
-    "/images/GalleryAbout2.avif",
-    "/images/GalleryAbout3.avif"
+    {
+      url: "/images/GalleryAbout1.avif",
+      caption: "Welcome to Gynecology Clinic—where evidence-based care, ethical practice, and personalized attention come together."
+    },
+    {
+      url: "/images/GalleryAbout4.avif",
+      caption: "Welcome. Take a seat. We will listen."
+    },
+    {
+      url: "/images/GalleryAbout9.avif",
+      caption: "Listening with empathy. Caring with expertise."
+    },
+    {
+      url: "/images/GalleryAbout2.avif",
+      caption: "Every woman deserves care in an environment that respects her privacy, dignity, and comfort"
+    },
+    {
+      url: "/images/GalleryAbout8.avif",
+      caption: "Listening first. Examining carefully. Imaging when it adds value."
+    },
+    {
+      url: "/images/GalleryAbout3.avif",
+      caption: "Your safety is our priority. Committed to the highest standards of sterilization and patient safety."
+    }
   ];
   // const milestoneTimeline = [
   //   {
@@ -70,8 +88,8 @@ export default function About() {
       desc: "Fellow of the Royal College of Obstetricians and Gynaecologists, reflecting global academic and clinical excellence."
     },
     {
-      title: "Prolific Medical Author",
-      desc: "Published more than 60 peer-reviewed articles and contributed 12 book chapters to academic gynecology."
+      title: "Medical Author",
+      desc: "Author of 60 + peer reviewed scientific publications and 12 book chapters."
     },
     {
       title: "Clinical Areas of Interest",
@@ -96,11 +114,6 @@ export default function About() {
           </button>
           <span className="text-slate-300">/</span>
           <span className="text-xs font-semibold text-slate-500">About the Clinician</span>
-        </div>
-
-        {/* Banner Section */}
-        <div className="w-full mb-12 lg:mb-16 rounded-3xl overflow-hidden border border-[#d19890]/25 shadow-md h-64 md:h-80 lg:h-[400px]">
-           <img src="/images/AboutBanner.avif" alt="Clinic Interior" className="w-full h-full object-cover" />
         </div>
 
         {/* Hero Section */}
@@ -189,54 +202,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Clinic Visuals Carousel */}
-        <div className="mb-20">
-          <div className="text-center space-y-2 mb-10">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#4e2627]">Our Facility</h3>
-            <p className="text-sm text-slate-500">A glimpse into our comfortable and modern clinic</p>
-          </div>
-          <div className="rounded-3xl overflow-hidden border border-[#d19890]/25 shadow-xl bg-white p-2 sm:p-3">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay, EffectFade]}
-              effect="fade"
-              fadeEffect={{ crossFade: true }}
-              spaceBetween={30}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 5000, disableOnInteraction: false }} 
-              rewind={true}
-              className="w-full md:aspect-[1.5/1] lg:aspect-[1.8/1] rounded-2xl overflow-hidden"
-              style={{
-                '--swiper-theme-color': '#4e2627',
-                '--swiper-navigation-size': '24px',
-                '--swiper-pagination-bullet-inactive-color': '#d19890',
-                '--swiper-pagination-bullet-inactive-opacity': '0.5'
-              } as React.CSSProperties}
-            >
-              {clinicImages.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <a
-                    href={img}
-                    data-fancybox="facility-gallery"
-                    data-caption={`Clinic View ${idx + 1}`}
-                    className="group relative block w-full h-full cursor-zoom-in overflow-hidden"
-                  >
-                    <img
-                      src={img}
-                      alt={`Clinic View ${idx + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-[#4e2627]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white">
-                      <ZoomIn className="h-6 w-6" />
-                      <span className="text-sm font-semibold tracking-wide">Click to Enlarge</span>
-                    </div>
-                  </a>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+        
 
         {/* Credentials and Clinical Philosophy */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
@@ -331,7 +297,10 @@ export default function About() {
               "International Gynecologic Cancer Society (IGCS)",
               "Asia Oceania Research Organisation on Genital Infections and Neoplasia (AOGIN India)",
               "Association of Gynaecologic Oncologists of India (AGOI)",
-              "Society of Fetal Medicine (SFM)"
+              "Society of Fetal Medicine (SFM)",
+              "Indian Society of Gynecologic endoscopists ( IAGE )",
+              "Indian Society for the study of Cervical Pathology and Colposcopy ( ISCCP)"
+
             ].map((body, i) => (
               <span key={i} className="inline-flex items-center rounded-xl bg-[#d19890]/10 px-3.5 py-2 text-xs font-semibold text-[#4e2627] border border-[#d19890]/20 shadow-sm transition-all hover:bg-[#d19890]/20 hover:scale-102">
                 {body}
@@ -340,7 +309,72 @@ export default function About() {
           </div>
         </div>
 
+        {/* Clinic Visuals Carousel */}
+        <div className="mb-20">
+          <div className="text-center space-y-2 mb-10">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#4e2627]">Tour Our Practice</h3>
+            <p className="text-sm text-slate-500">A glimpse into our comfortable clinic</p>
+          </div>
+          <div className="relative px-0 sm:px-2">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={12}
+              slidesPerView={1}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+              }}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }} 
+              rewind={true}
+              className="w-full relative [&_.swiper-pagination]:!bottom-0"
+              style={{
+                '--swiper-theme-color': '#4e2627',
+                '--swiper-navigation-size': '20px',
+                '--swiper-pagination-bullet-inactive-color': '#d19890',
+                '--swiper-pagination-bullet-inactive-opacity': '0.5'
+              } as React.CSSProperties}
+            >
+              {clinicImages.map((img, idx) => (
+                <SwiperSlide key={idx} className="h-auto flex flex-col pb-6">
+                  {/* Image Card Frame */}
+                  <div className="bg-white rounded-[22px] p-3 border border-[#e8d5d1]/80 shadow-sm hover:shadow-md transition-all duration-300 w-full overflow-hidden shrink-0">
+                    <a
+                      href={img.url}
+                      data-fancybox="facility-gallery"
+                      data-caption={img.caption}
+                      className="group relative block w-full aspect-[4/3] rounded-xl overflow-hidden cursor-zoom-in bg-slate-100"
+                    >
+                      <img
+                        src={img.url}
+                        alt={`Clinic View ${idx + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-[#4e2627]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 text-white">
+                        <ZoomIn className="h-5 w-5" />
+                        <span className="text-xs font-semibold tracking-wide">Click to Enlarge</span>
+                      </div>
+                    </a>
+                  </div>
+                  {/* Caption Below Image Frame */}
+                  <div className="pt-3 px-1 flex-1">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+                      {img.caption}
+                    </p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+
       </div>
     </div>
   );
 }
+

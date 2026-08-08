@@ -32,7 +32,7 @@ export default function App() {
   return (
     <Router basename="/">
       <ScrollToTop />
-      <div className="relative flex min-h-screen flex-col bg-[#FAF9F9] text-slate-800 font-sans selection:bg-[#d19890]/70 selection:text-[#4e2627] overflow-x-hidden" id="clinical-root">
+      <div className="relative flex min-h-screen flex-col bg-[#FAF9F9] text-slate-800 font-sans selection:bg-[#d19890]/70 selection:text-[#4e2627] overflow-x-clip" id="clinical-root">
         {/* Ambient Glowing Orbs */}
         <div className="pointer-events-none fixed -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#d19890]/15 blur-[100px] z-0 animate-pulse" style={{ animationDuration: '8s' }} />
         <div className="pointer-events-none fixed top-1/4 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#a46b66]/10 blur-[120px] z-0 animate-pulse" style={{ animationDuration: '12s' }} />

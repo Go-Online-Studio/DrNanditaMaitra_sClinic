@@ -136,7 +136,9 @@ export default function Footer() {
               <strong className="text-[#F9F8F8] uppercase text-[10px] tracking-wider block mb-1">
                 Medical Disclaimer
               </strong>
-              The information presented on this website is strictly for educational and informational purposes only. It is not intended to serve as, nor should it be substituted for, professional medical advice, clinical diagnosis, or medical treatment. Always seek the advice of Dr. Nandita Maitra or another qualified healthcare provider regarding any questions or concerns you have about an obstetric or gynecological condition. Never disregard professional medical advice or delay in seeking it because of information read on this website. For acute emergencies, please contact our helpline or go to the nearest hospital casualty department immediately.
+              The information provided on this website is intended solely for educational and informational purposes. It is not a substitute for professional medical advice, diagnosis, or treatment.<br/>
+Every woman's health concerns are unique. Always consult a qualified healthcare professional for advice regarding your individual medical condition. Do not disregard or delay seeking professional medical care because of information you have read on this website.
+
             </p>
           </div>
 
