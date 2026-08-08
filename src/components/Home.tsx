@@ -401,7 +401,7 @@ Thank you!`;
                 <span className="text-xs font-bold uppercase tracking-wider">Fast Contact Channels</span>
               </div>
               <h3 className="font-serif text-xl font-bold text-[#4e2627]">
-                Connect Instantly with Dr. Maitra’s Clinic
+                Connect with Dr. Maitra’s Clinic
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 For prompt triage, appointment confirmations, or direct driving landmarks to our Race Course office, use the immediate links below.
