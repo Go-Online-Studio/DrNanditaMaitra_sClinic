@@ -42,7 +42,7 @@ export default function Privacy() {
             At <b>GYNECOLOGY CLINIC</b>, we are committed to protecting your privacy and maintaining the confidentiality of your personal information.
           </p>
           <p>
-            Personal information is handled with appropriate safeguards and in accordance with the principles of the <b>Digital Personal Data Protection Act, 2023 (DPDP Act).</b>
+            Personal information is handled with appropriate safeguards and is kept strictly <b>private and confidential</b>.
           </p>
           <p>
             Information voluntarily submitted through our contact or appointment forms, such as your name, phone number, email address, or enquiry, is used solely to respond to your request or facilitate your healthcare needs. We do not sell, rent, or share your personal information with third parties for marketing purposes.

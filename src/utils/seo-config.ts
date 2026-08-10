@@ -4,10 +4,9 @@
 const DOMAIN = 'https://www.drnanditamaitra.com';
 const CLINIC_NAME = "Dr. Nandita Maitra's Clinic";
 const DOCTOR_NAME = 'Dr. Nandita Maitra';
-const ADDRESS = '102, Race Course Medical Centre, Race Course, Vadodara, Gujarat 390007';
+const ADDRESS = '102, next to Pashabhai park, Race Course Medical Centre, Race Course, Vadodara, Gujarat 390007';
 const PHONE = '+912652331818';
 const PHONE_DISPLAY = '0265-2331818';
-const EMAIL = 'info@drnanditamaitra.com';
 const GEO_LAT = '22.310784';
 const GEO_LNG = '73.165440';
 const LOGO = `${DOMAIN}/images/drnanditamaitra-sclinicLogo.svg`;
@@ -20,11 +19,10 @@ export const physicianLdJson = {
   name: DOCTOR_NAME,
   image: LOGO,
   telephone: PHONE,
-  email: EMAIL,
   url: DOMAIN,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '102, Race Course Medical Centre, Race Course',
+    streetAddress: '102, next to Pashabhai park, Race Course Medical Centre, Race Course',
     addressLocality: 'Vadodara',
     addressRegion: 'Gujarat',
     postalCode: '390007',
@@ -80,7 +78,6 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
         name: CLINIC_NAME,
         image: LOGO,
         telephone: PHONE,
-        email: EMAIL,
         url: DOMAIN,
         address: physicianLdJson.address,
         geo: physicianLdJson.geo,
@@ -214,7 +211,6 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
       image: LOGO,
       url: `${DOMAIN}/about`,
       telephone: PHONE,
-      email: EMAIL,
       address: physicianLdJson.address,
       alumniOf: [
         { '@type': 'EducationalOrganization', name: 'Medical College Vadodara (MBBS)' },
@@ -243,7 +239,6 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
         '@type': 'LocalBusiness',
         name: CLINIC_NAME,
         telephone: PHONE,
-        email: EMAIL,
         url: DOMAIN,
         address: physicianLdJson.address,
         geo: physicianLdJson.geo,
@@ -288,7 +283,7 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
         { '@type': 'Question', name: 'Can PCOS be cured permanently?', acceptedAnswer: { '@type': 'Answer', text: 'PCOS is a metabolic and hormonal syndrome. It cannot be cured in a single step, but it can be managed very effectively through lifestyle changes, hormonal therapy, and dietary modifications under expert supervision.' } },
         { '@type': 'Question', name: 'What are the signs of a healthy pregnancy?', acceptedAnswer: { '@type': 'Answer', text: 'Key signs include regular fetal movements after 20 weeks, stable blood pressure, appropriate weight gain, no unexplained bleeding or severe pain, and normal scan results. Regular antenatal checkups are the best way to ensure pregnancy health.' } },
         { '@type': 'Question', name: 'How do I know if I have fertility problems?', acceptedAnswer: { '@type': 'Answer', text: 'If you have been trying to conceive for 12 months (or 6 months if above 35) without success, a fertility evaluation is recommended. This includes hormonal blood tests, ultrasound, and semen analysis for the male partner.' } },
-        { '@type': 'Question', name: "What is Dr. Nandita Maitra's clinic address in Vadodara?", acceptedAnswer: { '@type': 'Answer', text: '102, Race Course Medical Centre, Race Course, Vadodara, Gujarat 390007.' } },
+        { '@type': 'Question', name: "What is Dr. Nandita Maitra's clinic address in Vadodara?", acceptedAnswer: { '@type': 'Answer', text: '102, next to Pashabhai park, Race Course Medical Centre, Race Course, Vadodara, Gujarat 390007.' } },
         { '@type': 'Question', name: 'What are the clinic hours?', acceptedAnswer: { '@type': 'Answer', text: 'Monday to Saturday: 10:30 AM – 12:30 PM and 5:00 PM – 7:00 PM. Closed on Sundays and public holidays.' } },
         { '@type': 'Question', name: 'Does Dr. Maitra offer second opinions for surgery?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Dr. Maitra actively encourages patients to seek second opinions before proceeding with any surgical intervention such as hysterectomy, fibroid surgery, or laparoscopy.' } },
       ],
@@ -338,4 +333,4 @@ export const GEO_TAGS = {
   ICBM: `${GEO_LAT}, ${GEO_LNG}`,
 };
 
-export { DOMAIN, CLINIC_NAME, DOCTOR_NAME, PHONE_DISPLAY, EMAIL, ADDRESS };
+export { DOMAIN, CLINIC_NAME, DOCTOR_NAME, PHONE_DISPLAY, ADDRESS };

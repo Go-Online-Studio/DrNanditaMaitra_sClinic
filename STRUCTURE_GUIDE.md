@@ -138,9 +138,7 @@ The project uses a mix of dynamic and hardcoded WhatsApp lines. **Ensure all of 
 
 ### 5. Email Addresses
 
-- 📄 **[src/components/Footer.tsx](file:///c:/Users/Admin/Desktop/New%20folder/src/components/Footer.tsx)**
-  - **Line 53:** Update `href="mailto:contact@drnanditamaitra.com"`.
-  - **Line 56:** Update visible text `info@drnanditamaitra.com`.
+- *(Email address removed)*
 
 ### 6. Clinic Map Location & Embeds
 

@@ -88,8 +88,8 @@ export default function About() {
       desc: "Fellow of the Royal College of Obstetricians and Gynaecologists, reflecting global academic and clinical excellence."
     },
     {
-      title: "Medical Author",
-      desc: "Author of 60 + peer reviewed scientific publications and 12 book chapters."
+      title: "Research & Academic Contributions",
+      desc: "Dr. Nandita Maitra has authored 63+ peer-reviewed publications, with 530+ citations and a Google Scholar h-index of 10, reflecting her longstanding contribution to research and academic medicine."
     },
     {
       title: "Clinical Areas of Interest",
@@ -178,7 +178,7 @@ export default function About() {
                 She completed her <b>MBBS and MD in Obstetrics & Gynecology</b> from Medical College, Baroda, and holds the prestigious <b>FRCOG (Fellow of the Royal College of Obstetricians and Gynaecologists, United Kingdom)</b>.
               </p>
               <p>
-                Dr. Maitra dedicated more than three decades to the Department of Obstetrics & Gynecology at <b>Medical College and SSG Hospital, Vadodara</b>, where she served as <b>Additional Professor and Unit Head</b> before her retirement. Throughout her academic career, she was actively involved in undergraduate and postgraduate teaching, mentoring future obstetricians and gynecologists while providing comprehensive care to thousands of women.
+                Dr. Maitra spent more than three decades to the Department of Obstetrics & Gynecology at <b>Medical College and SSG Hospital, Vadodara</b>, where she served as <b>Additional Professor and Unit Head</b> before her retirement. Throughout her academic career, she was actively involved in undergraduate and postgraduate teaching, mentoring future obstetricians and gynecologists while providing comprehensive care to thousands of women.
               </p>
               <p>
                 Today, through <b>GYNECOLOGY CLINIC</b>, Dr. Maitra combines decades of academic expertise with compassionate, evidence-based clinical practice. She is committed to providing ethical, individualized care in accordance with National Medical Commission (NMC) ethical guidelines and current evidence-based practice.
@@ -330,7 +330,8 @@ export default function About() {
               }}
               navigation
               pagination={{ clickable: true }}
-              autoplay={{ delay: 5000, disableOnInteraction: false }} 
+              autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }} 
+              speed={1500}
               rewind={true}
               className="w-full relative [&_.swiper-pagination]:!bottom-0"
               style={{

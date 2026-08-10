@@ -4,7 +4,6 @@ import PageSEO from './PageSEO';
 
 const LAST_UPDATED = 'July 1, 2025';
 const CLINIC_NAME = "Dr. Nandita Maitra's Clinic";
-const CONTACT_EMAIL = 'info@drnanditamaitra.com';
 const CONTACT_PHONE = '0265-2331818';
 
 const sections = [
@@ -213,13 +212,6 @@ export default function Privacy() {
             If you have questions about this privacy policy or wish to exercise your data rights, please contact us directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 px-6 py-3 text-sm font-semibold text-white transition-all"
-            >
-              <Mail className="h-4 w-4" />
-              {CONTACT_EMAIL}
-            </a>
             <a
               href={`tel:+912652331818`}
               className="inline-flex items-center gap-2 rounded-full bg-[#d19890] hover:bg-[#a46b66] px-6 py-3 text-sm font-semibold text-[#4e2627] transition-all"

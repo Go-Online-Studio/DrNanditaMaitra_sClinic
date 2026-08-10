@@ -23,7 +23,7 @@ const categories: FAQCategory[] = [
     items: [
       {
         q: 'How do I book an appointment with Dr. Nandita Maitra?',
-        a: 'You can book an appointment by calling our clinic at 0265-2331818, via WhatsApp at +91 90810 05399, by filling out the form on our Contact page, or by visiting our clinic at 102, Race Course Medical Centre, Race Course, Vadodara.',
+        a: 'You can book an appointment by calling our clinic at 0265-2331818, via WhatsApp at +91 90810 05399, by filling out the form on our Contact page, or by visiting our clinic at 102, next to Pashabhai park, Race Course Medical Centre, Race Course, Vadodara.',
       },
       {
         q: 'What are the clinic hours?',

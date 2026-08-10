@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, FormEvent } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { GEO_TAGS } from '../utils/seo-config';
@@ -71,7 +71,7 @@ export default function BlogPost() {
       ).slice(0, 5)
     : [];
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: FormEvent) => {
     e.preventDefault();
     if (searchResults.length === 1) {
       navigate(`/patient-education/${searchResults[0].slug}`);
@@ -80,7 +80,7 @@ export default function BlogPost() {
   };
 
   /* Shared accent-bar article row used in sidebar + mobile */
-  const ArticleRow = ({ p }: { p: typeof BLOG_POSTS[number] }) => (
+  const ArticleRow = ({ p }: { p: typeof BLOG_POSTS[number]; key?: string }) => (
     <div
       onClick={() => navigate(`/patient-education/${p.slug}`)}
       className="group cursor-pointer flex items-start gap-3 p-2 rounded-xl hover:bg-[#d19890]/10 transition-colors"
@@ -280,7 +280,9 @@ export default function BlogPost() {
             className="mt-12 rounded-2xl bg-slate-50 border border-slate-200 px-6 py-5 text-xs text-slate-500 leading-relaxed"
             style={{ maxWidth: '680px' }}
           >
-            <strong className="text-slate-700">Medical Disclaimer:</strong> This patient information is based on current evidence and clinical guidelines. Content has been adapted and simplified for patient education from <strong>UpToDate&reg;</strong>, retrieved on <strong>August 1, 2026</strong>, with additional review and editing by <strong>Dr. Nandita Maitra</strong> to ensure accuracy and relevance for women&apos;s health.
+            <strong className="text-slate-700">Medical Disclaimer:</strong> This article is intended for <strong>general patient education</strong> and is based on <strong>current medical evidence</strong> and clinical guidelines. Reputable medical references, including <strong>UpToDate&reg;</strong>, have been consulted, and the content has been <strong>independently reviewed and edited</strong> by <strong>Dr. Nandita Maitra</strong>.
+            <br /><br />
+            This information is <strong>not a substitute for individual medical advice</strong>, diagnosis, or treatment. Please consult a <strong>qualified healthcare professional</strong> for personalized advice.
           </div>
 
           {/* Inline CTA */}
