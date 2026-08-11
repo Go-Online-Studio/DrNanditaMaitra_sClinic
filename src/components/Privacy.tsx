@@ -6,7 +6,7 @@ export default function Privacy() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#F9F8F8] min-h-screen" id="privacy-policy-page">
+    <div className="bg-[#F9F8F8]" id="privacy-policy-page">
       <PageSEO pageKey="privacy" />
 
       {/* Hero Banner */}
@@ -39,14 +39,14 @@ export default function Privacy() {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="rounded-2xl border border-slate-100 bg-white p-6 md:p-10 shadow-sm space-y-6 text-slate-700 leading-relaxed font-sans text-sm md:text-base">
           <p>
-            At <b>GYNECOLOGY CLINIC</b>, we are committed to protecting your privacy and maintaining the confidentiality of your personal information.
-          </p>
-          <p>
-            Personal information is handled with appropriate safeguards and is kept strictly <b>private and confidential</b>.
-          </p>
-          <p>
-            Information voluntarily submitted through our contact or appointment forms, such as your name, phone number, email address, or enquiry, is used solely to respond to your request or facilitate your healthcare needs. We do not sell, rent, or share your personal information with third parties for marketing purposes.
-          </p>
+                At <b>GYNECOLOGY CLINIC</b>, we respect your privacy and are committed to keeping your personal information <b>private and confidential</b>.
+              </p>
+              <p>
+                Information submitted through our contact or appointment forms is used only to respond to your enquiry, schedule appointments, or facilitate your healthcare needs.
+              </p>
+              <p>
+                We do not sell or use your personal information for marketing. Your data is handled responsibly in accordance with applicable laws, including the <b>Digital Personal Data Protection Act, 2023 (DPDP Act).</b>
+              </p>
         </div>
       </div>
     </div>

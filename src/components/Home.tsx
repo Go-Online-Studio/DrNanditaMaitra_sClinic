@@ -404,7 +404,7 @@ Thank you!`;
                 Clinic Enquiry & Appointment Request
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                For prompt triage, appointment confirmations, or direct driving landmarks to our Race Course office, use the immediate links below.
+                For prompt triage, appointment confirmations, or direct driving landmarks to our Race Course office, use the links below.
               </p>
               
               <div className="pt-4">
