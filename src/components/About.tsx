@@ -85,7 +85,7 @@ export default function About() {
     },
     {
       title: "FRCOG (United Kingdom)",
-      desc: "Fellow of the Royal College of Obstetricians and Gynaecologists, reflecting global academic and clinical excellence."
+      desc: "Fellow of the Royal College of Obstetricians and Gynecologists, reflecting global academic and clinical excellence."
     },
     {
       title: "Research & Academic Contributions",
@@ -172,13 +172,13 @@ export default function About() {
             </span>
             <div className="space-y-5 text-slate-600 text-sm md:text-base leading-relaxed font-sans mt-4">
               <p>
-                <b>Dr. Nandita Maitra, MBBS, MD, FRCOG,</b> is a Senior Consultant Gynecologist and Obstetrician with over <b>35 years of distinguished experience</b> in women's healthcare, obstetrics, gynecology, academic medicine, and clinical teaching.
+                <b>Dr. Nandita Maitra, MBBS, MD, FRCOG,</b> is a Senior Consultant Gynecologist and Obstetrician with over <b>35 years of experience</b> in women's healthcare, obstetrics, gynecology, academic medicine, and clinical teaching.
               </p>
               <p>
-                She completed her <b>MBBS and MD in Obstetrics & Gynecology</b> from Medical College, Baroda, and holds the prestigious <b>FRCOG (Fellow of the Royal College of Obstetricians and Gynaecologists, United Kingdom)</b>.
+                She completed her <b>MBBS and MD in Obstetrics & Gynecology</b> from Medical College, Baroda, and holds the prestigious <b>FRCOG (Fellow of the Royal College of Obstetricians and Gynecologists, United Kingdom)</b>.
               </p>
               <p>
-                Dr. Maitra spent more than three decades to the Department of Obstetrics & Gynecology at <b>Medical College and SSG Hospital, Vadodara</b>, where she served as <b>Additional Professor and Unit Head</b> before her retirement. Throughout her academic career, she was actively involved in undergraduate and postgraduate teaching, mentoring future obstetricians and gynecologists while providing comprehensive care to thousands of women.
+                Dr. Maitra spent more than three decades the Department of Obstetrics & Gynecology at <b>Medical College and SSG Hospital, Vadodara</b>, where she served as <b>Additional Professor and Unit Head</b> before her retirement. Throughout her academic career, she was actively involved in undergraduate and postgraduate teaching, mentoring future obstetricians and gynecologists while providing comprehensive care to thousands of women.
               </p>
               <p>
                 Today, through <b>GYNECOLOGY CLINIC</b>, Dr. Maitra combines decades of academic expertise with compassionate, evidence-based clinical practice. She is committed to providing ethical, individualized care in accordance with National Medical Commission (NMC) ethical guidelines and current evidence-based practice.
@@ -291,12 +291,12 @@ export default function About() {
           </h3>
           <div className="flex flex-wrap gap-3">
             {[
-              "Royal College of Obstetricians and Gynaecologists (RCOG), UK",
-              "Federation of Obstetric and Gynaecological Societies of India (FOGSI)",
+              "Royal College of Obstetricians and Gynecologists (RCOG), UK",
+              "Federation of Obstetric and Gynecological Societies of India (FOGSI)",
               "Indian Menopause Society (IMS)",
               "International Gynecologic Cancer Society (IGCS)",
               "Asia Oceania Research Organisation on Genital Infections and Neoplasia (AOGIN India)",
-              "Association of Gynaecologic Oncologists of India (AGOI)",
+              "Association of Gynecologic Oncologists of India (AGOI)",
               "Society of Fetal Medicine (SFM)",
               "Indian Society of Gynecologic endoscopists ( IAGE )",
               "Indian Society for the study of Cervical Pathology and Colposcopy ( ISCCP)"

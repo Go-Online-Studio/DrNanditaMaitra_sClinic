@@ -261,7 +261,7 @@ Thank you!`;
                     <span className="text-[#d19890]">Gynecology</span> Care
                   </h2>
                   <p className="text-sm text-slate-200 sm:text-base md:text-lg leading-relaxed">
-                    Guidance from a former Medical College faculty member for informed decisions and personalised gynaecological care
+                    Guidance from a former Medical College faculty member for informed decisions and personalised gynecology care
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-3">
                     <button
@@ -399,25 +399,22 @@ Thank you!`;
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
             
             {/* Direct Contact Links / Emergency (4 Cols) */}
-            <div className="lg:col-span-5 space-y-4 border-b border-[#d19890]/15 pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
-              <div className="flex items-center gap-2 text-[#a46b66]">
-                <Clock className="shrink-0 h-5 w-5" />
-                <span className="text-xs font-bold uppercase tracking-wider">Fast Contact Channels</span>
-              </div>
-              <h3 className="font-serif text-xl font-bold text-[#4e2627]">
+            <div className="lg:col-span-5 flex flex-col justify-center space-y-5 border-b border-[#d19890]/15 pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
+              <h3 className="font-serif text-2xl lg:text-3xl font-bold text-[#4e2627] leading-tight">
                 Clinic Enquiry & Appointment Request
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed">
                 For prompt triage, appointment confirmations, or direct driving landmarks to our Race Course office, use the immediate links below.
               </p>
               
-              <div className="flex flex-wrap gap-3">
+              <div className="pt-4">
                 <a
                   href="tel:+912652331818"
-                  className="flex flex-1 items-center justify-center gap-2.5 rounded-xl bg-red-50/60 backdrop-blur-xs hover:bg-red-100 border border-red-200 px-4 py-3 text-red-700 font-mono text-sm font-semibold transition-all shadow-sm"
+                  className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-xl bg-white px-6 py-4 text-red-700 shadow-sm transition-all hover:shadow-md border border-red-100 hover:border-red-200"
                 >
-                  <Phone className="shrink-0 h-4.5 w-4.5 text-red-600 animate-pulse" />
-                  <span>Call: 0265-2331818</span>
+                  <div className="absolute inset-0 bg-red-50/50 translate-x-[-100%] group-hover:translate-x-[0%] transition-transform duration-500" />
+                  <Phone className="relative z-10 shrink-0 h-5 w-5 text-red-600 animate-pulse" />
+                  <span className="relative z-10 font-mono text-lg font-bold tracking-wide">Call: 0265-2331818</span>
                 </a>
               </div>
             </div>
@@ -443,7 +440,7 @@ Thank you!`;
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-[#d19890]/10">
                     <h4 className="font-serif text-base font-bold text-[#4e2627] flex items-center gap-1.5 justify-center sm:justify-start">
                       <Calendar className="shrink-0 h-4.5 w-4.5 text-[#a46b66]" />
-                      <span>Quick Clinic Inquiry & Triage</span>
+                      <span>Book an appointment</span>
                     </h4>
                     <span className="text-[10px] glass-badge text-[#4e2627] px-2.5 py-1.5 rounded-md font-bold uppercase tracking-wider text-center self-center sm:self-auto">
                       Private & Confidential
@@ -676,7 +673,7 @@ Thank you!`;
                  <div className="flex flex-col gap-4 pt-2">
                    <div className="flex items-start gap-3">
                      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#d19890]" />
-                     <span className="text-sm text-slate-200">Holds prestigious Fellow of the Royal College of Obstetricians and Gynaecologists (FRCOG, UK)</span>
+                     <span className="text-sm text-slate-200">Holds prestigious Fellow of the Royal College of Obstetricians and Gynecologists (FRCOG, UK)</span>
                    </div>
                    <div className="flex items-start gap-3">
                      <CheckCircle className="mt-1 h-5 w-5 shrink-0 text-[#d19890]" />

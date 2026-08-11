@@ -135,27 +135,38 @@ export default function Footer() {
         <div className="my-10 border-t border-[#d19890]/20" />
 
         {/* Legal, Medical Disclaimers and Privacy Notes */}
-        <div className="space-y-4 font-sans text-xs text-[#F9F8F8]/70">
+        <div className="space-y-6 font-sans text-xs text-[#F9F8F8]/70">
           <div className="flex items-start gap-2.5">
             <ShieldCheck className="mt-0.5 h-4.5 w-4.5 shrink-0 text-[#d19890]" />
-            <p className="leading-relaxed">
-              <strong className="text-[#F9F8F8] uppercase text-[10px] tracking-wider block mb-1">
+            <div className="space-y-2 leading-relaxed">
+              <strong className="text-[#F9F8F8] uppercase text-[10px] tracking-wider block">
                 Medical Disclaimer
               </strong>
-              The information provided on this website is intended solely for educational and informational purposes. It is not a substitute for professional medical advice, diagnosis, or treatment.<br/>
-Every woman's health concerns are unique. Always consult a qualified healthcare professional for advice regarding your individual medical condition. Do not disregard or delay seeking professional medical care because of information you have read on this website.
-
-            </p>
+              <p>
+                The information provided on this website is intended solely for educational and informational purposes. It is not a substitute for professional medical advice, diagnosis, or treatment.
+              </p>
+              <p>
+                Every woman's health concerns are unique. Always consult a qualified healthcare professional for advice regarding your individual medical condition. Do not disregard or delay seeking professional medical care because of information you have read on this website.
+              </p>
+            </div>
           </div>
 
           <div className="flex items-start gap-2.5">
             <ShieldCheck className="mt-0.5 h-4.5 w-4.5 shrink-0 text-[#d19890]" />
-            <p className="leading-relaxed">
-              <strong className="text-[#F9F8F8] uppercase text-[10px] tracking-wider block mb-1">
-                Privacy & Confidentiality (NMC Ethics)
+            <div className="space-y-2 leading-relaxed">
+              <strong className="text-[#F9F8F8] uppercase text-[10px] tracking-wider block">
+                Privacy & Confidentiality
               </strong>
-              Patient privacy is our utmost priority. Any personal health details submitted via our Quick Inquiry Form are kept strictly private and confidential. We adhere strictly to patient-doctor confidentiality as mandated by the National Medical Commission (NMC) Code of Medical Ethics and do not share health parameters with third-party networks.
-            </p>
+              <p>
+                At <b>GYNECOLOGY CLINIC</b>, we respect your privacy and are committed to keeping your personal information <b>private and confidential</b>.
+              </p>
+              <p>
+                Information submitted through our contact or appointment forms is used only to respond to your enquiry, schedule appointments, or facilitate your healthcare needs.
+              </p>
+              <p>
+                We do not sell or use your personal information for marketing. Your data is handled responsibly in accordance with applicable laws, including the <b>Digital Personal Data Protection Act, 2023 (DPDP Act).</b>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -166,14 +177,14 @@ Every woman's health concerns are unique. Always consult a qualified healthcare 
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-[#F9F8F8]/65 sm:flex-row font-sans">
           <p className='text-center sm:text-left'>© {currentYear} All rights reserved by Dr. Nandita Maitra's Clinic. Designed and developed by <a className="hover:text-[#ffffff] transition-colors focus:outline-none" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
           </a> </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <Link to="/privacy" className="hover:text-[#d19890] transition-colors focus:outline-none">
               Privacy Policy
             </Link>
             <Link to="/disclaimer" className="hover:text-[#d19890] transition-colors focus:outline-none">
               Professional & Legal Disclaimer
             </Link>
-            <Link to="/contact" className="hover:text-[#d19890] transition-colors focus:outline-none">
+            <Link to="/contact" className="hidden sm:block hover:text-[#d19890] transition-colors focus:outline-none">
               Contact Us
             </Link>
           </div>
