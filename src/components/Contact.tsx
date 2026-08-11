@@ -167,7 +167,7 @@ Thank you!`;
 
           {/* Column 2: Booking/Inquiry Form (7 Cols) */}
           <div className="lg:col-span-7">
-            <div className="rounded-2xl glass-panel-heavy border border-[#d19890]/20 p-3 sm:p-8 shadow-xl space-y-6 h-full">
+            <div className="rounded-2xl glass-panel-heavy backdrop-blur-xl border border-[#d19890]/20 p-3 sm:p-8 shadow-xl space-y-6 h-full">
               {formSubmitted ? (
                 <div className="text-center py-12 space-y-4">
                   <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">

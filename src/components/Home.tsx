@@ -395,7 +395,7 @@ Thank you!`;
 
       {/* 2. Quick Action Bar (Sticky-on-mobile style immediately below Hero) */}
       <section className="relative z-30 mx-auto -mt-10 max-w-6xl px-4 pb-8" id="quick-action-bar">
-        <div className="glass-panel-heavy rounded-2xl p-3 sm:p-6 shadow-xl border border-[#d19890]/20">
+        <div className="glass-panel-heavy backdrop-blur-xl rounded-2xl p-3 sm:p-6 shadow-xl border border-[#d19890]/20">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
             
             {/* Direct Contact Links / Emergency (4 Cols) */}
