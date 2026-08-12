@@ -27,15 +27,15 @@ export default function About() {
   const clinicImages = [
     {
       url: "/images/GalleryAbout1.avif",
-      caption: "Welcome to Gynecology Clinic—where evidence-based care, ethical practice, and personalized attention come together."
+      caption: "Welcome to Gynecology Clinic."
     },
     {
       url: "/images/GalleryAbout4.avif",
-      caption: "Welcome. Take a seat. We will listen."
+      caption: "Welcome. Take a seat."
     },
     {
       url: "/images/GalleryAbout9.avif",
-      caption: "Listening with empathy. Caring with expertise."
+      caption: "Listening with empathy."
     },
     {
       url: "/images/GalleryAbout2.avif",
@@ -175,7 +175,7 @@ export default function About() {
                 <b>Dr. Nandita Maitra, MBBS, MD, FRCOG,</b> is a Senior Consultant Gynecologist and Obstetrician with over <b>35 years of experience</b> in women's healthcare, obstetrics, gynecology, academic medicine, and clinical teaching.
               </p>
               <p>
-                She completed her <b>MBBS and MD in Obstetrics & Gynecology</b> from Medical College, Baroda, and holds the prestigious <b>FRCOG (Fellow of the Royal College of Obstetricians and Gynecologists, United Kingdom)</b>.
+                She completed her <b>MBBS and MD in Obstetrics & Gynecology</b> from Medical College, Baroda, and holds <b>FRCOG (Fellow of the Royal College of Obstetricians and Gynecologists, United Kingdom)</b>.
               </p>
               <p>
                 Dr. Maitra spent more than three decades in the Department of Obstetrics & Gynecology at <b>Medical College and SSG Hospital, Vadodara</b>, where she served as <b>Additional Professor and Unit Head</b> before her retirement. Throughout her academic career, she was actively involved in undergraduate and postgraduate teaching, mentoring future obstetricians and gynecologists while providing comprehensive care to thousands of women.
@@ -193,7 +193,7 @@ export default function About() {
                     onClick={() => navigate('/contact')}
                     className="rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-6 py-4 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none flex items-center justify-center gap-2 w-full sm:w-auto"
                   >
-                    <span>Book Appointment Now</span>
+                    <span>Appointment and Inquiries</span>
                     <ArrowRight className="shrink-0 h-4 w-4" />
                   </button>
                 </div>

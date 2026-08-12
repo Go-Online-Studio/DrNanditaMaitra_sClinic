@@ -101,7 +101,7 @@ export default function ServiceDetail() {
                   className="flex items-center gap-3 w-full rounded-xl bg-[#4e2627] hover:bg-[#a46b66] text-white p-4 transition-colors font-semibold shadow-md focus:outline-none"
                 >
                   <Calendar className="h-5 w-5" />
-                  Book Appointment
+                  Appointment and Inquiries
                 </button>
               </div>
             </div>

@@ -128,7 +128,7 @@ const pageMeta = {
     canonical: 'https://www.drnanditamaitra.com/services/second-opinion',
   },
   contact: {
-    title: "Book Appointment | Dr. Nandita Maitra's Clinic Vadodara",
+    title: "Appointment and Inquiries | Dr. Nandita Maitra's Clinic Vadodara",
     description: "Book a consultation with Dr. Nandita Maitra at Race Course Medical Centre, Vadodara. Call 0265-2331818.",
     canonical: 'https://www.drnanditamaitra.com/contact',
   },

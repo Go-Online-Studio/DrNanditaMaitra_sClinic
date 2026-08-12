@@ -47,7 +47,7 @@ export default function ProfessionalDisclaimer() {
           </p>
           <p>
             In strict compliance with the PCPNDT Act, fetal sex determination, disclosure of fetal sex, and sex selection are neither performed nor permitted under any circumstances. Requests for such information cannot be entertained.
-We are dedicated to delivering compassionate, confidential, and patient-centred care while upholding the highest standards of medical ethics, professionalism, and legal compliance.
+We are dedicated to delivering compassionate, confidential, and patient-centred care while upholding the standards of medical ethics, professionalism, and legal compliance.
           </p>
         </div>
       </div>

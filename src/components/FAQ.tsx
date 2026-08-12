@@ -265,7 +265,7 @@ export default function FAQ() {
                 onClick={() => navigate('/contact')}
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[#4e2627]/20 bg-white hover:bg-slate-50 text-[#4e2627] px-6 py-2.5 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none"
               >
-                Book Appointment
+                Appointment and Inquiries
               </button>
             </div>
           </div>

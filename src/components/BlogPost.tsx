@@ -295,7 +295,7 @@ export default function BlogPost() {
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d19890] hover:bg-[#a46b66] text-[#4e2627] hover:text-white px-6 py-3 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none"
                 id="blog-cta-contact"
               >
-                Book Appointment
+                Appointment and Inquiries
               </button>
               <a
                 href="tel:+912652331818"
@@ -438,7 +438,7 @@ export default function BlogPost() {
                 className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#d19890] hover:bg-[#a46b66] text-[#4e2627] hover:text-white py-2.5 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none"
                 id="sidebar-cta-book"
               >
-                Book Appointment
+                Appointment and Inquiries
               </button>
               <a
                 href="tel:+912652331818"
