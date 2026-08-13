@@ -36,7 +36,7 @@ Evaluation may include ovulation monitoring (cycle studies), pelvic ultrasound, 
     heading: 'PCOS / PMOS Care',
     shortDesc: 'Appropriate diagnosis and individualized care for PCOS, focusing on symptom management and long-term metabolic health.',
     fullDesc: `Polycystic Ovary Syndrome (PCOS) is one of the most common hormonal disorders affecting women of reproductive age. It may present with irregular or infrequent periods, acne, excessive hair growth, difficulty conceiving, or weight-related concerns, although many women with PCOS have a normal body weight. Left untreated, PCOS can increase the long-term risk of diabetes, metabolic disorders, and endometrial problems.\n
-Our approach focuses on diagnosis, identifying the specific PCOS phenotype, and individualized treatment. Care includes lifestyle guidance, management of menstrual and hormonal symptoms, fertility evaluation when required, and long-term monitoring to help protect your reproductive and overall health.
+Our approach focuses on appropriate diagnosis, identifying the specific PCOS phenotype, and individualized treatment. Care includes lifestyle guidance, management of menstrual and hormonal symptoms, fertility evaluation when required, and long-term monitoring to help protect your reproductive and overall health.
 `,
     image: '/images/GynecServiceImage3.avif',
   },
