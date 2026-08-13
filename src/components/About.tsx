@@ -159,7 +159,7 @@ export default function About() {
                  </div>
                  <div className="flex items-center gap-3 text-sm text-slate-600 justify-center lg:justify-start">
                    <Globe className="h-4.5 w-4.5 text-[#d19890] shrink-0" />
-                   <span>RCOG (UK) Registration No. 102761</span>
+                   <span>RCOG (UK) Membership Number 102761</span>
                  </div>
               </div>
             </div>
