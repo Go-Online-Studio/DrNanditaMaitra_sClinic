@@ -64,7 +64,7 @@ export default function Footer() {
                   className="flex items-center gap-2 hover:text-[#d19890] transition-colors focus:outline-none cursor-pointer"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#d19890]/40"></span>
-                  <span>Appointment and Inquiries</span>
+                  <span>Appointment and Enquiries</span>
                 </Link>
               </li>
             </ul>

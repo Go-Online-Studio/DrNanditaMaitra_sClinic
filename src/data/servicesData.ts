@@ -35,7 +35,7 @@ Evaluation may include ovulation monitoring (cycle studies), pelvic ultrasound, 
     icon: RefreshCw,
     heading: 'PCOS / PMOS Care',
     shortDesc: 'Appropriate diagnosis and individualized care for PCOS, focusing on symptom management and long-term metabolic health.',
-    fullDesc: `Polycystic Ovary Syndrome (PCOS) is one of the most common hormonal disorders affecting women of reproductive age. It may present with irregular or infrequent periods, acne, excessive hair growth, difficulty conceiving, or weight-related concerns, although many women with PCOS have a normal body weight. Left untreated, PCOS can increase the long-term risk of diabetes, metabolic disorders, and endometrial problems.\n
+    fullDesc: `Polycystic Ovary Syndrome (PCOS) is one of the most common hormonal disorders affecting women of reproductive age. It may present with irregular or infrequent periods, acne, excessive hair growth, difficulty conceiving, or weight-related concerns, although many women with PCOS have a normal body weight. PCOS can increase the long-term risk of diabetes, metabolic disorders, and endometrial problems.\n
 Our approach focuses on appropriate diagnosis, identifying the specific PCOS phenotype, and individualized treatment. Care includes lifestyle guidance, management of menstrual and hormonal symptoms, fertility evaluation when required, and long-term monitoring to help protect your reproductive and overall health.
 `,
     image: '/images/GynecServiceImage3.avif',
@@ -72,7 +72,7 @@ Early detection offers the best opportunity for prevention, timely treatment, an
     icon: ZoomIn,
     heading: 'Colposcopy and Vulval Evaluation',
     shortDesc: 'High-definition (HD) magnification of the cervix and vulva for diagnosis of abnormal screening results and symptoms.',
-    fullDesc: `Expert evaluation for abnormal Pap smears, HPV infection, persistent cervical abnormalities, and vulval symptoms using high-definition (HD) magnification. Colposcopy allows detailed assessment of the cervix, while vulvoscopy provides careful examination of the vulva to identify inflammatory, precancerous, and other vulval disorders, when clinically indicated targeted biopsy may be performed or arranged.\n
+    fullDesc: `Expert evaluation for abnormal Pap smears, HPV infection, persistent cervical abnormalities, and vulval symptoms using high-definition (HD) magnification. Colposcopy allows detailed assessment of the cervix, while vulvoscopy provides careful examination of the vulva to identify inflammatory, precancerous, and other vulval disorders. When clinically indicated targeted biopsy may be performed or arranged.\n
 Vulval assessment includes a systematic 3-ring examination of the vulva, assessing the inner, middle and outer zones for changes in colour, texture, erythema, pigmentation, lesions and architectural changes. Vulvoscopy may be performed when clinically indicated to further evaluate subtle abnormalities and guide appropriate management.`,
     image: '/images/GynecServiceImage7.avif',
   },

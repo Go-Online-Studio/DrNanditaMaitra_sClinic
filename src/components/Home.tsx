@@ -321,7 +321,7 @@ Thank you!`;
                       onClick={() => navigate('/contact')}
                       className="rounded-full bg-[#4e2627] border border-[#d19890]/40 hover:bg-[#a46b66] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:scale-102 focus:outline-none"
                     >
-                      Appointment and Inquiries
+                      Appointment and Enquiries
                     </button>
                   </div>
                 </div>
@@ -404,7 +404,7 @@ Thank you!`;
                 Clinic Enquiry & Appointment Request
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                For prompt triage, appointment confirmations, or direct driving landmarks to our Race Course office, use the links below.
+                For appointment confirmations, or direct driving landmarks to our Race Course office, use the links below.
               </p>
               
               <div className="pt-4">
@@ -440,7 +440,7 @@ Thank you!`;
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-[#d19890]/10">
                     <h4 className="font-serif text-base font-bold text-[#4e2627] flex items-center gap-1.5 justify-center sm:justify-start">
                       <Calendar className="shrink-0 h-4.5 w-4.5 text-[#a46b66]" />
-                      <span>Appointment and Inquiries</span>
+                      <span>Appointment and Enquiries</span>
                     </h4>
                     <span className="text-[10px] glass-badge text-[#4e2627] px-2.5 py-1.5 rounded-md font-bold uppercase tracking-wider text-center self-center sm:self-auto">
                       Private & Confidential

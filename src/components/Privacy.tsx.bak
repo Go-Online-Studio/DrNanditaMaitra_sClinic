@@ -33,7 +33,7 @@ const sections = [
     content: [
       {
         subtitle: 'Appointment & Communication',
-        text: 'Contact information is used to schedule and confirm your appointments, send reminders, and respond to your inquiries. We do not use your contact data for unsolicited marketing.',
+        text: 'Contact information is used to schedule and confirm your appointments, send reminders, and respond to your Enquiries. We do not use your contact data for unsolicited marketing.',
       },
       {
         subtitle: 'Clinical Care',

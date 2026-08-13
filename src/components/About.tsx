@@ -47,7 +47,7 @@ export default function About() {
     },
     {
       url: "/images/GalleryAbout3.avif",
-      caption: "Your safety is our priority. Committed to the highest standards of sterilization and patient safety."
+      caption: "Your safety is our priority. Committed to the standards of sterilization and patient safety."
     }
   ];
   // const milestoneTimeline = [
@@ -193,7 +193,7 @@ export default function About() {
                     onClick={() => navigate('/contact')}
                     className="rounded-full bg-[#4e2627] hover:bg-[#a46b66] text-white px-6 py-4 text-xs font-bold uppercase tracking-wider transition-all shadow-lg hover:translate-y-[-1px] focus:outline-none flex items-center justify-center gap-2 w-full sm:w-auto"
                   >
-                    <span>Appointment and Inquiries</span>
+                    <span>Appointment and Enquiries</span>
                     <ArrowRight className="shrink-0 h-4 w-4" />
                   </button>
                 </div>

@@ -107,7 +107,7 @@ export default function Services() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d19890] hover:bg-[#a46b66] text-[#4e2627] hover:text-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider transition-all shadow-md focus:outline-none"
               id="services-cta-contact"
             >
-              <span>Appointment and Inquiries</span>
+              <span>Appointment and Enquiries</span>
               <ArrowRight className="shrink-0 h-4 w-4" />
             </button>
             <button

@@ -222,8 +222,8 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
   },
 
   contact: {
-    title: `Appointment and Inquiries | ${DOCTOR_NAME} Clinic Vadodara`,
-    description: `Appointment and Inquiries with ${DOCTOR_NAME} at Race Course Medical Centre, Vadodara. Clinic hours: Mon–Sat 10:30AM–12:30PM & 5PM–7PM. Call ${PHONE_DISPLAY}.`,
+    title: `Appointment and Enquiries | ${DOCTOR_NAME} Clinic Vadodara`,
+    description: `Appointment and Enquiries with ${DOCTOR_NAME} at Race Course Medical Centre, Vadodara. Clinic hours: Mon–Sat 10:30AM–12:30PM & 5PM–7PM. Call ${PHONE_DISPLAY}.`,
     canonical: `${DOMAIN}/contact`,
     ogTitle: `Contact & Appointments | ${DOCTOR_NAME} Vadodara`,
     ogDescription: `Schedule a consultation with ${DOCTOR_NAME}. Call or WhatsApp ${PHONE_DISPLAY} or visit Race Course Medical Centre, Vadodara.`,
