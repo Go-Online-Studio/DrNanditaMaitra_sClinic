@@ -46,6 +46,10 @@ export default function About() {
       caption: "Listening first. Examining carefully. Imaging when it adds value."
     },
     {
+      url: "/images/GalleryAbout10.avif",
+      caption: "Colposcopy Closer examination. Clearer answers."
+    },
+    {
       url: "/images/GalleryAbout3.avif",
       caption: "Your safety is our priority. Committed to the standards of sterilization and patient safety."
     }
@@ -378,4 +382,3 @@ export default function About() {
     </div>
   );
 }
-
