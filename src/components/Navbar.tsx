@@ -220,17 +220,30 @@ export default function Navbar() {
                   const isDropdownOpen = activeDropdown === item.id;
                   return (
                     <div key={item.id} className="w-full">
-                      <button 
-                        onClick={(e) => toggleDropdown(e as any, item.id, item.path)}
-                        className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold transition-all ${
-                          isActive
-                            ? 'bg-[#d19890]/20 text-[#4e2627]'
-                            : 'text-slate-600 hover:bg-white/40'
-                        }`}
-                      >
-                        <span>{item.label}</span>
-                        <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                      </button>
+                      <div className="flex w-full items-center rounded-xl overflow-hidden">
+                        {/* Label navigates to /services */}
+                        <Link
+                          to={item.path}
+                          onClick={() => handleNavClick(item.path)}
+                          className={`flex-1 px-4 py-3 text-sm font-bold transition-all text-left ${
+                            isActive
+                              ? 'bg-[#d19890]/20 text-[#4e2627]'
+                              : 'text-slate-600 hover:bg-white/40'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                        {/* Chevron toggles accordion */}
+                        <button
+                          onClick={(e) => toggleDropdown(e as any, item.id, item.path)}
+                          className={`px-4 py-3 transition-all ${
+                            isActive ? 'bg-[#d19890]/20 text-[#4e2627]' : 'text-slate-600 hover:bg-white/40'
+                          }`}
+                          aria-label="Toggle services submenu"
+                        >
+                          <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                      </div>
                       
                       {/* Mobile Accordion Dropdown */}
                       {isDropdownOpen && (
