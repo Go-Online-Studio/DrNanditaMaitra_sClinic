@@ -3,7 +3,7 @@ import { ArrowLeft, Shield, Lock, Eye, FileText, UserCheck, Bell, Mail, Phone } 
 import PageSEO from './PageSEO';
 
 const LAST_UPDATED = 'July 1, 2025';
-const CLINIC_NAME = "Dr. Nandita Maitra's Clinic";
+const CLINIC_NAME = "Panchshil Gynecology Clinic";
 const CONTACT_PHONE = '0265-2331818';
 
 const sections = [

@@ -98,7 +98,7 @@ export default function Navbar() {
           >
             <img
               src="/images/drnanditamaitra-sclinicLogo.svg"
-              alt="Dr. Nandita Maitra's Clinic Logo"
+              alt="Panchshil Gynecology Clinic Logo"
               className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
             />
           </Link>

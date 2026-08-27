@@ -23,7 +23,7 @@ export interface BlogPost {
   sections: BlogSection[];
 }
 
-const DOMAIN = 'https://www.drnanditamaitra.com';
+const DOMAIN = 'https://www.panchshilgynecologyclinic.com';
 const DOCTOR_NAME = 'Dr. Nandita Maitra';
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -45,7 +45,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'Acne in Women: Could It Be Hormonal?',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Persistent acne in women may be linked to hormonal imbalance or PCOS. Learn about the causes, treatment options, and when to consult a gynecologist.`,
       url: `${DOMAIN}/patient-education/acne-in-women-could-it-be-hormonal`,
@@ -237,7 +237,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'Healthy Weight Loss for Women: Simple Diet and Lifestyle Tips',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Discover safe, sustainable weight-loss strategies for women. Learn how healthy eating and lifestyle changes can improve PCOS, fertility, menstrual health, and overall well-being.`,
       url: `${DOMAIN}/patient-education/healthy-weight-loss-for-women`,
@@ -466,7 +466,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'Excess Facial or Body Hair in Women (Hirsutism): Could It Be PCOS?',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Learn about hirsutism (excess facial or body hair in women), its causes, symptoms, diagnosis, treatment, and its link with PCOS and hormonal imbalance.`,
       url: `${DOMAIN}/patient-education/excess-facial-or-body-hair-in-women-hirsutism`,
@@ -659,7 +659,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'PMS vs. PMDD: Understanding the Difference',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Learn the difference between PMS and PMDD, common symptoms, causes, treatment options, and when to consult a gynecologist for severe premenstrual symptoms.`,
       url: `${DOMAIN}/patient-education/pms-vs-pmdd-understanding-difference`,
@@ -875,7 +875,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'Polycystic Ovary Syndrome (PCOS): Symptoms, Diagnosis & Treatment',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Learn about PCOS, its symptoms, diagnosis, fertility, treatment options, and lifestyle management. Early diagnosis and treatment can improve long-term health and reproductive outcomes.`,
       url: `${DOMAIN}/patient-education/polycystic-ovary-syndrome-pcos`,
@@ -1104,7 +1104,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'Painful Periods (Dysmenorrhea): When Should You See a Gynecologist?',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Painful periods are common, but severe menstrual cramps are not normal. Learn about the causes, symptoms, treatment options, and when to consult a gynecologist.`,
       url: `${DOMAIN}/patient-education/painful-periods-dysmenorrhea`,
@@ -1259,7 +1259,7 @@ export const BLOG_POSTS: BlogPost[] = [
       '@type': 'Article',
       headline: 'Is My Period Normal? A Complete Guide to Menstruation',
       author: { '@type': 'Person', name: DOCTOR_NAME, url: `${DOMAIN}/about` },
-      publisher: { '@type': 'Organization', name: "Dr. Nandita Maitra's Clinic", url: DOMAIN },
+      publisher: { '@type': 'Organization', name: "Panchshil Gynecology Clinic", url: DOMAIN },
       datePublished: 'August 2026',
       description: `Learn what is considered a normal menstrual cycle, common menstrual symptoms, causes of irregular periods, menstrual hygiene, and when to consult a gynecologist.`,
       url: `${DOMAIN}/patient-education/is-my-period-normal`,

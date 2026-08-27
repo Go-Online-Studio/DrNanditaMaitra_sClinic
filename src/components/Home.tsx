@@ -12,13 +12,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-// Import local images
-import BannerImage1 from '../../public/images/BannerImage1.webp';
-import BannerImage2 from '../../public/images/BannerImage2.webp';
-import BannerImage3 from '../../public/images/BannerImage3.webp';
-import BannerImageMob1 from '../../public/images/BannerMob1.webp';
-import BannerImageMob2 from '../../public/images/BannerMob2.webp';
-import BannerImageMob3 from '../../public/images/BannerMob3.webp';
+// Define image URLs directly from public folder
+const BannerImage1 = '/images/BannerImage1.webp';
+const BannerImage2 = '/images/BannerImage2.webp';
+const BannerImage3 = '/images/BannerImage3.webp';
+const BannerImageMob1 = '/images/BannerMob1.webp';
+const BannerImageMob2 = '/images/BannerMob2.webp';
+const BannerImageMob3 = '/images/BannerMob3.webp';
 
 import { servicesData } from '../data/servicesData';
 import { PageId, QuickInquiry, Testimonial } from '../types';

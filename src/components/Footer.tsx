@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex items-center justify-center md:justify-start">
               <img
                 src="/images/drnanditamaitra-sclinicLogo.svg"
-                alt="Dr. Nandita Maitra's Clinic Logo"
+                alt="Panchshil Gynecology Clinic Logo"
                 className="h-18 lg:h-22 w-auto object-contain"
               />
             </div>
@@ -175,7 +175,7 @@ export default function Footer() {
 
         {/* Lower Footer */}
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-[#F9F8F8]/65 sm:flex-row font-sans">
-          <p className='text-center sm:text-left'>© {currentYear} All rights reserved by Dr. Nandita Maitra's Clinic. Designed and developed by <a className="hover:text-[#ffffff] transition-colors focus:outline-none" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
+          <p className='text-center sm:text-left'>© {currentYear} All rights reserved by Panchshil Gynecology Clinic. Designed and developed by <a className="hover:text-[#ffffff] transition-colors focus:outline-none" href="https://shriiitrackingsolution.in/" target="_blank"> <b>Shriii&nbsp;Tracking&nbsp;Solution</b>
           </a> </p>
           <div className="flex items-center gap-3 sm:gap-6">
             <Link to="/privacy" className="hover:text-[#d19890] transition-colors focus:outline-none">

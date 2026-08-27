@@ -197,21 +197,21 @@ const pageMeta = {
     canonical: `${SITE_URL}/services/second-opinion`,
   },
   contact: {
-    title: "Appointment and Enquiries | Dr. Nandita Maitra's Clinic Vadodara",
+    title: "Appointment and Enquiries | Panchshil Gynecology Clinic Vadodara",
     description:
       "Book a consultation with Dr. Nandita Maitra at Race Course Medical Centre, Vadodara. Call 0265-2331818.",
     canonical: `${SITE_URL}/contact`,
   },
   privacy: {
-    title: "Privacy Policy | Dr. Nandita Maitra's Clinic Vadodara",
+    title: "Privacy Policy | Panchshil Gynecology Clinic Vadodara",
     description:
-      "Privacy Policy of Dr. Nandita Maitra's Clinic — how we protect your personal and medical data.",
+      "Privacy Policy of Panchshil Gynecology Clinic — how we protect your personal and medical data.",
     canonical: `${SITE_URL}/privacy`,
   },
   disclaimer: {
-    title: "Professional & Legal Disclaimer | Dr. Nandita Maitra's Clinic Vadodara",
+    title: "Professional & Legal Disclaimer | Panchshil Gynecology Clinic Vadodara",
     description:
-      "Professional and legal disclaimer for Dr. Nandita Maitra's Clinic — medical information, scope of service, and regulatory compliance.",
+      "Professional and legal disclaimer for Panchshil Gynecology Clinic — medical information, scope of service, and regulatory compliance.",
     canonical: `${SITE_URL}/disclaimer`,
   },
   faq: {
@@ -272,8 +272,8 @@ function injectSeo(html, meta) {
 
   // 3. Fix JSON-LD "telephon" typo → "telephone" and fix domain
   html = html.replace(/"telephon":/g, '"telephone":');
-  html = html.replace(/https:\/\/drnanditamaitra\.com/g, SITE_URL);
-  html = html.replace(/https:\/\/www\.drnanditamaitra\.com/g, SITE_URL);
+  html = html.replace(/https:\/\/panchshilgynecologyclinic\.com/g, SITE_URL);
+  html = html.replace(/https:\/\/www\.panchshilgynecologyclinic\.com/g, SITE_URL);
 
   // 4. Fix trailing comma before ] in JSON-LD openingHoursSpecification
   html = html.replace(/,(\s*)\]/g, '$1]');

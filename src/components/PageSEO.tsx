@@ -33,7 +33,7 @@ export default function PageSEO({ pageKey }: PageSEOProps) {
       <meta property="og:title" content={seo.ogTitle} />
       <meta property="og:description" content={seo.ogDescription} />
       <meta property="og:locale" content="en_IN" />
-      <meta property="og:site_name" content="Dr. Nandita Maitra's Clinic" />
+      <meta property="og:site_name" content="Panchshil Gynecology Clinic" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

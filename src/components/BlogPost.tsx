@@ -119,7 +119,7 @@ export default function BlogPost() {
         <meta property="og:title"        content={post.ogTitle} />
         <meta property="og:description"  content={post.ogDescription} />
         <meta property="og:locale"       content="en_IN" />
-        <meta property="og:site_name"    content="Dr. Nandita Maitra's Clinic" />
+        <meta property="og:site_name"    content="Panchshil Gynecology Clinic" />
         <meta property="article:author"  content="Dr. Nandita Maitra" />
         <meta property="article:section" content={post.category} />
         <meta name="twitter:card"        content="summary_large_image" />
@@ -130,8 +130,8 @@ export default function BlogPost() {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home',              item: 'https://www.drnanditamaitra.com/' },
-            { '@type': 'ListItem', position: 2, name: 'Patient Education', item: 'https://www.drnanditamaitra.com/patient-education' },
+            { '@type': 'ListItem', position: 1, name: 'Home',              item: 'https://www.panchshilgynecologyclinic.com' },
+            { '@type': 'ListItem', position: 2, name: 'Patient Education', item: 'https://www.panchshilgynecologyclinic.com/patient-education' },
             { '@type': 'ListItem', position: 3, name: post.title,          item: post.canonical },
           ],
         })}</script>
