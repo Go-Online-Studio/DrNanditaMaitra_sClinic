@@ -28,11 +28,11 @@ function escapeForSheet(value: string | undefined | null): string {
  * @returns boolean indicating if the request was successfully dispatched
  */
 export async function submitToGoogleSheet(data: SheetSubmissionData): Promise<boolean> {
-  const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+  const scriptUrl = import.meta.env.GOOGLE_SCRIPT_URL;
   
   if (!scriptUrl) {
     console.warn(
-      "VITE_GOOGLE_SCRIPT_URL is not defined in the environment variables. " +
+      "GOOGLE_SCRIPT_URL is not defined in the environment variables. " +
       "Skipping Google Sheet submission."
     );
     return false;

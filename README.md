@@ -32,7 +32,7 @@ Official website for Dr. Nandita Maitra, Senior Obstetrician & Gynecologist with
 
 2. Configure environment variables in `.env`:
    ```env
-   VITE_GOOGLE_SCRIPT_URL="<your-google-apps-script-web-app-url>"
+   GOOGLE_SCRIPT_URL="<your-google-apps-script-web-app-url>"
    ```
 
 3. Start the development server:

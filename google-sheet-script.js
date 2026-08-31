@@ -23,7 +23,7 @@
  * 10. Click "Deploy" and authorize the script permissions.
  * 11. Copy the "Web app URL" provided.
  * 12. Create a `.env` file in this project's root folder and paste the URL:
- *     VITE_GOOGLE_SCRIPT_URL="YOUR_COPIED_URL_HERE"
+ *    GOOGLE_SCRIPT_URL="YOUR_COPIED_URL_HERE"
  */
 
 function doPost(e) {
