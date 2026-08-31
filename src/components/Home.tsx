@@ -245,6 +245,8 @@ Thank you!`;
                     alt="Compassionate Maternal Care"
                     className="h-full w-full object-cover object-center"
                     fetchPriority="high"
+                    width="1920"
+                    height="1080"
                   />
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1a0d0d]/90 to-[#1a0d0d]/40 z-10" />
@@ -254,10 +256,10 @@ Thank you!`;
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#d19890]/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#d19890] backdrop-blur-sm sm:text-sm">
                     <Sparkles className="shrink-0 h-4 w-4" /> 35+ Years of Dedicated Clinical Experience
                   </span>
-                  <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#F9F8F8]">
+                  <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-[#F9F8F8]">
                     Ethical and Evidence-Based <br />
                     <span className="text-[#d19890]">Gynecology</span> Care
-                  </h2>
+                  </h1>
                   <p className="text-sm text-slate-200 sm:text-base md:text-lg leading-relaxed">
                     Guidance from a former Medical College faculty member for informed decisions and personalised gynecology care
                   </p>
@@ -290,7 +292,10 @@ Thank you!`;
                     src={BannerImageMob2}
                     alt="Advanced Gynecological Diagnostics"
                     className="h-full w-full object-cover object-center"
-                    fetchPriority="high"
+                    loading="lazy"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
                   />
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1a0d0d]/95 to-[#1a0d0d]/40 z-10" />
@@ -336,7 +341,10 @@ Thank you!`;
                     src={BannerImageMob3}
                     alt="Fertility and Family Planning"
                     className="h-full w-full object-cover object-center"
-                    fetchPriority="high"
+                    loading="lazy"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
                   />
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1a0d0d]/95 to-[#1a0d0d]/40 z-10" />
@@ -559,9 +567,9 @@ Thank you!`;
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" id="clinical-services-grid">
          {/* Section Heading */}
   <div className="text-center mb-10">
-    <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#4e2627]">
+    <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-[#4e2627]">
       Our Services
-    </h3>
+    </h2>
 
     <p className="mx-auto max-w-2xl text-sm text-slate-600">
       At Gynecology Clinic, we offer thoughtful, evidence-based gynecology

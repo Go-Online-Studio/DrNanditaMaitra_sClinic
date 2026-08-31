@@ -114,7 +114,6 @@ export default function Navbar() {
               src="/images/drnanditamaitra-sclinicLogo.svg"
               alt="Panchshil Gynecology Clinic Logo"
               className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
-              fetchPriority="high"
             />
           </Link>
 

@@ -18,6 +18,7 @@ export default function Footer() {
                 src="/images/drnanditamaitra-sclinicLogo.svg"
                 alt="Panchshil Gynecology Clinic Logo"
                 className="h-18 lg:h-22 w-auto object-contain"
+                loading="lazy"
               />
             </div>
             <p className="text-sm text-[#F9F8F8]/80 leading-relaxed font-sans">

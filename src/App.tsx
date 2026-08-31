@@ -34,9 +34,9 @@ export default function App() {
       <ScrollToTop />
       <div className="relative flex min-h-screen flex-col bg-[#FAF9F9] text-slate-800 font-sans selection:bg-[#d19890]/70 selection:text-[#4e2627] overflow-x-clip" id="clinical-root">
         {/* Ambient Glowing Orbs */}
-        <div className="pointer-events-none fixed -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#d19890]/15 blur-[100px] z-0 animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="pointer-events-none fixed top-1/4 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#a46b66]/10 blur-[120px] z-0 animate-pulse" style={{ animationDuration: '12s' }} />
-        <div className="pointer-events-none fixed bottom-10 left-1/3 h-[500px] w-[500px] rounded-full bg-[#4e2627]/5 blur-[90px] z-0 animate-pulse" style={{ animationDuration: '10s' }} />
+        <div className="pointer-events-none fixed -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-[#d19890]/15 blur-[100px] z-0 animate-pulse" style={{ animationDuration: '8s', animationDelay: '3s' }} />
+        <div className="pointer-events-none fixed top-1/4 right-[-10%] h-[600px] w-[600px] rounded-full bg-[#a46b66]/10 blur-[120px] z-0 animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }} />
+        <div className="pointer-events-none fixed bottom-10 left-1/3 h-[500px] w-[500px] rounded-full bg-[#4e2627]/5 blur-[90px] z-0 animate-pulse" style={{ animationDuration: '10s', animationDelay: '5s' }} />
 
         <div className="relative z-10 flex min-h-screen flex-col">
           <Navbar />
@@ -101,7 +101,7 @@ export default function App() {
           </a>
 
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75" style={{ animationDuration: '2s' }} />
+            <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-75" style={{ animationDuration: '2s', animationDelay: '3s' }} />
             <a
               href={getWhatsAppUrl()}
               target="_blank"

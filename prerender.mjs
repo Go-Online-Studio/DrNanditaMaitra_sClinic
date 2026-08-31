@@ -24,7 +24,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Physician",
   "name": "Dr. Nandita Maitra - Obstetrician & Gynecologist",
-  "image": "https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&q=80&w=800",
+  "image": `${SITE_URL}/images/drnanditamaitra-sclinicLogo.svg`,
   "telephone": "+91 90810 05399",
   "url": SITE_URL,
   "address": {
@@ -336,12 +336,15 @@ const allPages = [
   })),
 ];
 
+const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD for lastmod
+
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allPages
   .map(
     (p) => `  <url>
     <loc>${p.url}</loc>
+    <lastmod>${today}</lastmod>
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority}</priority>
   </url>`

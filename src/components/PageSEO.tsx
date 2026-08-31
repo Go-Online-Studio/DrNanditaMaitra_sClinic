@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
-import { SEO_CONFIG, GEO_TAGS } from '../utils/seo-config';
+import { SEO_CONFIG, GEO_TAGS, DOMAIN } from '../utils/seo-config';
 
 interface PageSEOProps {
   pageKey: string;
 }
+
+const OG_IMAGE = `${DOMAIN}/images/og-image.jpg`;
 
 export default function PageSEO({ pageKey }: PageSEOProps) {
   const seo = SEO_CONFIG[pageKey];
@@ -34,11 +36,15 @@ export default function PageSEO({ pageKey }: PageSEOProps) {
       <meta property="og:description" content={seo.ogDescription} />
       <meta property="og:locale" content="en_IN" />
       <meta property="og:site_name" content="Panchshil Gynecology Clinic" />
+      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.ogTitle} />
       <meta name="twitter:description" content={seo.ogDescription} />
+      <meta name="twitter:image" content={OG_IMAGE} />
 
       {/* LD+JSON — one script per schema object */}
       {ldJsonArray.map((schema, i) => (
