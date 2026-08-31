@@ -227,46 +227,46 @@ const pageMeta = {
 /** Build the complete <head> SEO block for a given meta entry */
 function buildSeoBlock(meta) {
   return `
-    <link rel="canonical" href="${meta.canonical}" />
+    <link data-rh="true" rel="canonical" href="${meta.canonical}" />
 
-    <meta property="og:title" content="${meta.title}" />
-    <meta property="og:description" content="${meta.description}" />
-    <meta property="og:url" content="${meta.canonical}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:image" content="${OG_IMAGE}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta data-rh="true" property="og:title" content="${meta.title}" />
+    <meta data-rh="true" property="og:description" content="${meta.description}" />
+    <meta data-rh="true" property="og:url" content="${meta.canonical}" />
+    <meta data-rh="true" property="og:type" content="website" />
+    <meta data-rh="true" property="og:locale" content="en_IN" />
+    <meta data-rh="true" property="og:image" content="${OG_IMAGE}" />
+    <meta data-rh="true" property="og:image:width" content="1200" />
+    <meta data-rh="true" property="og:image:height" content="630" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${meta.title}" />
-    <meta name="twitter:description" content="${meta.description}" />
-    <meta name="twitter:image" content="${OG_IMAGE}" />
+    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+    <meta data-rh="true" name="twitter:title" content="${meta.title}" />
+    <meta data-rh="true" name="twitter:description" content="${meta.description}" />
+    <meta data-rh="true" name="twitter:image" content="${OG_IMAGE}" />
 
-    <meta name="geo.region" content="IN-GJ" />
-    <meta name="geo.placename" content="Vadodara, Gujarat" />
-    <meta name="geo.position" content="22.310784;73.165440" />
-    <meta name="ICBM" content="22.310784, 73.165440" />`;
+    <meta data-rh="true" name="geo.region" content="IN-GJ" />
+    <meta data-rh="true" name="geo.placename" content="Vadodara, Gujarat" />
+    <meta data-rh="true" name="geo.position" content="22.310784;73.165440" />
+    <meta data-rh="true" name="ICBM" content="22.310784, 73.165440" />`;
 }
 
 /** Inject page-specific SEO tags and fix shared content in an HTML template */
 function injectSeo(html, meta) {
   // 1. Replace <title>
   html = html.replace(
-    /<title>[^<]*<\/title>/,
-    `<title>${meta.title}</title>`
+    /<title[^>]*>[^<]*<\/title>/,
+    `<title data-rh="true">${meta.title}</title>`
   );
 
   // 2. Replace or insert <meta name="description">
   if (html.includes('name="description"')) {
     html = html.replace(
-      /<meta name="description" content="[^"]*"/,
-      `<meta name="description" content="${meta.description}"`
+      /<meta[^>]*name="description"[^>]*"/,
+      `<meta data-rh="true" name="description" content="${meta.description}"`
     );
   } else {
     html = html.replace(
       "</head>",
-      `  <meta name="description" content="${meta.description}" />\n</head>`
+      `  <meta data-rh="true" name="description" content="${meta.description}" />\n</head>`
     );
   }
 
@@ -280,11 +280,11 @@ function injectSeo(html, meta) {
 
   // 5. Strip existing OG / Twitter / canonical / geo tags from base template
   //    to prevent duplicates — we will re-inject page-specific ones below.
-  html = html.replace(/<meta property="og:[^"]*"[^>]*>\s*/g, "");
-  html = html.replace(/<meta name="twitter:[^"]*"[^>]*>\s*/g, "");
-  html = html.replace(/<link rel="canonical"[^>]*>\s*/g, "");
-  html = html.replace(/<meta name="geo\.[^"]*"[^>]*>\s*/g, "");
-  html = html.replace(/<meta name="ICBM"[^>]*>\s*/g, "");
+  html = html.replace(/<meta[^>]*property="og:[^"]*"[^>]*>\s*/g, "");
+  html = html.replace(/<meta[^>]*name="twitter:[^"]*"[^>]*>\s*/g, "");
+  html = html.replace(/<link[^>]*rel="canonical"[^>]*>\s*/g, "");
+  html = html.replace(/<meta[^>]*name="geo\.[^"]*"[^>]*>\s*/g, "");
+  html = html.replace(/<meta[^>]*name="ICBM"[^>]*>\s*/g, "");
 
   // 6. Inject clean, page-specific SEO block just before </head>
   html = html.replace("</head>", `${buildSeoBlock(meta)}\n  </head>`);
