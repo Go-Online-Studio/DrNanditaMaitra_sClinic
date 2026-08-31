@@ -67,6 +67,7 @@ export default function ServiceDetail() {
                 src={service.image} 
                 alt={service.heading} 
                 className="w-full h-auto aspect-4/3 object-cover"
+                fetchPriority="high"
               />
             </div>
             

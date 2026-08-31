@@ -254,6 +254,7 @@ export default function BlogPost() {
               src={post.imageUrl || 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1200'}
               alt={post.title}
               className="w-full h-auto aspect-[1.5/1] object-cover"
+              fetchPriority="high"
             />
           </div>
 

@@ -21,23 +21,37 @@ export default function Navbar() {
   const navWrapperRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  const isStickyRef = useRef(false);
+  const triggerPointRef = useRef(80);
+
   useEffect(() => {
     let resizeTimer: NodeJS.Timeout;
 
-    const updateHeight = () => {
-      if (headerRef.current) setNavHeight(headerRef.current.offsetHeight);
+    const updateCachedMetrics = () => {
+      if (headerRef.current && navWrapperRef.current) {
+        const height = headerRef.current.offsetHeight || 80;
+        setNavHeight(height);
+        triggerPointRef.current = navWrapperRef.current.offsetTop + height;
+      }
     };
 
     const handleResize = () => {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(updateHeight, 150);
+      resizeTimer = setTimeout(updateCachedMetrics, 150);
     };
 
+    let ticking = false;
     const handleScroll = () => {
-      if (headerRef.current && navWrapperRef.current) {
-        const height = headerRef.current.offsetHeight;
-        const triggerPoint = navWrapperRef.current.offsetTop + height;
-        setIsSticky(window.scrollY >= triggerPoint);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const shouldBeSticky = window.scrollY >= triggerPointRef.current;
+          if (isStickyRef.current !== shouldBeSticky) {
+            isStickyRef.current = shouldBeSticky;
+            setIsSticky(shouldBeSticky);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -48,7 +62,7 @@ export default function Navbar() {
       }
     };
 
-    updateHeight();
+    updateCachedMetrics();
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll, { passive: true });
     document.addEventListener('pointerup', handleClickOutside);
@@ -100,6 +114,7 @@ export default function Navbar() {
               src="/images/drnanditamaitra-sclinicLogo.svg"
               alt="Panchshil Gynecology Clinic Logo"
               className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
+              fetchPriority="high"
             />
           </Link>
 

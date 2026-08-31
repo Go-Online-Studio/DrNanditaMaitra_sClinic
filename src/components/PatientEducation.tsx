@@ -57,6 +57,7 @@ export default function PatientEducation() {
                       src={post.imageUrl}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      {...(index < 3 ? { fetchPriority: "high" } : {})}
                     />
                   </div>
                 ) : (

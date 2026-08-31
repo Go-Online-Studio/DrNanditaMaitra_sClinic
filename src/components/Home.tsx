@@ -232,7 +232,6 @@ Thank you!`;
           pagination={{ clickable: true, el: '.swiper-custom-pagination' }}
           navigation={{ nextEl: '.swiper-button-next-custom', prevEl: '.swiper-button-prev-custom' }}
           loop={true}
-          autoHeight={true}
           className="w-full"
         >
           {/* Slide 1 */} {/*sm:min-h-[calc(100vh-114px)]*/}
@@ -245,7 +244,6 @@ Thank you!`;
                     src={BannerImageMob1}
                     alt="Compassionate Maternal Care"
                     className="h-full w-full object-cover object-center"
-                    loading="eager"
                     fetchPriority="high"
                   />
                 </picture>
@@ -292,7 +290,6 @@ Thank you!`;
                     src={BannerImageMob2}
                     alt="Advanced Gynecological Diagnostics"
                     className="h-full w-full object-cover object-center"
-                    loading="eager"
                     fetchPriority="high"
                   />
                 </picture>
@@ -339,7 +336,6 @@ Thank you!`;
                     src={BannerImageMob3}
                     alt="Fertility and Family Planning"
                     className="h-full w-full object-cover object-center"
-                    loading="eager"
                     fetchPriority="high"
                   />
                 </picture>

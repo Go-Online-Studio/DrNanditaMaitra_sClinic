@@ -40,7 +40,7 @@ export default function Services() {
       {/* Services Grid */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16" id="services-grid">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {servicesData.map((service) => {
+          {servicesData.map((service, index) => {
             return (
               <div
                 key={service.id}
@@ -53,7 +53,7 @@ export default function Services() {
                     src={service.image}
                     alt={service.heading}
                     className="w-full aspect-4/3 object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
+                    {...(index < 3 ? { fetchPriority: "high" } : { loading: "lazy" })}
                   />
                 </div>
                 

@@ -131,6 +131,7 @@ export default function About() {
                   alt="Dr. Nandita Maitra"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  fetchPriority="high"
                 />
             </div>
             
