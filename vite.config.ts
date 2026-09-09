@@ -10,6 +10,7 @@ export default defineConfig(() => {
     build: {
       target: 'es2022',
     },
+    envPrefix: ['VITE_', 'GOOGLE_SCRIPT_'],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

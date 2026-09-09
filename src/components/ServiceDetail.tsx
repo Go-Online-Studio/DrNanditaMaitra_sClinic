@@ -22,13 +22,7 @@ export default function ServiceDetail() {
 
   return (
     <div className="bg-[#F9F8F8] min-h-screen" id={`service-detail-${service.id}`}>
-      <PageSEO 
-        pageKey={`services/${service.id}` as any} // we will handle missing keys gracefully in PageSEO or prerender
-      />
-      
-      {/* Dynamic SEO Tags just in case */}
-      <title>{`${service.heading} | Dr. Nandita Maitra Vadodara`}</title>
-      <meta name="description" content={service.shortDesc} />
+      <PageSEO pageKey={`services/${service.id}`} />
 
       {/* Hero Section */}
       <div className="bg-[#4e2627] text-[#F9F8F8]">
@@ -52,7 +46,7 @@ export default function ServiceDetail() {
               <p className="text-base sm:text-lg text-[#F9F8F8]/80 max-w-3xl">
                 {service.shortDesc}
               </p>
-            </div>
+            </div>    
           </div>
         </div>
       </div>

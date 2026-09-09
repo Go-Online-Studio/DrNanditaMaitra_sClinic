@@ -77,13 +77,12 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleNavClick = (path?: string) => {
+  const handleNavClick = () => {
     setIsOpen(false);
     setActiveDropdown(null);
-    if (path) navigate(path);
   };
 
-  const toggleDropdown = (e: React.MouseEvent, id: string, path: string) => {
+  const toggleDropdown = (e: React.MouseEvent, id: string) => {
     // If it's a mobile click, toggle. If desktop, it's hover based, but click can navigate or toggle
     if (window.innerWidth < 1024) {
       e.preventDefault(); // Prevent navigation on mobile toggle
@@ -238,7 +237,7 @@ export default function Navbar() {
                         {/* Label navigates to /services */}
                         <Link
                           to={item.path}
-                          onClick={() => handleNavClick(item.path)}
+                          onClick={handleNavClick}
                           className={`flex-1 px-4 py-3 text-sm font-bold transition-all text-left ${
                             isActive
                               ? 'bg-[#d19890]/20 text-[#4e2627]'
@@ -249,7 +248,7 @@ export default function Navbar() {
                         </Link>
                         {/* Chevron toggles accordion */}
                         <button
-                          onClick={(e) => toggleDropdown(e as any, item.id, item.path)}
+                          onClick={(e) => toggleDropdown(e, item.id)}
                           className={`px-4 py-3 transition-all ${
                             isActive ? 'bg-[#d19890]/20 text-[#4e2627]' : 'text-slate-600 hover:bg-white/40'
                           }`}

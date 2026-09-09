@@ -196,11 +196,11 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
 
   about: {
     title: `About ${DOCTOR_NAME} | 35+ Years OB-GYN Expert Vadodara`,
-    description: `Learn about ${DOCTOR_NAME} — MBBS, DGO, MD, FICOG — Senior Obstetrician and Gynecologist with 35+ years of clinical and academic excellence in Vadodara, Gujarat.`,
+    description: `Learn about ${DOCTOR_NAME} — MBBS, MD, FRCOG — Senior Obstetrician and Gynecologist with 35+ years of clinical and academic excellence in Vadodara, Gujarat.`,
     canonical: `${DOMAIN}/about`,
     ogTitle: `About ${DOCTOR_NAME} | OB-GYN Expert Vadodara`,
-    ogDescription: `35+ years of compassionate women's healthcare — ${DOCTOR_NAME} is a trusted senior OB-GYN in Vadodara with FICOG credentials.`,
-    keywords: 'Dr Nandita Maitra gynecologist, FICOG gynecologist Vadodara, senior obstetrician Gujarat, women health expert Vadodara',
+    ogDescription: `35+ years of compassionate women's healthcare — ${DOCTOR_NAME} is a trusted senior OB-GYN in Vadodara with FRCOG credentials.`,
+    keywords: 'Dr Nandita Maitra gynecologist, FRCOG gynecologist Vadodara, senior obstetrician Gujarat, women health expert Vadodara',
     ldJson: {
       '@context': 'https://schema.org',
       '@type': 'Person',
@@ -213,11 +213,11 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
       telephone: PHONE,
       address: physicianLdJson.address,
       alumniOf: [
-        { '@type': 'EducationalOrganization', name: 'Medical College Vadodara (MBBS)' },
-        { '@type': 'EducationalOrganization', name: 'DGO, MD Obstetrics & Gynecology' },
+        { '@type': 'EducationalOrganization', name: 'Medical College Baroda (MBBS)' },
+        { '@type': 'EducationalOrganization', name: 'MD Obstetrics & Gynecology' },
       ],
-      hasCredential: { '@type': 'EducationalOccupationalCredential', name: 'FICOG (Fellow of Indian College of Obstetrics and Gynecology)' },
-      memberOf: { '@type': 'MedicalOrganization', name: 'Indian College of Obstetrics and Gynecology' },
+      hasCredential: { '@type': 'EducationalOccupationalCredential', name: 'FRCOG (Fellow of the Royal College of Obstetricians and Gynecologists, UK)' },
+      memberOf: { '@type': 'MedicalOrganization', name: 'Royal College of Obstetricians and Gynecologists' },
     },
   },
 
@@ -265,6 +265,23 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
     },
   },
 
+  disclaimer: {
+    title: `Professional & Legal Disclaimer | ${CLINIC_NAME} Vadodara`,
+    description: `Professional and legal disclaimer for ${CLINIC_NAME} — medical information, scope of service, and regulatory compliance under NMC and PCPNDT guidelines.`,
+    canonical: `${DOMAIN}/disclaimer`,
+    ogTitle: `Professional & Legal Disclaimer | ${CLINIC_NAME}`,
+    ogDescription: `Professional and legal disclaimer for ${CLINIC_NAME} in Vadodara — medical ethics, scope of care, and statutory compliance.`,
+    keywords: 'disclaimer clinic Vadodara, medical disclaimer Dr Nandita Maitra, PCPNDT compliance Gujarat, NMC ethics gynecology',
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: `Professional & Legal Disclaimer — ${CLINIC_NAME}`,
+      url: `${DOMAIN}/disclaimer`,
+      description: "Professional and legal disclaimer for patients and website visitors of Panchshil Gynecology Clinic.",
+      isPartOf: { '@type': 'WebSite', url: DOMAIN, name: CLINIC_NAME },
+    },
+  },
+
   faq: {
     title: `FAQs — Women's Health Questions Answered | ${DOCTOR_NAME} Vadodara`,
     description: `Frequently asked questions about gynecology, obstetrics, fertility, PCOS, menopause, and pregnancy in Vadodara. Answered by ${DOCTOR_NAME}.`,
@@ -306,6 +323,96 @@ export const SEO_CONFIG: Record<string, PageSEO> = {
       telephone: PHONE,
       medicalSpecialty: 'Obstetrics and Gynecology',
     },
+  },
+
+  'services/cervical-cancer-screening': {
+    title: `Cervical Cancer Screening | ${DOCTOR_NAME} Vadodara`,
+    description: `Comprehensive cervical cancer screening including Pap smear and HPV testing by ${DOCTOR_NAME}, Senior Gynecologist in Vadodara.`,
+    canonical: `${DOMAIN}/services/cervical-cancer-screening`,
+    ogTitle: `Cervical Cancer Screening | ${DOCTOR_NAME}`,
+    ogDescription: `Early detection saves lives. Comprehensive Pap smear and HPV DNA screening with ${DOCTOR_NAME} in Vadodara.`,
+    keywords: 'cervical cancer screening Vadodara, pap smear Vadodara, HPV DNA test Gujarat, cervical screening clinic',
+    ldJson: physicianLdJson,
+  },
+
+  'services/colposcopy-and-vulval-evaluation': {
+    title: `Colposcopy and Vulval Evaluation | ${DOCTOR_NAME} Vadodara`,
+    description: `Detailed examination of the cervix, vagina, and vulva using colposcopy and vulvoscopy for abnormal smears, HPV, and vulval symptoms.`,
+    canonical: `${DOMAIN}/services/colposcopy-and-vulval-evaluation`,
+    ogTitle: `Colposcopy & Vulval Evaluation | ${DOCTOR_NAME}`,
+    ogDescription: `High-definition magnification for abnormal Pap smears, HPV infection, and persistent vulval concerns in Vadodara.`,
+    keywords: 'colposcopy Vadodara, vulval evaluation, vulvoscopy Gujarat, abnormal pap smear follow up',
+    ldJson: physicianLdJson,
+  },
+
+  'services/gynecologic-ultrasound': {
+    title: `Gynecologic Ultrasound | ${DOCTOR_NAME} Vadodara`,
+    description: `Expert pelvic ultrasound for diagnosing abnormal bleeding, pain, cysts, and fertility issues.`,
+    canonical: `${DOMAIN}/services/gynecologic-ultrasound`,
+    ogTitle: `Gynecologic Ultrasound | ${DOCTOR_NAME}`,
+    ogDescription: `Safe, radiation-free pelvic ultrasound for diagnosis of bleeding, pain, cysts, and fertility concerns in Vadodara.`,
+    keywords: 'pelvic ultrasound Vadodara, gynecologic sonography, ovarian cyst scan, uterine scan Gujarat',
+    ldJson: physicianLdJson,
+  },
+
+  'services/fertility-consultation': {
+    title: `Fertility Consultation & Evaluation | ${DOCTOR_NAME} Vadodara`,
+    description: `Comprehensive fertility assessment, ovulation tracking, and targeted investigations in Vadodara.`,
+    canonical: `${DOMAIN}/services/fertility-consultation`,
+    ogTitle: `Fertility Consultation & Evaluation | ${DOCTOR_NAME}`,
+    ogDescription: `Evidence-based fertility evaluation and targeted investigations to guide your conception journey in Vadodara.`,
+    keywords: 'fertility consultation Vadodara, infertility doctor Gujarat, ovulation monitoring, follicular study',
+    ldJson: physicianLdJson,
+  },
+
+  'services/pcos-care': {
+    title: `PCOS Care & Hormonal Health | ${DOCTOR_NAME} Vadodara`,
+    description: `Evidence-based diagnosis and individualized care for PCOS, hormonal imbalance, and metabolic health.`,
+    canonical: `${DOMAIN}/services/pcos-care`,
+    ogTitle: `PCOS Care | ${DOCTOR_NAME}`,
+    ogDescription: `Appropriate diagnosis and individualized care for PCOS, focusing on symptom management and long-term metabolic health.`,
+    keywords: 'PCOS care Vadodara, polycystic ovary syndrome doctor, PCOD treatment Gujarat, hormonal acne and weight',
+    ldJson: physicianLdJson,
+  },
+
+  'services/menopause-consultation': {
+    title: `Menopause Consultation & Care | ${DOCTOR_NAME} Vadodara`,
+    description: `Compassionate symptom relief and long-term bone and heart health protection during menopause.`,
+    canonical: `${DOMAIN}/services/menopause-consultation`,
+    ogTitle: `Menopause Consultation | ${DOCTOR_NAME}`,
+    ogDescription: `Comprehensive assessment and tailored treatments to relieve menopausal symptoms and protect your long-term health.`,
+    keywords: 'menopause doctor Vadodara, hot flashes treatment, perimenopause consultation Gujarat, hormone therapy advice',
+    ldJson: physicianLdJson,
+  },
+
+  'services/early-pregnancy-care': {
+    title: `Early Pregnancy Care & Antenatal Consultation | ${DOCTOR_NAME} Vadodara`,
+    description: `Expert consultation for early pregnancy concerns, antenatal guidance, and high-risk care.`,
+    canonical: `${DOMAIN}/services/early-pregnancy-care`,
+    ogTitle: `Early Pregnancy Care | ${DOCTOR_NAME}`,
+    ogDescription: `Compassionate first-trimester care, including essential screening tests, early ultrasound, and personalized guidance.`,
+    keywords: 'early pregnancy care Vadodara, first trimester doctor, pregnancy screening Gujarat, antenatal consultation',
+    ldJson: physicianLdJson,
+  },
+
+  'services/preconception-counselling': {
+    title: `Preconception Counselling | ${DOCTOR_NAME} Vadodara`,
+    description: `Pre-pregnancy health optimisation and counselling to support a healthy conception and pregnancy.`,
+    canonical: `${DOMAIN}/services/preconception-counselling`,
+    ogTitle: `Preconception Counselling | ${DOCTOR_NAME}`,
+    ogDescription: `Personalized health assessment and guidance before conception to ensure the best possible start for a healthy pregnancy.`,
+    keywords: 'preconception counselling Vadodara, planning pregnancy doctor, pre-pregnancy checkup Gujarat',
+    ldJson: physicianLdJson,
+  },
+
+  'services/second-opinion': {
+    title: `Second Opinion Consultation | ${DOCTOR_NAME} Vadodara`,
+    description: `Careful second opinion for complex gynecological problems and uncertain diagnoses.`,
+    canonical: `${DOMAIN}/services/second-opinion`,
+    ogTitle: `Second Opinion Consultation | ${DOCTOR_NAME}`,
+    ogDescription: `Evidence-based review of your diagnosis or advised surgery to help you make confident and informed healthcare decisions.`,
+    keywords: 'gynecology second opinion Vadodara, surgery second opinion Gujarat, hysterectomy review doctor',
+    ldJson: physicianLdJson,
   },
 
   'patient-education': {

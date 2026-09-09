@@ -28,7 +28,11 @@ function escapeForSheet(value: string | undefined | null): string {
  * @returns boolean indicating if the request was successfully dispatched
  */
 export async function submitToGoogleSheet(data: SheetSubmissionData): Promise<boolean> {
-  const scriptUrl = import.meta.env.GOOGLE_SCRIPT_URL;
+  const fallbackUrl = "https://script.google.com/macros/s/AKfycbzAdUaTmrrsrP6OA1T5QV929IOG07aaF-IocgJcXJBtTnPoPCBUzXS6SAdf8GEOhSm7yQ/exec";
+  const scriptUrl =
+    (import.meta.env.GOOGLE_SCRIPT_URL00 as string | undefined) ||
+    (import.meta.env.GOOGLE_SCRIPT_URL as string | undefined) ||
+    fallbackUrl;
   
   if (!scriptUrl) {
     console.warn(

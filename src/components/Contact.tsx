@@ -1,14 +1,14 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
-import { Phone, MapPin, Clock, Mail, MessageSquare, ArrowRight, ShieldCheck, CheckSquare, HelpCircle } from 'lucide-react';
+import { Phone, MapPin, Clock, ShieldCheck, CheckSquare, HelpCircle } from 'lucide-react';
 import { useWhatsAppLink } from '../hooks/useWhatsAppLink';
-import { useNavigate } from 'react-router-dom';
+import { useWhatsAppModal } from '../context/WhatsAppModalContext';
 import PageSEO from './PageSEO';
 import { validateName, validatePhone } from '../utils/validation';
 import { submitToGoogleSheet } from '../services/googleSheets';
 
 export default function Contact() {
-  const navigate = useNavigate();
   const { getWhatsAppUrl } = useWhatsAppLink();
+  const { openWhatsAppModal } = useWhatsAppModal();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -55,18 +55,24 @@ export default function Contact() {
       description: formData.message || 'N/A'
     });
 
-    // Process Form Data and compile a beautiful WhatsApp message
-    const formattedMessage = `Hello Dr. Maitra's Clinic,
+    // Process Form Data and compile a beautiful WhatsApp message with attractive emojis and clear structure
+    const formattedMessage =
+`🌸 *Appointment Request - Dr. Maitra's Clinic* 🌸
+━━━━━━━━━━━━━━━━━━━━
 
-I would like to schedule an appointment. Here are my registration details:
-• Name: ${formData.name.trim()}
-• Phone Number: ${formData.phone.trim()}
-• Email Address: ${formData.email.trim() || 'N/A'}
-• Preferred Date: ${formData.date.trim() || 'N/A'}
-• Reason for Visit: ${formData.visitReason}
-• Details: ${formData.message.trim() || 'N/A'}
+👤 *Patient Name:*  ${formData.name.trim()}
+📞 *Contact Number:*  ${formData.phone.trim()}
+📧 *Email:*  ${formData.email.trim() || 'N/A'}
 
-Thank you!`;
+🩺 *Reason for Visit:*  ${formData.visitReason}
+📅 *Preferred Date:*  ${formData.date.trim() || 'N/A'}
+
+📝 *Additional Details:*
+${formData.message.trim() || 'No additional details provided.'}
+
+━━━━━━━━━━━━━━━━━━━━
+✨ Kindly confirm my appointment slot at your earliest convenience.
+Thank you! 🙏`;
 
     const whatsappUrl = getWhatsAppUrl(formattedMessage);
     
@@ -130,14 +136,14 @@ Thank you!`;
                   </svg>
                   <div className="text-xs text-slate-600">
                     <strong className="text-[#4e2627] text-sm block">WhatsApp for Appointments & Enquiries</strong>
-                    <a 
-                      href={getWhatsAppUrl()} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="font-mono text-sm font-bold text-[#4e2627] hover:underline block pt-0.5"
+                    <button
+                      type="button"
+                      onClick={() => openWhatsAppModal()}
+                      className="font-mono text-sm font-bold text-[#4e2627] hover:underline block pt-0.5 text-left cursor-pointer focus:outline-none"
+                      id="contact-sidebar-whatsapp-btn"
                     >
                       +91 90810 05399
-                    </a>
+                    </button>
                   </div>
                 </div>
 
@@ -301,6 +307,7 @@ Thank you!`;
                         name="date"
                         id="date"
                         required
+                        min={new Date().toISOString().split('T')[0]}
                         value={formData.date}
                         onChange={handleInputChange}
                         className={`w-full rounded-xl border bg-white/40 focus:bg-white px-3.5 py-2.5 text-xs focus:outline-none focus:ring-1 transition-all ${
@@ -332,7 +339,7 @@ Thank you!`;
                     />
                   </div>
 
-                  <div className="flex items-start gap-2.5 bg-[#d19890]/10 p-3.5 rounded-xl border border-[#d19890]/35]">
+                  <div className="flex items-start gap-2.5 bg-[#d19890]/10 p-3.5 rounded-xl border border-[#d19890]/35">
                     <ShieldCheck className="h-5 w-5 text-[#a46b66] mt-0.5 shrink-0" />
                     <p className="text-[10px] text-slate-600 leading-relaxed">
                       By submitting, you agree that Dr. Nandita Maitra's clinic can contact you regarding your clinical inquiry. All information is secured under patient privacy laws.
@@ -370,7 +377,7 @@ Thank you!`;
             <div className="space-y-2">
               <h4 className="font-serif font-bold text-[#4e2627] text-sm">Is walk-in consultation allowed?</h4>
               <p className="leading-relaxed">
-                Walking consultation is allowed,but we strongly recommend booking a clinical appointment slot.
+                Walking consultation is allowed, but we strongly recommend booking a clinical appointment slot.
               </p>
             </div>
           </div>

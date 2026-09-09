@@ -65,6 +65,13 @@ const routes = [
   "about",
   "services",
   "patient-education",
+  "patient-education/acne-in-women-could-it-be-hormonal",
+  "patient-education/healthy-weight-loss-for-women",
+  "patient-education/excess-facial-or-body-hair-in-women-hirsutism",
+  "patient-education/pms-vs-pmdd-understanding-difference",
+  "patient-education/polycystic-ovary-syndrome-pcos",
+  "patient-education/painful-periods-dysmenorrhea",
+  "patient-education/is-my-period-normal",
   "patient-education/understanding-pcos",
   "patient-education/cervical-screening-pap-smear",
   "patient-education/navigating-menopause",
@@ -111,6 +118,48 @@ const pageMeta = {
     description:
       "Trusted women's health articles on PCOS, cervical screening, menopause, early pregnancy care, and fertility — by Dr. Nandita Maitra, Senior Gynecologist in Vadodara, Gujarat.",
     canonical: `${SITE_URL}/patient-education`,
+  },
+  "patient-education/acne-in-women-could-it-be-hormonal": {
+    title: "Acne in Women: Could It Be Hormonal? | Dr. Nandita Maitra Vadodara",
+    description:
+      "Persistent acne in women may be linked to hormonal imbalance or PCOS. Learn about the causes, treatment options, and when to consult a gynecologist.",
+    canonical: `${SITE_URL}/patient-education/acne-in-women-could-it-be-hormonal`,
+  },
+  "patient-education/healthy-weight-loss-for-women": {
+    title: "Healthy Weight Loss for Women | Dr. Nandita Maitra Vadodara",
+    description:
+      "Evidence-based weight loss strategies for women — addressing hormonal factors, metabolic health, nutrition, and sustainable habits.",
+    canonical: `${SITE_URL}/patient-education/healthy-weight-loss-for-women`,
+  },
+  "patient-education/excess-facial-or-body-hair-in-women-hirsutism": {
+    title: "Excess Facial or Body Hair in Women (Hirsutism) | Dr. Nandita Maitra Vadodara",
+    description:
+      "Understanding hirsutism in women — causes including PCOS, diagnostic evaluation, and medical treatment options in Vadodara.",
+    canonical: `${SITE_URL}/patient-education/excess-facial-or-body-hair-in-women-hirsutism`,
+  },
+  "patient-education/pms-vs-pmdd-understanding-difference": {
+    title: "PMS vs PMDD: Understanding the Difference | Dr. Nandita Maitra Vadodara",
+    description:
+      "Learn the distinction between Premenstrual Syndrome (PMS) and Premenstrual Dysphoric Disorder (PMDD), their symptoms, and effective relief options.",
+    canonical: `${SITE_URL}/patient-education/pms-vs-pmdd-understanding-difference`,
+  },
+  "patient-education/polycystic-ovary-syndrome-pcos": {
+    title: "Polycystic Ovary Syndrome (PCOS): Guide | Dr. Nandita Maitra Vadodara",
+    description:
+      "A comprehensive guide to Polycystic Ovary Syndrome (PCOS) — symptoms, diagnosis, long-term health risks, and individualized management.",
+    canonical: `${SITE_URL}/patient-education/polycystic-ovary-syndrome-pcos`,
+  },
+  "patient-education/painful-periods-dysmenorrhea": {
+    title: "Painful Periods (Dysmenorrhea): Causes & Care | Dr. Nandita Maitra Vadodara",
+    description:
+      "Understanding menstrual cramps and painful periods — when pain is normal, when it indicates endometriosis or fibroids, and treatment options.",
+    canonical: `${SITE_URL}/patient-education/painful-periods-dysmenorrhea`,
+  },
+  "patient-education/is-my-period-normal": {
+    title: "Is My Period Normal? What Every Woman Should Know | Dr. Nandita Maitra Vadodara",
+    description:
+      "Guide to normal menstrual cycle length, flow, regularity, and warning signs that warrant evaluation by a gynecologist.",
+    canonical: `${SITE_URL}/patient-education/is-my-period-normal`,
   },
   "patient-education/understanding-pcos": {
     title: "Understanding PCOS: Symptoms, Diagnosis & Management | Dr. Nandita Maitra Vadodara",

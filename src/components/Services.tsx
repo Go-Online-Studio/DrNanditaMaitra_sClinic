@@ -1,17 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import PageSEO from './PageSEO';
-import {
-  Microscope,
-  Activity,
-  Baby,
-  Heart,
-  Scan,
-  Thermometer,
-  FlaskConical,
-  MessageSquareDot,
-  ArrowRight,
-  ChevronRight,
-} from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 
 import { servicesData } from '../data/servicesData';
 
